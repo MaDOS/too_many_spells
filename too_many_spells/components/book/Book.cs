@@ -1,7 +1,7 @@
 using Godot;
 using System.Collections.Generic;
-using System.IO;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 public partial class Book : AnimatedSprite2D
 {
@@ -24,53 +24,43 @@ public partial class Book : AnimatedSprite2D
 
 	private void LoadPages()
 	{
-		FileInfo file = new FileInfo("res://components/book/pages.json");
-
-		if(file.Exists)
+		if (FileAccess.FileExists("user://book.json"))
 		{
-			GD.Print("Loading pages from file");
-
-			string json = File.ReadAllText(file.FullName);
-			_pages = JsonSerializer.Deserialize<List<PageSet>>(json)!;
+			using (FileAccess file = FileAccess.Open("user://book.json", FileAccess.ModeFlags.Read))
+			{
+				string json = file.GetAsText();
+				_pages = JsonSerializer.Deserialize<List<PageSet>>(json)!;
+			}
 		}
 		else
-		{		
-			GD.Print("Loading pages from resources");
-			
-			bool firstRun = true;
-
-			for (int i = 0; firstRun || ResourceLoader.Exists($"res://components/book/pages/page{i}.png"); i += 2)
+		{
+			for (int i = 0; i == 0 || ResourceLoader.Exists($"res://components/book/pages/page{i}.png"); i += 2)
 			{
-				Texture2D? leftTexture = LoadTexture($"res://components/book/pages/page{i}.png");
-				Texture2D? rightTexture = LoadTexture($"res://components/book/pages/page{i + 1}.png");
-
-				_pages.Add(new PageSet(leftTexture, rightTexture));
-
-				firstRun = false;
+				_pages.Add(new PageSet($"res://components/book/pages/page{i}.png", $"res://components/book/pages/page{i + 1}.png"));
 			}
-
-			File.WriteAllText(file.FullName, JsonSerializer.Serialize(_pages));
+			
+			this.SavePages();
 		}
 	}
 
-	private Texture2D? LoadTexture(string path)
+	private void SavePages()
 	{
-		return ResourceLoader.Exists(path) ? GD.Load<Texture2D>(path) : null;
+		using (FileAccess file = FileAccess.Open("user://book.json", FileAccess.ModeFlags.Write))
+		{
+			var json = JsonSerializer.Serialize(_pages);
+			file.StoreString(json);
+		}
 	}
 
 	public void OnAnimationFinished()
 	{
 		if (_currentTurn >= 1 && _currentTurn <= _pages.Count + 1)
-			_leftPageSprite.Texture = _pages[_currentTurn - 1].LeftPageTexture;
-		_rightPageSprite.Texture = _pages[_currentTurn - 1].RightPageTexture;
+			_leftPageSprite.Texture = _pages[_currentTurn - 1].LeftPage.Texture;
+			_rightPageSprite.Texture = _pages[_currentTurn - 1].RightPage.Texture;
 	}
 
 	private void GotoTurn(int turn)
 	{
-		// GD.Print($"CurrentTurn {_currentTurn}");
-		// GD.Print($"Turn {turn}");
-		// GD.Print($"Pagecount {_pages.Count}");
-
 		_leftPageSprite.Texture = null;
 		_rightPageSprite.Texture = null;
 
@@ -101,9 +91,19 @@ public partial class Book : AnimatedSprite2D
 				Play("previous_page");
 		}
 
-		GD.Print($"Goto {turn} done");
-
 		this._currentTurn = turn;
+	}
+
+	public override void _Input(InputEvent @event)
+	{
+		if (@event.IsActionPressed("next_page"))
+		{
+			this.OnNextPage();
+		}
+		else if (@event.IsActionPressed("previous_page"))
+		{
+			this.OnPreviousPage();
+		}
 	}
 
 	public void OnNextPage()
@@ -119,14 +119,27 @@ public partial class Book : AnimatedSprite2D
 
 public class PageSet
 {
-	public string LeftPageTextureFile { get; set; }
-	public string RightPageTextureFile { get; set; }
-	public Texture2D? LeftPageTexture { get; set; }
-	public Texture2D? RightPageTexture { get; set; }
+	public Page LeftPage { get; set; }
+	public Page RightPage { get; set; }
 
-	public PageSet(Texture2D? leftPageTexture, Texture2D? rightPageTexture)
+	public PageSet(string leftPageTextureFile, string rightPageTextureFile)
 	{
-		LeftPageTexture = leftPageTexture;
-		RightPageTexture = rightPageTexture;
+		LeftPage = new Page(leftPageTextureFile);
+		RightPage = new Page(rightPageTextureFile);
+	}
+}
+
+public class Page
+{
+	public string TextureFile { get; set; }
+	
+	[JsonIgnore]
+	public Texture2D? Texture { get; set; }
+
+	public Page(string textureFile)
+	{
+		TextureFile = textureFile;
+
+		Texture = ResourceLoader.Exists(textureFile) ? GD.Load<Texture2D>(textureFile) : null;
 	}
 }

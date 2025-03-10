@@ -805,23 +805,6 @@ offset_top = -16.0
 offset_right = 31.0
 offset_bottom = 30.0
 
-[node name="NextPageButton" type="TextureButton" parent="Control"]
-layout_mode = 1
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -29.0
-grow_horizontal = 0
-grow_vertical = 2
-
-[node name="PreviousPageButton" type="TextureButton" parent="Control"]
-layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_right = 29.0
-grow_vertical = 2
-
 [node name="PageRight" type="Sprite2D" parent="."]
 position = Vector2(12.5, 2.06265)
 scale = Vector2(0.0424241, 0.0547249)
@@ -831,5 +814,3 @@ position = Vector2(-14, 2)
 scale = Vector2(0.0424241, 0.0547249)
 
 [connection signal="animation_finished" from="." to="." method="OnAnimationFinished"]
-[connection signal="button_down" from="Control/NextPageButton" to="." method="OnNextPage"]
-[connection signal="button_down" from="Control/PreviousPageButton" to="." method="OnPreviousPage"]
