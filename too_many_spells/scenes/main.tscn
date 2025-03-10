@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdd1y760obx05"]
+
+[ext_resource type="PackedScene" uid="uid://kf64j7pluy7o" path="res://components/book/book.tscn" id="2_0wfyh"]
+
+[node name="Main" type="Node2D"]
+
+[node name="InteractiveBook2D" parent="." instance=ExtResource("2_0wfyh")]
+position = Vector2(860.5, 362.75)
+scale = Vector2(8.48437, 8.08594)
