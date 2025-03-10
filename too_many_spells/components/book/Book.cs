@@ -165,7 +165,6 @@ public partial class Book : AnimatedSprite2D
 
 	public void PageReleased()
 	{
-		//Insert page at new position
 		if(draggingPage is not null)
 		{
 			if (this.mouseOnLeftSide)
@@ -176,9 +175,7 @@ public partial class Book : AnimatedSprite2D
 				}
 				else
 				{
-					this._pages.Remove(draggingPage);
-					this._pages.Insert(_currentPage - 1, this.draggingPage!);
-					this.OnAnimationFinished();
+					this._pages.Insert(_currentPage - 1, this.draggingPage);
 				}
 			}
 			else if (this.mouseOnRightSide)
@@ -189,9 +186,7 @@ public partial class Book : AnimatedSprite2D
 				}
 				else
 				{
-					this._pages.Remove(draggingPage);
-					this._pages.Insert(_currentPage, this.draggingPage!);
-					this.OnAnimationFinished();
+					this._pages.Insert(_currentPage, this.draggingPage);
 				}
 			}
 		}
@@ -204,13 +199,14 @@ public partial class Book : AnimatedSprite2D
 			if(mouseButton.Pressed)
 			{
 				this.draggingPage = this.GetLeftPage();
-				this.BlankLeftPage();
+				this._pages.Remove(this.draggingPage);
+				this.OnAnimationFinished();
 			}
 
 			if(!mouseButton.Pressed)
 			{
-				this.UnBlankLeftPage();
 				this.PageReleased();
+				this.OnAnimationFinished();
 			}
 
 			GD.Print($"Mouse {(mouseButton.Pressed ? "pressed" : "released")} on left page");
@@ -224,13 +220,14 @@ public partial class Book : AnimatedSprite2D
 			if(mouseButton.Pressed)
 			{
 				this.draggingPage = this.GetRightPage();
-				this.BlankRightPage();
+				this._pages.Remove(this.draggingPage);
+				this.OnAnimationFinished();
 			}
 
 			if(!mouseButton.Pressed)
 			{
-				this.UnBlankRightPage();
 				this.PageReleased();
+				this.OnAnimationFinished();
 			}
 
 			GD.Print($"Mouse {(mouseButton.Pressed ? "pressed" : "released")} on right page");
