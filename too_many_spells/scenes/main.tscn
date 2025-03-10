@@ -7,3 +7,11 @@
 [node name="InteractiveBook2D" parent="." instance=ExtResource("2_0wfyh")]
 position = Vector2(860.5, 362.75)
 scale = Vector2(8.48437, 8.08594)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 269.0
+offset_top = 535.0
+offset_right = 564.0
+offset_bottom = 605.0
+
+[connection signal="pressed" from="Button" to="InteractiveBook2D" method="SavePages"]

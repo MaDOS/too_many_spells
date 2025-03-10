@@ -7,12 +7,11 @@ public partial class Book : AnimatedSprite2D
 {
 	private const string SAVEFILE = "user://book.json";
 
-	private int _currentPage = -1;
-
 	private TextureRect _leftPage = null!;
 	private TextureRect _rightPage = null!;
 
-	private List<Page> _pages = new List<Page>();
+	protected int _currentPage = -1;
+	protected List<Page> _pages = new List<Page>();
 
 	public override void _Ready()
 	{
@@ -55,8 +54,6 @@ public partial class Book : AnimatedSprite2D
 
 			this.SavePages();
 		}
-
-		GD.Print($"PageCount {_pages.Count}");
 	}
 
 	private void SavePages()
@@ -84,9 +81,6 @@ public partial class Book : AnimatedSprite2D
 
 	private void GotoPage(int page)
 	{
-		GD.Print($"Goto turn {page}");
-		GD.Print($"PageCount {page}");
-
 		_leftPage.Texture = null;
 		_rightPage.Texture = null;
 
@@ -122,8 +116,6 @@ public partial class Book : AnimatedSprite2D
 
 	public void OnNextPage()
 	{
-		GD.Print("Next page");
-
 		if(_currentPage == -1)
 		{
 			this.GotoPage(0);
@@ -140,8 +132,6 @@ public partial class Book : AnimatedSprite2D
 
 	public void OnPreviousPage()
 	{
-		GD.Print("Previous page");
-
 		if(_currentPage == _pages.Count + 1)
 		{
 			this.GotoPage(_currentPage - 1);
@@ -155,148 +145,6 @@ public partial class Book : AnimatedSprite2D
 			this.GotoPage(_currentPage - 2);
 		}
 	}
-
-	#region dragging page
-
-	private Page? draggingPage = null;
-
-	private bool mouseOnLeftSide = false;
-	private bool mouseOnRightSide = false;
-
-	public void PageReleased()
-	{
-		if(draggingPage is not null)
-		{
-			if (this.mouseOnLeftSide)
-			{
-				if(_currentPage == 0)
-				{
-					return;
-				}
-				else
-				{
-					this._pages.Insert(_currentPage - 1, this.draggingPage);
-				}
-			}
-			else if (this.mouseOnRightSide)
-			{
-				if(_currentPage == _pages.Count)
-				{
-					return;
-				}
-				else
-				{
-					this._pages.Insert(_currentPage, this.draggingPage);
-				}
-			}
-		}
-	}
-
-	public void _on_gui_input_leftPage(InputEvent @event)
-	{
-		if (@event is InputEventMouseButton mouseButton && mouseButton.ButtonIndex == MouseButton.Left)
-		{
-			if(mouseButton.Pressed)
-			{
-				this.draggingPage = this.GetLeftPage();
-				this._pages.Remove(this.draggingPage);
-				this.OnAnimationFinished();
-			}
-
-			if(!mouseButton.Pressed)
-			{
-				this.PageReleased();
-				this.OnAnimationFinished();
-			}
-
-			GD.Print($"Mouse {(mouseButton.Pressed ? "pressed" : "released")} on left page");
-		}
-	}
-
-	public void _on_gui_input_rightPage(InputEvent @event)
-	{
-		if (@event is InputEventMouseButton mouseButton && mouseButton.ButtonIndex == MouseButton.Left)
-		{
-			if(mouseButton.Pressed)
-			{
-				this.draggingPage = this.GetRightPage();
-				this._pages.Remove(this.draggingPage);
-				this.OnAnimationFinished();
-			}
-
-			if(!mouseButton.Pressed)
-			{
-				this.PageReleased();
-				this.OnAnimationFinished();
-			}
-
-			GD.Print($"Mouse {(mouseButton.Pressed ? "pressed" : "released")} on right page");
-		}
-	}
-
-	public void _on_mouse_entered_leftPage()
-	{
-		this.mouseOnLeftSide = true;
-	}
-
-	public void _on_mouse_exited_leftPage()
-	{
-		this.mouseOnLeftSide = false;
-	}
-
-	public void _on_mouse_entered_rightPage()
-	{
-		this.mouseOnRightSide = true;
-	}
-
-	public void _on_mouse_exited_rightPage()
-	{
-		this.mouseOnRightSide = false;
-	}
-
-	public Book.Page GetLeftPage()
-	{
-		return _pages[_currentPage - 1];
-	}
-
-	public Book.Page GetRightPage()
-	{
-		return _pages[_currentPage];
-	}
-
-	public void BlankLeftPage()
-	{
-		if (_currentPage > 1 && _currentPage < _pages.Count + 1)
-		{
-			_leftPage.Texture = null;
-		}
-	}
-
-	public void UnBlankLeftPage()
-	{		
-		if (_currentPage > 1 && _currentPage < _pages.Count + 1)
-		{
-			_leftPage.Texture = _pages[_currentPage - 1].Texture;
-		}
-	}
-
-	public void BlankRightPage()
-	{
-		if (_currentPage > 0 && _currentPage < _pages.Count)
-		{
-			_rightPage.Texture = null;
-		}
-	}
-
-	public void UnBlankRightPage()
-	{
-		if (_currentPage > 0 && _currentPage < _pages.Count)
-		{
-			_rightPage.Texture = _pages[_currentPage].Texture;
-		}
-	}
-
-	#endregion
 
 	public class Page
 	{

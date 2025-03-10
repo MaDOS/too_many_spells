@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="too_many_spells"
-run/main_scene="uid://cdd1y760obx05"
+run/main_scene="uid://bj3wdy2t5m88c"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 

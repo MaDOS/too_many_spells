@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://cec7jf1jenf8l"]
+
+[ext_resource type="Script" uid="uid://dbu6r2nja6xtx" path="res://components/dm_prompt/DmPrompt.cs" id="1_avuye"]
+[ext_resource type="Texture2D" uid="uid://qp2m3fwlopdm" path="res://components/dm_prompt/background.jpg" id="1_hcaff"]
+
+[node name="DmPrompt" type="Node2D"]
+script = ExtResource("1_avuye")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 578.0
+offset_bottom = 442.0
+texture = ExtResource("1_hcaff")
+
+[node name="Prompt" type="Label" parent="Background"]
+offset_left = 26.0
+offset_top = 51.0
+offset_right = 554.0
+offset_bottom = 308.0
+text = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="Background"]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 381.0
+offset_right = 457.0
+offset_bottom = 420.0
+text = "OK"
+
+[connection signal="pressed" from="Background/Button" to="." method="OnOkClicked"]
