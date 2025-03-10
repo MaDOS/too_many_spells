@@ -1,7 +1,9 @@
-[gd_scene load_steps=106 format=3 uid="uid://kf64j7pluy7o"]
+[gd_scene load_steps=108 format=3 uid="uid://kf64j7pluy7o"]
 
 [ext_resource type="Texture2D" uid="uid://bjq13iyvup1t6" path="res://components/book/Book_Sheet_64x64.png" id="1_nusbk"]
 [ext_resource type="Script" uid="uid://ck4q70ndjf6a3" path="res://components/book/Book.cs" id="2_s0rqt"]
+[ext_resource type="Script" path="res://components/book/LeftPage.cs" id="3_x2eds"]
+[ext_resource type="Script" path="res://components/book/RightPage.cs" id="4_ff771"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0ag3u"]
 atlas = ExtResource("1_nusbk")
@@ -790,7 +792,7 @@ animations = [{
 "speed": 12.0
 }]
 
-[node name="InteractiveBook2D" type="AnimatedSprite2D"]
+[node name="Book" type="AnimatedSprite2D"]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_vxube")
 animation = &"next_to_last"
@@ -805,12 +807,23 @@ offset_top = -16.0
 offset_right = 31.0
 offset_bottom = 30.0
 
-[node name="PageRight" type="Sprite2D" parent="."]
-position = Vector2(12.5, 2.06265)
-scale = Vector2(0.0424241, 0.0547249)
+[node name="PageLeft" type="TextureRect" parent="."]
+offset_left = -24.0
+offset_top = -16.0
+offset_right = -2.0
+offset_bottom = 21.0
+rotation = 0.00133836
+expand_mode = 1
+script = ExtResource("3_x2eds")
 
-[node name="PageLeft" type="Sprite2D" parent="."]
-position = Vector2(-14, 2)
-scale = Vector2(0.0424241, 0.0547249)
+[node name="PageRight" type="TextureRect" parent="."]
+offset_left = 2.0
+offset_top = -16.0
+offset_right = 25.0
+offset_bottom = 21.0
+expand_mode = 1
+script = ExtResource("4_ff771")
 
 [connection signal="animation_finished" from="." to="." method="OnAnimationFinished"]
+[connection signal="gui_input" from="PageLeft" to="." method="_on_gui_input_leftPage"]
+[connection signal="gui_input" from="PageRight" to="." method="_on_gui_input_rightPage"]
