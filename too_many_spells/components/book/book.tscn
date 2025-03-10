@@ -826,4 +826,8 @@ script = ExtResource("4_ff771")
 
 [connection signal="animation_finished" from="." to="." method="OnAnimationFinished"]
 [connection signal="gui_input" from="PageLeft" to="." method="_on_gui_input_leftPage"]
+[connection signal="mouse_entered" from="PageLeft" to="." method="_on_mouse_entered_leftPage"]
+[connection signal="mouse_exited" from="PageLeft" to="." method="_on_mouse_exited_leftPage"]
 [connection signal="gui_input" from="PageRight" to="." method="_on_gui_input_rightPage"]
+[connection signal="mouse_entered" from="PageRight" to="." method="_on_mouse_entered_rightPage"]
+[connection signal="mouse_exited" from="PageRight" to="." method="_on_mouse_exited_rightPage"]

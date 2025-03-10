@@ -7,12 +7,12 @@ public partial class Book : AnimatedSprite2D
 {
 	private const string SAVEFILE = "user://book.json";
 
-	private int _currentTurn = 0;
+	private int _currentPage = -1;
 
 	private TextureRect _leftPage = null!;
 	private TextureRect _rightPage = null!;
 
-	private List<PageSet> _pages = new List<PageSet>();
+	private List<Page> _pages = new List<Page>();
 
 	public override void _Ready()
 	{
@@ -21,7 +21,7 @@ public partial class Book : AnimatedSprite2D
 
 		this.LoadPages();
 
-		this.GotoTurn(0);
+		this.GotoPage(-1);
 	}
 
 	public override void _Input(InputEvent @event)
@@ -43,14 +43,14 @@ public partial class Book : AnimatedSprite2D
 			using (FileAccess file = FileAccess.Open(SAVEFILE, FileAccess.ModeFlags.Read))
 			{
 				string json = file.GetAsText();
-				_pages = JsonSerializer.Deserialize<List<PageSet>>(json)!;
+				_pages = JsonSerializer.Deserialize<List<Page>>(json)!;
 			}
 		}
 		else
 		{
-			for (int i = 0; i == 0 || ResourceLoader.Exists($"res://components/book/pages/page{i}.png"); i += 2)
+			for (int i = 1; ResourceLoader.Exists($"res://components/book/pages/page{i}.png"); i += 1)
 			{
-				_pages.Add(new PageSet($"res://components/book/pages/page{i}.png", $"res://components/book/pages/page{i + 1}.png"));
+				_pages.Add(new Page($"res://components/book/pages/page{i}.png"));
 			}
 
 			this.SavePages();
@@ -70,62 +70,132 @@ public partial class Book : AnimatedSprite2D
 
 	public void OnAnimationFinished()
 	{
-		if (_currentTurn >= 1 && _currentTurn <= _pages.Count + 1)
-			_leftPage.Texture = _pages[_currentTurn - 1].LeftPage.Texture;
-		_rightPage.Texture = _pages[_currentTurn - 1].RightPage.Texture;
+		if(_currentPage == 0)
+		{
+			this._leftPage.Texture = null;
+			this._rightPage.Texture = this._pages[0].Texture;
+		}
+		else
+		{
+			this._leftPage.Texture = this._pages[_currentPage - 1].Texture;
+			this._rightPage.Texture = this._pages[_currentPage].Texture;
+		}
 	}
 
-	private void GotoTurn(int turn)
+	private void GotoPage(int page)
 	{
-		GD.Print($"Goto turn {turn}");
-		GD.Print($"PageCount {turn}");
+		GD.Print($"Goto turn {page}");
+		GD.Print($"PageCount {page}");
 
 		_leftPage.Texture = null;
 		_rightPage.Texture = null;
 
-		if (turn < 0)
-			turn = 0;
-		else if (turn > _pages.Count + 1)
-			turn = _pages.Count + 1;
+		if (page < -1)
+			page = -1;
+		else if (page > _pages.Count + 1)
+			page = _pages.Count + 1;
 
-		if (_currentTurn == 0 && turn == 1)
+		if (_currentPage == -1 && page == 0)
 			Play("open_to_first");
-		else if (_currentTurn == 1 && turn == 0)
+		else if (_currentPage == 0 && page == -1)
 			Play("close_from_first");
-		else if (_currentTurn == 1 && turn == 2)
+		else if (_currentPage == 0 && page == 2)
 			Play("next_from_first");
-		else if (_currentTurn == 2 && turn == 1)
+		else if (_currentPage == 2 && page == 0)
 			Play("previous_to_first");
-		else if (_currentTurn == _pages.Count - 1 && turn == _pages.Count)
+		else if (_currentPage == _pages.Count - 2 && page == _pages.Count)
 			Play("next_to_last");
-		else if (_currentTurn == _pages.Count && turn == _pages.Count + 1)
+		else if (_currentPage == _pages.Count && page == _pages.Count + 1)
 			Play("close_from_last");
-		else if (_currentTurn == _pages.Count + 1 && turn == _pages.Count)
+		else if (_currentPage == _pages.Count + 1 && page == _pages.Count)
 			Play("open_to_last");
 		else
 		{
-			if (_currentTurn < turn)
+			if (_currentPage < page)
 				Play("next_page");
-			else if (_currentTurn > turn)
+			else if (_currentPage > page)
 				Play("previous_page");
 		}
 
-		this._currentTurn = turn;
+		_currentPage = page;
 	}
 
 	public void OnNextPage()
 	{
 		GD.Print("Next page");
-		this.GotoTurn(_currentTurn + 1);
+
+		if(_currentPage == -1)
+		{
+			this.GotoPage(0);
+		}
+		else if(_currentPage == _pages.Count)
+		{
+			this.GotoPage(_currentPage + 1);
+		}
+		else
+		{
+			this.GotoPage(_currentPage + 2);
+		}
 	}
 
 	public void OnPreviousPage()
 	{
 		GD.Print("Previous page");
-		this.GotoTurn(_currentTurn - 1);
+
+		if(_currentPage == _pages.Count + 1)
+		{
+			this.GotoPage(_currentPage - 1);
+		}
+		else if (_currentPage == 0)
+		{
+			this.GotoPage(-1);
+		}
+		else
+		{
+			this.GotoPage(_currentPage - 2);
+		}
 	}
 
 	#region dragging page
+
+	private Page? draggingPage = null;
+
+	private bool mouseOnLeftSide = false;
+	private bool mouseOnRightSide = false;
+
+	public void PageReleased()
+	{
+		//Insert page at new position
+		if(draggingPage is not null)
+		{
+			if (this.mouseOnLeftSide)
+			{
+				if(_currentPage == 0)
+				{
+					return;
+				}
+				else
+				{
+					this._pages.Remove(draggingPage);
+					this._pages.Insert(_currentPage - 1, this.draggingPage!);
+					this.OnAnimationFinished();
+				}
+			}
+			else if (this.mouseOnRightSide)
+			{
+				if(_currentPage == _pages.Count)
+				{
+					return;
+				}
+				else
+				{
+					this._pages.Remove(draggingPage);
+					this._pages.Insert(_currentPage, this.draggingPage!);
+					this.OnAnimationFinished();
+				}
+			}
+		}
+	}
 
 	public void _on_gui_input_leftPage(InputEvent @event)
 	{
@@ -133,13 +203,17 @@ public partial class Book : AnimatedSprite2D
 		{
 			if(mouseButton.Pressed)
 			{
+				this.draggingPage = this.GetLeftPage();
 				this.BlankLeftPage();
 			}
 
 			if(!mouseButton.Pressed)
 			{
 				this.UnBlankLeftPage();
+				this.PageReleased();
 			}
+
+			GD.Print($"Mouse {(mouseButton.Pressed ? "pressed" : "released")} on left page");
 		}
 	}
 
@@ -149,30 +223,53 @@ public partial class Book : AnimatedSprite2D
 		{
 			if(mouseButton.Pressed)
 			{
+				this.draggingPage = this.GetRightPage();
 				this.BlankRightPage();
 			}
 
 			if(!mouseButton.Pressed)
 			{
 				this.UnBlankRightPage();
+				this.PageReleased();
 			}
+
+			GD.Print($"Mouse {(mouseButton.Pressed ? "pressed" : "released")} on right page");
 		}
+	}
+
+	public void _on_mouse_entered_leftPage()
+	{
+		this.mouseOnLeftSide = true;
+	}
+
+	public void _on_mouse_exited_leftPage()
+	{
+		this.mouseOnLeftSide = false;
+	}
+
+	public void _on_mouse_entered_rightPage()
+	{
+		this.mouseOnRightSide = true;
+	}
+
+	public void _on_mouse_exited_rightPage()
+	{
+		this.mouseOnRightSide = false;
 	}
 
 	public Book.Page GetLeftPage()
 	{
-		return _pages[_currentTurn].LeftPage;
+		return _pages[_currentPage - 1];
 	}
 
 	public Book.Page GetRightPage()
 	{
-		return _pages[_currentTurn].RightPage;
+		return _pages[_currentPage];
 	}
 
 	public void BlankLeftPage()
 	{
-		GD.Print($"Blank left page");
-		if (_currentTurn > 1 && _currentTurn < _pages.Count + 1)
+		if (_currentPage > 1 && _currentPage < _pages.Count + 1)
 		{
 			_leftPage.Texture = null;
 		}
@@ -180,17 +277,15 @@ public partial class Book : AnimatedSprite2D
 
 	public void UnBlankLeftPage()
 	{		
-		GD.Print($"Unblank left page");
-		if (_currentTurn > 1 && _currentTurn < _pages.Count + 1)
+		if (_currentPage > 1 && _currentPage < _pages.Count + 1)
 		{
-			_leftPage.Texture = _pages[_currentTurn - 1].LeftPage.Texture;
+			_leftPage.Texture = _pages[_currentPage - 1].Texture;
 		}
 	}
 
 	public void BlankRightPage()
 	{
-		GD.Print($"Blank right page");
-		if (_currentTurn > 0 && _currentTurn < _pages.Count)
+		if (_currentPage > 0 && _currentPage < _pages.Count)
 		{
 			_rightPage.Texture = null;
 		}
@@ -198,30 +293,13 @@ public partial class Book : AnimatedSprite2D
 
 	public void UnBlankRightPage()
 	{
-		GD.Print($"Unblank right page");
-		if (_currentTurn > 0 && _currentTurn < _pages.Count)
+		if (_currentPage > 0 && _currentPage < _pages.Count)
 		{
-			_rightPage.Texture = _pages[_currentTurn - 1].RightPage.Texture;
+			_rightPage.Texture = _pages[_currentPage].Texture;
 		}
 	}
 
 	#endregion
-
-	public class PageSet
-	{
-		public Page LeftPage { get; set; }
-		public Page RightPage { get; set; }
-
-		[JsonConstructor]
-		public PageSet()
-		{ }
-
-		public PageSet(string leftPageTextureFile, string rightPageTextureFile)
-		{
-			LeftPage = new Page(leftPageTextureFile);
-			RightPage = new Page(rightPageTextureFile);
-		}
-	}
 
 	public class Page
 	{
