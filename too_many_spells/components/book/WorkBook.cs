@@ -2,11 +2,21 @@ using Godot;
 
 public partial class WorkBook : Book
 {
+	[Signal]
+    public delegate void PageSwapEventHandler();
+
 	private Page? draggingPage = null;
 	private int draggingFromIndex = 1;
 
 	private bool mouseOnLeftSide = false;
 	private bool mouseOnRightSide = false;
+
+	private bool _swappingDisabled = false;
+
+	public void DisableSwapping()
+	{
+		this._swappingDisabled = true;
+	}
 
 	public void PageReleased()
 	{
@@ -21,10 +31,22 @@ public partial class WorkBook : Book
 				if (this.mouseOnLeftSide)
 				{
 					this._pages.Insert(_currentPage - 1, this.draggingPage);
+
+					if(_currentPage - 1 != draggingFromIndex)
+					{
+						this.SavePages();
+						EmitSignal(nameof(PageSwap));
+					}
 				}
 				else if (this.mouseOnRightSide)
 				{
 					this._pages.Insert(_currentPage, this.draggingPage);
+
+					if(_currentPage != draggingFromIndex)
+					{
+						this.SavePages();
+						EmitSignal(nameof(PageSwap));
+					}
 				}
 				else
 				{
@@ -46,6 +68,9 @@ public partial class WorkBook : Book
 
 	public override void _on_gui_input_leftPage(InputEvent @event)
 	{
+		if(_swappingDisabled)
+		{return;}
+
 		if (@event is InputEventMouseButton mouseButton && mouseButton.ButtonIndex == MouseButton.Left)
 		{
 			GD.Print($"Mouse {(mouseButton.Pressed ? "pressed" : "released")} on left page");
@@ -71,6 +96,9 @@ public partial class WorkBook : Book
 
 	public override void _on_gui_input_rightPage(InputEvent @event)
 	{
+		if(_swappingDisabled)
+		{return;}
+		
 		if (@event is InputEventMouseButton mouseButton && mouseButton.ButtonIndex == MouseButton.Left)
 		{
 			GD.Print($"Mouse {(mouseButton.Pressed ? "pressed" : "released")} on right page");

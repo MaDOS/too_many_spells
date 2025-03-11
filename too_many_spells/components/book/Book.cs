@@ -106,8 +106,10 @@ public partial class Book : AnimatedSprite2D
 		GD.Print("Cleaning book");
 
 		//delete all buffer pages
-		foreach (var page in _pages)
+		for(int i = 0; i < _pages.Count; i++)
 		{
+			var page = _pages[i];
+
 			if (page.SpellName == string.Empty)
 			{
 				_pages.Remove(page);

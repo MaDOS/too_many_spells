@@ -80,10 +80,18 @@ public partial class Player : Node
 
         LevelDefintion? levelDefintion = LevelDefintions.FirstOrDefault(lvlDef => lvlDef.Level == Level);
 
+        if(levelDefintion is null)
+        {
+            GD.Print("Player is max level");
+            return;
+        }
+
         if (levelDefintion != null && Experience >= levelDefintion.Experience)
         {
             Data.Level++;
             Data.Experience = 0;
+
+            this.SavePlayer();
 
             GD.Print($"Player leveled up to {Level}");
 
