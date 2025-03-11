@@ -38,6 +38,11 @@ public partial class Spells : Node
         }
     }
 
+    public Spell? GetSpell(string spellName)
+    {
+        return AllSpells.Find(spell => spell.Name == spellName);
+    }
+
     public record Spell
     {
         public string Name { get; set; } = string.Empty;

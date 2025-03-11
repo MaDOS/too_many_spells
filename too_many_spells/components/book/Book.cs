@@ -47,7 +47,7 @@ public partial class Book : AnimatedSprite2D
 		}
 		else
 		{
-			Spells.Instance.AllSpells.ForEach(spell => _pages.Add(new Page(spell.Artwork)));
+			Spells.Instance.AllSpells.ForEach(spell => _pages.Add(new Page(spell.Name, spell.Artwork)));
 
 			this.SavePages();
 		}
@@ -64,7 +64,7 @@ public partial class Book : AnimatedSprite2D
 
 	public void OnAnimationFinished()
 	{
-		if(_currentPage == 0)
+		if (_currentPage == 0)
 		{
 			this._leftPage.Texture = null;
 			this._rightPage.Texture = this._pages[0].Texture;
@@ -113,11 +113,11 @@ public partial class Book : AnimatedSprite2D
 
 	public void OnNextPage()
 	{
-		if(_currentPage == -1)
+		if (_currentPage == -1)
 		{
 			this.GotoPage(0);
 		}
-		else if(_currentPage == _pages.Count)
+		else if (_currentPage == _pages.Count)
 		{
 			this.GotoPage(_currentPage + 1);
 		}
@@ -129,7 +129,7 @@ public partial class Book : AnimatedSprite2D
 
 	public void OnPreviousPage()
 	{
-		if(_currentPage == _pages.Count + 1)
+		if (_currentPage == _pages.Count + 1)
 		{
 			this.GotoPage(_currentPage - 1);
 		}
@@ -143,16 +143,51 @@ public partial class Book : AnimatedSprite2D
 		}
 	}
 
+	public virtual void _on_gui_input_leftPage(InputEvent @event)
+	{ }
+
+	public virtual void _on_gui_input_rightPage(InputEvent @event)
+	{ }
+
+	public virtual void _on_mouse_entered_leftPage()
+	{ }
+
+	public virtual void _on_mouse_exited_leftPage()
+	{ }
+
+	public virtual void _on_mouse_entered_rightPage()
+	{ }
+
+	public virtual void _on_mouse_exited_rightPage()
+	{ }
+
+	public Book.Page GetLeftPage()
+	{
+		GD.Print($"{nameof(GetLeftPage)}(idx: {_currentPage - 1})");
+
+		return _pages[_currentPage - 1];
+	}
+
+	public Book.Page GetRightPage()
+	{
+		GD.Print($"{nameof(GetRightPage)}(idx: {_currentPage})");
+
+		return _pages[_currentPage];
+	}
+
 	public class Page
 	{
 		public string TextureFile { get; set; }
+
+		public string SpellName { get; set; }
 
 		[JsonIgnore]
 		public Texture2D? Texture { get; set; }
 
 		[JsonConstructor]
-		public Page(string textureFile)
+		public Page(string spellName, string textureFile)
 		{
+			SpellName = spellName;
 			TextureFile = textureFile;
 
 			Texture = ResourceLoader.Exists(textureFile) ? GD.Load<Texture2D>(textureFile) : null;

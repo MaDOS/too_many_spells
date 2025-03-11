@@ -3,6 +3,9 @@ using System;
 
 public partial class Dialogbox : Control
 {
+    [Signal]
+    public delegate void TalkingPointsFinishedEventHandler();
+
     private string[] _talkingPoints;
     private string _speakerName;
 
@@ -36,27 +39,21 @@ public partial class Dialogbox : Control
         _dialogLabel.Text = _talkingPoints[_currentTalkingPointIndex];
 
         this.Show();
-
-        GD.Print("Dialogbox talking");
     }
 
     public void AdvanceTalkingPoints()
     {
-        GD.Print("Dialogbox advancing talking points");
-
         _currentTalkingPointIndex++;
 
         if (_currentTalkingPointIndex < _talkingPoints.Length)
         {
             _dialogLabel.Text = _talkingPoints[_currentTalkingPointIndex];
-
-            GD.Print("Dialogbox advanced talking points");
         }
         else
         {
             this.Hide();
 
-            GD.Print("Dialogbox hidden");
+            EmitSignal(nameof(TalkingPointsFinished));
         }
     }
 }
