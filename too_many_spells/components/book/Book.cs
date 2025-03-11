@@ -1,5 +1,7 @@
 using Godot;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
+using System.Linq;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -18,9 +20,29 @@ public partial class Book : AnimatedSprite2D
 		_leftPage = GetNode<TextureRect>("PageLeft");
 		_rightPage = GetNode<TextureRect>("PageRight");
 
+		Player.Instance.LevelUp += OnPlayerLevelUp;
+
 		this.LoadPages();
 
 		this.GotoPage(-1);
+	}
+
+	private void OnPlayerLevelUp(int level)
+	{
+		var levelDef = Player.Instance.LevelDefintions
+			.FirstOrDefault(lvlDef => lvlDef.Level == level);
+
+		foreach (var spellname in levelDef?.AddedSpells ?? new List<string>())
+		{
+			GD.Print($"Adding spell {spellname}");
+
+			Spells.Spell spell = Spells.Instance.GetSpell(spellname)!;
+
+			_pages.Insert(GD.RandRange(0, _pages.Count - 1), new Page(spell.Name, spell.Artwork));
+		}
+
+		this.CleanBook();
+		this.SavePages();
 	}
 
 	public override void _Input(InputEvent @event)
@@ -47,13 +69,55 @@ public partial class Book : AnimatedSprite2D
 		}
 		else
 		{
-			Spells.Instance.AllSpells.ForEach(spell => _pages.Add(new Page(spell.Name, spell.Artwork)));
+			foreach (var levelDef in Player.Instance.LevelDefintions
+				.Where(lvlDef => lvlDef.Level <= Player.Instance.Level))
+			{
+				foreach (var spellname in levelDef.AddedSpells)
+				{
+					Spells.Spell spell = Spells.Instance.GetSpell(spellname)!;
+					_pages.Add(new Page(spell.Name, spell.Artwork));
+				}
+			}
+
+			this.CleanBook();
 
 			this.SavePages();
 		}
 	}
 
-	private void SavePages()
+	protected void EnsureEvenPages()
+	{
+		//ensure even page count
+		if (_pages.Count % 2 != 0)
+		{
+			if (_pages.Last().SpellName == string.Empty)
+			{
+				_pages.Remove(_pages.Last());
+			}
+			else
+			{
+				_pages.Add(new Page(string.Empty, string.Empty));
+			}
+		}
+	}
+
+	protected void CleanBook()
+	{
+		GD.Print("Cleaning book");
+
+		//delete all buffer pages
+		foreach (var page in _pages)
+		{
+			if (page.SpellName == string.Empty)
+			{
+				_pages.Remove(page);
+			}
+		}
+
+		this.EnsureEvenPages();
+	}
+
+	protected void SavePages()
 	{
 		using (FileAccess file = FileAccess.Open(SAVEFILE, FileAccess.ModeFlags.Write))
 		{
@@ -68,6 +132,19 @@ public partial class Book : AnimatedSprite2D
 		{
 			this._leftPage.Texture = null;
 			this._rightPage.Texture = this._pages[0].Texture;
+		}
+		else if (_currentPage < 0)
+		{
+
+		}
+		else if (_currentPage == _pages.Count)
+		{
+			this._leftPage.Texture = this._pages[_currentPage - 1].Texture;
+			this._rightPage.Texture = null;
+		}
+		else if (_currentPage > _pages.Count)
+		{
+
 		}
 		else
 		{

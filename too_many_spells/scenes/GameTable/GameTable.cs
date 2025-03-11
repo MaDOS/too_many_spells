@@ -13,6 +13,7 @@ public partial class GameTable : Node2D
 
     private Dialogbox _dialogbox = null!;
     private GameBook _book = null!;
+    private Button _btnGoHome = null!;
 
     private GameMaster.GameMasterPrompt _gmPrompt = null!;
     private string _lastSpellCast = string.Empty;
@@ -21,6 +22,7 @@ public partial class GameTable : Node2D
     {
         _dialogbox = GetNode<Dialogbox>("Dialogbox");
         _book = GetNode<GameBook>("Book");
+        _btnGoHome = GetNode<Button>("BtnGoHome");
 
         _dialogbox.TalkingPointsFinished += Dialogbox_TalkingPointsFinished;
         _book.SpellCast += Book_SpellCast;
@@ -44,7 +46,12 @@ public partial class GameTable : Node2D
 
     private void HandleSpellCast()
     {
-        string[] answers = GameMaster.Instance.GetAnswer(_gmPrompt, Spells.Instance.GetSpell(_lastSpellCast)!);
+        Spells.Spell spell = Spells.Instance.GetSpell(_lastSpellCast)!;
+
+        float score = GameMaster.Instance.ScoreSpell(_gmPrompt, spell);
+        string[] answers = GameMaster.Instance.GetAnswer(_gmPrompt, spell, score);
+
+        Player.Instance.AddExperience((int)(score * _gmPrompt.MaxExperience));
 
         GD.Print($"Answers: {string.Join(", ", answers)}");
 
@@ -65,7 +72,14 @@ public partial class GameTable : Node2D
                 HandleSpellCast();
                 break;
             case State.GMPromptScoring: //todo scene end
+                _btnGoHome.Visible = true;
                 break;
         }
+    }
+
+    public void _on_BtnGoHome_pressed()
+    {
+        GD.Print("Go home");
+        GetTree().ChangeSceneToFile("res://scenes/WorkTable/work_table.tscn");
     }
 }

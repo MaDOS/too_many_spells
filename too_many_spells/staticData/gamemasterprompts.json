@@ -1,6 +1,7 @@
 [
 	{
 		"ScenarioName": "Scenario 1",
+		"MaxExperience": 100,
 		"PromptTexts": [
 			"A band of tattered bandits made the mistake of jumping out of the bushes to ambush you. Never would they have thought to meet such formidable adventurers in a group travelling by foot.",
 			"...or that such a powerful group would not waste a moment of talk but attack at once...",

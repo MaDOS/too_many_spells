@@ -7,11 +7,11 @@ public partial class GameBook : Book
 
     public bool AllowedToCast = false;
 
-    private string? draggingSpell = null;
+    private string? _draggingSpell = null;
     private bool castOnMouseUp = false;
 
     private PackedScene _spellTrailScene = GD.Load<PackedScene>("res://components/spelltrail/SpellTrail.tscn");
-    private Node2D _spellTrail = null!;
+    private Node2D? _spellTrail = null;
 
     public override void _Ready()
     {
@@ -22,7 +22,7 @@ public partial class GameBook : Book
     {
         base._PhysicsProcess(delta);
 
-        if(this.draggingSpell is not null)
+        if(this._draggingSpell is not null && this._spellTrail is not null)
         {
             _spellTrail.GlobalPosition = GetGlobalMousePosition();
         }
@@ -36,8 +36,11 @@ public partial class GameBook : Book
 
     public void DeactivateSpellTrail()
     {
-        _spellTrail.QueueFree();
-        RemoveChild(_spellTrail);
+        if(_spellTrail is not null)
+        {
+            RemoveChild(_spellTrail);
+            _spellTrail = null;
+        }
     }
 
     public override void _on_gui_input_leftPage(InputEvent @event)
@@ -48,7 +51,7 @@ public partial class GameBook : Book
 		{
 			if(mouseButton.Pressed && AllowedToCast)
 			{
-				this.draggingSpell = this.GetLeftPage().SpellName;
+				this._draggingSpell = this.GetLeftPage().SpellName;
                 this.ActiveSpellTrail();
 			}
             else
@@ -56,11 +59,11 @@ public partial class GameBook : Book
                 if(this.castOnMouseUp)
                 {
                     AllowedToCast = false;
-                    EmitSignal(nameof(SpellCast), this.draggingSpell!);
+                    EmitSignal(nameof(SpellCast), this._draggingSpell!);
                 }
                 else
                 {
-                    this.draggingSpell = null;
+                    this._draggingSpell = null;
                 }
 
                 this.DeactivateSpellTrail();
@@ -76,7 +79,7 @@ public partial class GameBook : Book
 		{
 			if(mouseButton.Pressed && AllowedToCast)
 			{
-                this.draggingSpell = this.GetRightPage().SpellName;
+                this._draggingSpell = this.GetRightPage().SpellName;
                 this.ActiveSpellTrail();
             }
             else
@@ -84,11 +87,11 @@ public partial class GameBook : Book
                 if(this.castOnMouseUp)
                 {
                     AllowedToCast = false;
-                    EmitSignal(nameof(SpellCast), this.draggingSpell!);
+                    EmitSignal(nameof(SpellCast), this._draggingSpell!);
                 }
                 else
                 {
-                    this.draggingSpell = null;
+                    this._draggingSpell = null;
                 }
 
                 this.DeactivateSpellTrail();
@@ -98,7 +101,7 @@ public partial class GameBook : Book
 
     public override void _on_mouse_entered_leftPage()
     {
-        if(this.draggingSpell is not null)
+        if(this._draggingSpell is not null)
         {
             this.castOnMouseUp = false;
         }
@@ -106,7 +109,7 @@ public partial class GameBook : Book
 
     public override void _on_mouse_exited_leftPage()
     {
-        if (this.draggingSpell is not null)
+        if (this._draggingSpell is not null)
         {
             this.castOnMouseUp = true;
         }
@@ -114,7 +117,7 @@ public partial class GameBook : Book
 
     public override void _on_mouse_entered_rightPage()
     {
-        if(this.draggingSpell is not null)
+        if(this._draggingSpell is not null)
         {
             this.castOnMouseUp = false;
         }
@@ -122,7 +125,7 @@ public partial class GameBook : Book
 
     public override void _on_mouse_exited_rightPage()
     {
-        if (this.draggingSpell is not null)
+        if (this._draggingSpell is not null)
         {
             this.castOnMouseUp = true;
         }

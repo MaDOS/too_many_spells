@@ -19,7 +19,7 @@ public partial class GameMaster : Node
         this.LoadPrompts();
     }
 
-    public void LoadPrompts()
+    private void LoadPrompts()
     {
         if (FileAccess.FileExists(PROMPTSFILE))
         {
@@ -42,15 +42,13 @@ public partial class GameMaster : Node
         return _prompts[GD.RandRange(0, _prompts.Count - 1)];
     }
 
-    private float ScoreSpell(GameMasterPrompt prompt, Spells.Spell spell)
+    public float ScoreSpell(GameMasterPrompt prompt, Spells.Spell spell)
     {
         return prompt.PromptTags.Intersect(spell.SpellTags).Count() / (float)prompt.PromptTags.Length;
     }
 
-    public string[] GetAnswer(GameMasterPrompt prompt, Spells.Spell spell)
+    public string[] GetAnswer(GameMasterPrompt prompt, Spells.Spell spell, float score)
     {
-        float score = this.ScoreSpell(prompt, spell);
-
         GD.Print($"Spell tags: {string.Join(", ", spell.SpellTags)}");
         GD.Print($"Prompt tags: {string.Join(", ", prompt.PromptTags)}");
         GD.Print($"Score: {score}");
@@ -69,6 +67,7 @@ public partial class GameMaster : Node
     public record GameMasterPrompt
     {
         public string ScenarioName { get; set; } = string.Empty;
+        public int MaxExperience { get; set; }
         public string[] PromptTexts { get; set; } = Array.Empty<string>();
         public string[] PromptTags { get; set; } = Array.Empty<string>();
 

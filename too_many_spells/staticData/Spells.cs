@@ -20,8 +20,6 @@ public partial class Spells : Node
 
     public void LoadSpells()
     {
-        GD.Print("Loading spells");
-
         if (FileAccess.FileExists(PROMPTSFILE))
         {
             using (FileAccess file = FileAccess.Open(PROMPTSFILE, FileAccess.ModeFlags.Read))

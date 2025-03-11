@@ -3,57 +3,69 @@ using Godot;
 public partial class WorkBook : Book
 {
 	private Page? draggingPage = null;
+	private int draggingFromIndex = 1;
 
 	private bool mouseOnLeftSide = false;
 	private bool mouseOnRightSide = false;
 
 	public void PageReleased()
 	{
-		if(draggingPage is not null)
+		if (draggingPage is not null)
 		{
-			if (this.mouseOnLeftSide)
+			if (_currentPage == 0 || _currentPage == _pages.Count)
 			{
-				if(_currentPage == 0)
-				{
-					return;
-				}
-				else
+				this._pages.Insert(draggingFromIndex, this.draggingPage);
+			}
+			else
+			{
+				if (this.mouseOnLeftSide)
 				{
 					this._pages.Insert(_currentPage - 1, this.draggingPage);
 				}
-			}
-			else if (this.mouseOnRightSide)
-			{
-				if(_currentPage == _pages.Count)
-				{
-					return;
-				}
-				else
+				else if (this.mouseOnRightSide)
 				{
 					this._pages.Insert(_currentPage, this.draggingPage);
 				}
+				else
+				{
+					this._pages.Insert(draggingFromIndex, this.draggingPage);
+				}
 			}
+
+			this.CleanBook();
+			this.OnAnimationFinished();
 		}
+	}
+
+	public void PageDragged()
+	{
+		this._pages.Remove(this.draggingPage!);
+		this.EnsureEvenPages();
+		this.OnAnimationFinished();
 	}
 
 	public override void _on_gui_input_leftPage(InputEvent @event)
 	{
 		if (@event is InputEventMouseButton mouseButton && mouseButton.ButtonIndex == MouseButton.Left)
 		{
-			if(mouseButton.Pressed)
+			GD.Print($"Mouse {(mouseButton.Pressed ? "pressed" : "released")} on left page");
+
+			if (mouseButton.Pressed)
 			{
-				this.draggingPage = this.GetLeftPage();
-				this._pages.Remove(this.draggingPage);
-				this.OnAnimationFinished();
+				//workaround do not drag if we have a buffer page
+				var leftPage = this.GetLeftPage();
+				if (leftPage.SpellName != string.Empty)
+				{
+					this.draggingPage = leftPage;
+					this.draggingFromIndex = _currentPage - 1;
+					PageDragged();
+				}
 			}
 
-			if(!mouseButton.Pressed)
+			if (!mouseButton.Pressed && draggingPage != null)
 			{
 				this.PageReleased();
-				this.OnAnimationFinished();
 			}
-
-			GD.Print($"Mouse {(mouseButton.Pressed ? "pressed" : "released")} on left page");
 		}
 	}
 
@@ -61,20 +73,19 @@ public partial class WorkBook : Book
 	{
 		if (@event is InputEventMouseButton mouseButton && mouseButton.ButtonIndex == MouseButton.Left)
 		{
-			if(mouseButton.Pressed)
+			GD.Print($"Mouse {(mouseButton.Pressed ? "pressed" : "released")} on right page");
+
+			if (mouseButton.Pressed)
 			{
 				this.draggingPage = this.GetRightPage();
-				this._pages.Remove(this.draggingPage);
-				this.OnAnimationFinished();
+				this.draggingFromIndex = _currentPage;
+				PageDragged();
 			}
 
-			if(!mouseButton.Pressed)
+			if (!mouseButton.Pressed && draggingPage != null)
 			{
 				this.PageReleased();
-				this.OnAnimationFinished();
 			}
-
-			GD.Print($"Mouse {(mouseButton.Pressed ? "pressed" : "released")} on right page");
 		}
 	}
 

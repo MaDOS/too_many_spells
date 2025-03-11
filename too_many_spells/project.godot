@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GameMaster="*res://staticData/GameMaster.cs"
 Spells="*res://staticData/Spells.cs"
+Player="*res://staticData/Player.cs"
 
 [dotnet]
 
