@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpvi8tds8qpem"]
+
+[ext_resource type="Script" uid="uid://dxfvskgpy33m2" path="res://scenes/GameTable/GameTable.cs" id="1_nec0s"]
+[ext_resource type="PackedScene" uid="uid://kf64j7pluy7o" path="res://components/book/book.tscn" id="2_wgycp"]
+[ext_resource type="Script" uid="uid://btnehme7vm2dt" path="res://components/book/GameBook.cs" id="3_4dcwo"]
+[ext_resource type="PackedScene" uid="uid://gd2rbdkmobyp" path="res://components/dialogbox/dialogbox.tscn" id="4_bqdcq"]
+
+[node name="GameTable" type="Node2D"]
+script = ExtResource("1_nec0s")
+
+[node name="Book" parent="." instance=ExtResource("2_wgycp")]
+position = Vector2(862, 409)
+scale = Vector2(7.5625, 6.28125)
+script = ExtResource("3_4dcwo")
+
+[node name="Dialogbox" parent="." instance=ExtResource("4_bqdcq")]

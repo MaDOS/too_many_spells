@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://gd2rbdkmobyp"]
+
+[ext_resource type="Script" uid="uid://bs264d343476j" path="res://components/dialogbox/Dialogbox.cs" id="1_005st"]
+
+[node name="Dialogbox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_005st")
+
+[node name="lblDialogText" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.035
+anchor_bottom = 0.035
+offset_left = 115.0
+offset_top = 452.0
+offset_right = 959.68
+offset_bottom = 600.32
+text = "Dialog Text"
+autowrap_mode = 2
+
+[node name="lblSpeekerName" type="Label" parent="."]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 379.0
+offset_right = 355.0
+offset_bottom = 434.0
+theme_override_font_sizes/font_size = 34
+text = "Speaker Name"

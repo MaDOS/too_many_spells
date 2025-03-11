@@ -47,10 +47,7 @@ public partial class Book : AnimatedSprite2D
 		}
 		else
 		{
-			for (int i = 1; ResourceLoader.Exists($"res://components/book/pages/page{i}.png"); i += 1)
-			{
-				_pages.Add(new Page($"res://components/book/pages/page{i}.png"));
-			}
+			Spells.Instance.AllSpells.ForEach(spell => _pages.Add(new Page(spell.Artwork)));
 
 			this.SavePages();
 		}

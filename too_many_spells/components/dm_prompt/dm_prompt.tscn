@@ -12,6 +12,7 @@ offset_bottom = 442.0
 texture = ExtResource("1_hcaff")
 
 [node name="Prompt" type="Label" parent="Background"]
+layout_mode = 0
 offset_left = 26.0
 offset_top = 51.0
 offset_right = 554.0

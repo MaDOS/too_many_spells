@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="too_many_spells"
-run/main_scene="uid://bj3wdy2t5m88c"
+run/main_scene="uid://cpvi8tds8qpem"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameMaster="*res://staticData/GameMaster.cs"
+Spells="*res://staticData/Spells.cs"
 
 [dotnet]
 
@@ -29,5 +34,10 @@ next_page={
 previous_page={
 "deadzone": 0.2,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":81,"key_label":0,"unicode":113,"location":0,"echo":false,"script":null)
+]
+}
+advance_talking_points={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
 ]
 }

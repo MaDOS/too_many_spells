@@ -1,0 +1,29 @@
+[
+	{
+		"ScenarioName": "Scenario 1",
+		"TalkingPoints": [
+			"A band of tattered bandits made the mistake of jumping out of the bushes to ambush you. Never would they have thought to meet such formidable adventurers in a group travelling by foot.", 
+			"...or that such a powerful group would not waste a moment of talk but attack at once...",
+			"In a powerful surge Fighter Y already took down two of the bandits, blood everywhere, whimpers and moans but not a bead of sweat on their forehead.",
+			"One of the bandits overextended and, seeing their comrades fall, thinks it a good idea to at least do some damage. Seeing you in your pretty but insubstantial robes the bandits comes for you.",
+			"What do you do?"
+		],
+		"SpellTags": [
+			"fire",
+			"water"
+		]
+	},
+	{
+		"ScenarioName": "Scenario 2",
+		"TalkingPoints": [
+			"You thought that wall looked odd, the moss had a strange colour and bounced back to your touch in a weird but intriguing manner.", 
+			"When bushels of it started to fall off the wall, followed by chunks of earth and something green started showing you thought there was nothing here that could hurt a wizard as powerful as you.",
+			"You thought wrong! One hand in a grip of oozing green slime burning like hell no amount of pulling is able to get yourself free but you still got the other!",
+			"What do you do?"
+		],
+		"SpellTags": [
+			"fire",
+			"water"
+		]
+	}
+]

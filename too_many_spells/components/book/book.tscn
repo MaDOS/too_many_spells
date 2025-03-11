@@ -811,7 +811,7 @@ offset_top = -16.0
 offset_right = -2.0
 offset_bottom = 21.0
 rotation = 0.00133836
-expand_mode = 1
+expand_mode = 4
 
 [node name="PageRight" type="TextureRect" parent="."]
 offset_left = 2.0
