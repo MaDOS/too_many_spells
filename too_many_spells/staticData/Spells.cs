@@ -29,7 +29,7 @@ public partial class Spells : Node
                 string json = file.GetAsText();
                 AllSpells = JsonSerializer.Deserialize<List<Spell>>(json)!;                
 
-                GD.Print($"Loaded Game Master prompts ({AllSpells.Count})");
+                GD.Print($"Loaded Spells ({AllSpells.Count})");
             }
         }
         else

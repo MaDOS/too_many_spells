@@ -10,13 +10,46 @@ public partial class GameBook : Book
     private string? draggingSpell = null;
     private bool castOnMouseUp = false;
 
+    private PackedScene _spellTrailScene = GD.Load<PackedScene>("res://components/spelltrail/SpellTrail.tscn");
+    private Node2D _spellTrail = null!;
+
+    public override void _Ready()
+    {
+        base._Ready();
+    }
+
+    public override void _PhysicsProcess(double delta)
+    {
+        base._PhysicsProcess(delta);
+
+        if(this.draggingSpell is not null)
+        {
+            _spellTrail.GlobalPosition = GetGlobalMousePosition();
+        }
+    }
+
+    public void ActiveSpellTrail()
+    {
+        _spellTrail = _spellTrailScene.Instantiate<Node2D>();
+        AddChild(_spellTrail);
+    }
+
+    public void DeactivateSpellTrail()
+    {
+        _spellTrail.QueueFree();
+        RemoveChild(_spellTrail);
+    }
+
     public override void _on_gui_input_leftPage(InputEvent @event)
     {
+        base._on_gui_input_leftPage(@event);
+
         if (@event is InputEventMouseButton mouseButton && mouseButton.ButtonIndex == MouseButton.Left)
 		{
 			if(mouseButton.Pressed && AllowedToCast)
 			{
 				this.draggingSpell = this.GetLeftPage().SpellName;
+                this.ActiveSpellTrail();
 			}
             else
             {
@@ -29,17 +62,22 @@ public partial class GameBook : Book
                 {
                     this.draggingSpell = null;
                 }
+
+                this.DeactivateSpellTrail();
             }
         }
     }
 
     public override void _on_gui_input_rightPage(InputEvent @event)
     {
+        base._on_gui_input_rightPage(@event);
+
         if (@event is InputEventMouseButton mouseButton && mouseButton.ButtonIndex == MouseButton.Left)
 		{
 			if(mouseButton.Pressed && AllowedToCast)
 			{
                 this.draggingSpell = this.GetRightPage().SpellName;
+                this.ActiveSpellTrail();
             }
             else
             {
@@ -52,6 +90,8 @@ public partial class GameBook : Book
                 {
                     this.draggingSpell = null;
                 }
+
+                this.DeactivateSpellTrail();
             }
         }
     }
