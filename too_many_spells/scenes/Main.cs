@@ -15,14 +15,23 @@ public partial class Main : Node2D
     private PackedScene _gameTableScene = GD.Load<PackedScene>("res://scenes/GameTable/game_table.tscn");
     private PackedScene _workTableScene = GD.Load<PackedScene>("res://scenes/WorkTable/work_table.tscn");
     private PackedScene _menuScene = GD.Load<PackedScene>("res://scenes/Menu/menu.tscn");
+    private PackedScene _pauseMenuScene = GD.Load<PackedScene>("res://scenes/PauseMenu/pause_menu.tscn");
 
-    private Node2D? activeGameScene = null!;
+    private Node2D? activeGameScene = null;
+
+    private Node2D _pauseMenuSceneNode = null!;
 
     public override void _Ready()
     {
+        _pauseMenuSceneNode = _pauseMenuScene.Instantiate<Node2D>();
+
         this.SetGameState(GameState.Menu);
 
-        GameStateManager.Instance.GamePaused += GamePaused;
+        GameStateManager.Instance.GamePauseToggled += GamePauseToggled;
+    }
+
+    public void GamePauseToggled(bool paused)
+    {
 
     }
 
@@ -38,8 +47,6 @@ public partial class Main : Node2D
 
         switch (gameState)
         {
-            case GameState.Paused:
-                break;
             case GameState.Menu:
                 this.ActivateMenuScene();
                 break;

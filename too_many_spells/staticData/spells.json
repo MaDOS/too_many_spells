@@ -4,6 +4,7 @@
 		"Artwork": "res://components/book/pages/page1.png",
 		"IsTrash": false,
 		"SpellTags": [
+			"fireball",
 			"destructive",
 			"fire"
 		]
