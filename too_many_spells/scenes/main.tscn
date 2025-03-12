@@ -4,3 +4,13 @@
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_o5qli")
+
+[node name="FmodBankLoader" type="FmodBankLoader" parent="."]
+bank_paths = ["res://assets/sound/Master.strings.bank", "res://assets/sound/Master.bank", "res://assets/sound/Music.bank"]
+
+[node name="FmodEventEmitter2D" type="FmodEventEmitter2D" parent="."]
+event_name = "event:/Music/Music Desk"
+event_guid = "{386d1bf2-c35a-46c6-892b-57ce8929183a}"
+autoplay = true
+
+[node name="FmodListener2D" type="FmodListener2D" parent="."]
