@@ -51,7 +51,7 @@ public partial class Main : Node2D
         AddChild(activeGameScene);
         this.CurrentGameState = gameState;
 
-        GD.Print("SetGameState done");
+        GD.Print("SetGameState done"); //oiajdaiwjdoawjdi
     }
 
     private void ActivateMenuScene()
