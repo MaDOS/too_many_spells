@@ -21,13 +21,16 @@ public partial class Main : Node2D
     public override void _Ready()
     {
         this.SetGameState(GameState.Menu);
+
+        GameStateManager.Instance.GamePaused += GamePaused;
+
     }
 
     public void SetGameState(GameState gameState)
     {
         GD.Print($"SetGameState({gameState})");
 
-        if(this.CurrentGameState != gameState)
+        if(activeGameScene is not null && this.CurrentGameState != gameState)
         {
             RemoveChild(activeGameScene);
             activeGameScene = null;
@@ -51,7 +54,7 @@ public partial class Main : Node2D
         AddChild(activeGameScene);
         this.CurrentGameState = gameState;
 
-        GD.Print("SetGameState done"); //oiajdaiwjdoawjdi
+        GD.Print("SetGameState done");
     }
 
     private void ActivateMenuScene()

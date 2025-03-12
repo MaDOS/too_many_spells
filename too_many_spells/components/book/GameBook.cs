@@ -20,6 +20,8 @@ public partial class GameBook : Book
         base._Ready();
 
 		Player.Instance.LevelUp += OnPlayerLevelUp;
+
+        var GameTableNode = GetNode("GameTable");
     }
 
     public override void _PhysicsProcess(double delta)
