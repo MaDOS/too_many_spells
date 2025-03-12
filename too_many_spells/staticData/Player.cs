@@ -42,8 +42,8 @@ public partial class Player : Node
         else
         {
             GD.Print("Leveldefs file does not exist");
-        }        
-        
+        }
+
         if (FileAccess.FileExists(SAVEFILE))
         {
             using (FileAccess file = FileAccess.Open(SAVEFILE, FileAccess.ModeFlags.Read))
@@ -68,7 +68,7 @@ public partial class Player : Node
             string json = JsonSerializer.Serialize(Data);
             file.StoreString(json);
         }
-    }    
+    }
 
     public void AddExperience(int experience)
     {
@@ -81,19 +81,21 @@ public partial class Player : Node
         List<LevelDefintion> levelsToLevelUp = new();
         List<LevelDefintion> levelsAbovePlayerLevel = LevelDefintions.Where(levelDef => levelDef.Level > this.Level).ToList();
 
-        while(totalLevelUpExp > levelsAbovePlayerLevel.First().Experience)
-        {
-            var nextLevelUp = levelsAbovePlayerLevel.First();
+        LevelDefintion? nextLevelUp;
 
+        while ((nextLevelUp = levelsAbovePlayerLevel.FirstOrDefault()) is not null && totalLevelUpExp >= nextLevelUp.Experience)
+        {
             levelsToLevelUp.Add(nextLevelUp);
             levelsAbovePlayerLevel.Remove(nextLevelUp);
 
             totalLevelUpExp -= nextLevelUp.Experience;
         }
 
+        GD.Print($"Levelups count: {levelsToLevelUp.Count}");
+
         this.Data.Experience = totalLevelUpExp;
-        
-        foreach(var levelToLevelUp in levelsToLevelUp)
+
+        foreach (var levelToLevelUp in levelsToLevelUp)
         {
             this.Data.Level++;
             EmitSignal(nameof(LevelUp), this.Data.Level);

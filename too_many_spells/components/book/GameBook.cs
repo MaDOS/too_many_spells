@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using Godot;
 
 public partial class GameBook : Book
@@ -16,6 +18,8 @@ public partial class GameBook : Book
     public override void _Ready()
     {
         base._Ready();
+
+		Player.Instance.LevelUp += OnPlayerLevelUp;
     }
 
     public override void _PhysicsProcess(double delta)
@@ -26,7 +30,27 @@ public partial class GameBook : Book
         {
             _spellTrail.GlobalPosition = GetGlobalMousePosition();
         }
-    }
+    }    
+
+	private void OnPlayerLevelUp(int level)
+	{
+		GD.Print("OnPlayerLevelUp");
+
+		var levelDef = Player.Instance.LevelDefintions
+			.FirstOrDefault(lvlDef => lvlDef.Level == level);
+
+		foreach (var spellname in levelDef?.AddedSpells ?? new List<string>())
+		{
+			GD.Print($"Adding spell {spellname}");
+
+			Spells.Spell spell = Spells.Instance.GetSpell(spellname)!;
+
+			_pages.Insert(GD.RandRange(0, _pages.Count - 1), new Page(spell.Name, spell.Artwork));
+		}
+
+		this.CleanBook();
+		this.SavePages();
+	}
 
     public void ActiveSpellTrail()
     {

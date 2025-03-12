@@ -13,19 +13,19 @@
     },
     {
         "Level": 2,
-        "Experience": 20,
+        "Experience": 25,
         "AddedSpells": [
             "Magic Missile",
             "Summon Familiar",
-            "Time Stop",
-            "Doodle",
             "Homework"
         ]
     },
     {
         "Level": 3,
-        "Experience": 50,
+        "Experience": 25,
         "AddedSpells": [
+            "Time Stop",
+            "Doodle"
         ]
     }
 ]
