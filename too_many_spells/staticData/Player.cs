@@ -76,26 +76,27 @@ public partial class Player : Node
         GD.Print($"Current experience: {Experience}");
         GD.Print($"Adding {experience} experience to player");
 
-        Data.Experience += experience;
+        var totalLevelUpExp = this.Experience + experience;
 
-        LevelDefintion? levelDefintion = LevelDefintions.FirstOrDefault(lvlDef => lvlDef.Level == Level);
+        List<LevelDefintion> levelsToLevelUp = new();
+        List<LevelDefintion> levelsAbovePlayerLevel = LevelDefintions.Where(levelDef => levelDef.Level > this.Level).ToList();
 
-        if(levelDefintion is null)
+        while(totalLevelUpExp > levelsAbovePlayerLevel.First().Experience)
         {
-            GD.Print("Player is max level");
-            return;
+            var nextLevelUp = levelsAbovePlayerLevel.First();
+
+            levelsToLevelUp.Add(nextLevelUp);
+            levelsAbovePlayerLevel.Remove(nextLevelUp);
+
+            totalLevelUpExp -= nextLevelUp.Experience;
         }
 
-        if (levelDefintion != null && Experience >= levelDefintion.Experience)
+        this.Data.Experience = totalLevelUpExp;
+        
+        foreach(var levelToLevelUp in levelsToLevelUp)
         {
-            Data.Level++;
-            Data.Experience = 0;
-
-            this.SavePlayer();
-
-            GD.Print($"Player leveled up to {Level}");
-
-            EmitSignal(nameof(LevelUp), Level);
+            this.Data.Level++;
+            EmitSignal(nameof(LevelUp), this.Data.Level);
         }
     }
 

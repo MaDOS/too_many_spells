@@ -29,6 +29,8 @@ public partial class Book : AnimatedSprite2D
 
 	private void OnPlayerLevelUp(int level)
 	{
+		GD.Print("OnPlayerLevelUp");
+
 		var levelDef = Player.Instance.LevelDefintions
 			.FirstOrDefault(lvlDef => lvlDef.Level == level);
 

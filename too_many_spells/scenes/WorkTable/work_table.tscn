@@ -1,17 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bj3wdy2t5m88c"]
+[gd_scene load_steps=4 format=3 uid="uid://bj3wdy2t5m88c"]
 
 [ext_resource type="PackedScene" uid="uid://kf64j7pluy7o" path="res://components/book/book.tscn" id="1_7idc7"]
 [ext_resource type="Script" uid="uid://dm0mifipepk1p" path="res://scenes/WorkTable/WorkTable.cs" id="1_m5rin"]
-[ext_resource type="Texture2D" uid="uid://b4r8hlwon5mrh" path="res://assets/Spieltisch/SpieltischBase.png" id="2_d55wh"]
 [ext_resource type="Script" uid="uid://38r0e4ro2sme" path="res://components/book/WorkBook.cs" id="2_vkig8"]
 
 [node name="WorkTable" type="Node2D"]
 script = ExtResource("1_m5rin")
-
-[node name="SpieltischBase" type="Sprite2D" parent="."]
-position = Vector2(577.5, 333)
-scale = Vector2(0.451953, 0.463889)
-texture = ExtResource("2_d55wh")
 
 [node name="Book" parent="." instance=ExtResource("1_7idc7")]
 position = Vector2(574, 291)
