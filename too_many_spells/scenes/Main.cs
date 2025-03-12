@@ -24,6 +24,8 @@ public partial class Main : Node2D
     public override void _Ready()
     {
         _pauseMenuSceneNode = _pauseMenuScene.Instantiate<Node2D>();
+        _pauseMenuSceneNode.Visible = false;
+        AddChild(_pauseMenuSceneNode);
 
         this.SetGameState(GameState.Menu);
 
@@ -32,7 +34,8 @@ public partial class Main : Node2D
 
     public void GamePauseToggled(bool paused)
     {
-
+        _pauseMenuSceneNode.Visible = paused;
+        _pauseMenuSceneNode.SetProcessInput(paused);
     }
 
     public void SetGameState(GameState gameState)
