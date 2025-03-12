@@ -3,6 +3,9 @@ using System;
 
 public partial class WorkTable : Node2D
 {
+    [Signal]
+    public delegate void NextSessionEventHandler();
+
     private WorkBook _workBook = null!;
     private Label _lblSwapsRemaining = null!;
 
@@ -20,8 +23,7 @@ public partial class WorkTable : Node2D
 
     private void _on_BtnNextSession_pressed()
     {
-        GD.Print("Next session");
-        GetTree().ChangeSceneToFile("res://scenes/GameTable/game_table.tscn");
+        EmitSignal(nameof(NextSession));
     }
 
     private void OnPageSwap()

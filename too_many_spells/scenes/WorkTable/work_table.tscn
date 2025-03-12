@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://38r0e4ro2sme" path="res://components/book/WorkBook.cs" id="2_vkig8"]
 
 [node name="WorkTable" type="Node2D"]
+process_mode = 1
 script = ExtResource("1_m5rin")
 
 [node name="Book" parent="." instance=ExtResource("1_7idc7")]

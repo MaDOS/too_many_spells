@@ -2,6 +2,9 @@ using Godot;
 
 public partial class GameTable : Node2D
 {
+    [Signal]
+    public delegate void GoHomeEventHandler();
+
     enum State
     {
         GMPrompt,
@@ -79,7 +82,6 @@ public partial class GameTable : Node2D
 
     public void _on_BtnGoHome_pressed()
     {
-        GD.Print("Go home");
-        GetTree().ChangeSceneToFile("res://scenes/WorkTable/work_table.tscn");
+        EmitSignal(nameof(GoHome));
     }
 }

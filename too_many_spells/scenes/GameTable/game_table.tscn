@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://gd2rbdkmobyp" path="res://components/dialogbox/dialogbox.tscn" id="4_bqdcq"]
 
 [node name="GameTable" type="Node2D"]
+process_mode = 1
 script = ExtResource("1_nec0s")
 
 [node name="Book" parent="." instance=ExtResource("2_wgycp")]
