@@ -1,12 +1,12 @@
-[gd_scene load_steps=20 format=3 uid="uid://ba0tyfw81fodf"]
+[gd_scene load_steps=20 format=3 uid="uid://disenhn2wv3if"]
 
 [ext_resource type="Script" uid="uid://td4jis23odu" path="res://scenes/Menu/ui_main_menu.gd" id="1_5f0d0"]
 [ext_resource type="Texture2D" uid="uid://d1w5bq1nlxfo7" path="res://assets/Temporary/Images/6308_0_funny_wizard_1280x1280.jpg" id="2_b2fbi"]
 [ext_resource type="FontFile" uid="uid://bfkna668oo3mb" path="res://assets/Temporary/Fonts/Finnfont-Regular.ttf" id="3_5gksv"]
 [ext_resource type="FontFile" uid="uid://baj3xxd4vtp7g" path="res://assets/Temporary/Fonts/Believe Heart.otf" id="4_l3ujf"]
-[ext_resource type="Script" uid="uid://ealm8i08k883" path="res://scenes/Menu/settings_panel_container.gd" id="5_kg0e0"]
+[ext_resource type="Script" path="res://Temporary/Scripts/settings_panel_container.gd" id="5_kg0e0"]
 [ext_resource type="PackedScene" uid="uid://dlw4y68fq4syw" path="res://scenes/Audio Manager/audio_manager.tscn" id="6_sgxvc"]
-[ext_resource type="Script" uid="uid://bnh15wb1ry7wn" path="res://scenes/Menu/audioplayer_complete.gd" id="7_my4uc"]
+[ext_resource type="Script" path="res://Temporary/Scripts/audioplayer_complete.gd" id="7_my4uc"]
 [ext_resource type="AudioStream" uid="uid://cf8kytvqksd0h" path="res://assets/Temporary/Audio/WD_Desk1.mp3" id="8_w16s8"]
 [ext_resource type="AudioStream" uid="uid://dg42a8g8cu0nv" path="res://assets/Temporary/Audio/WD_Desk2.mp3" id="9_kmvpm"]
 [ext_resource type="AudioStream" uid="uid://e7dqyp2q0g8" path="res://assets/Temporary/Audio/WD_Fair2.mp3" id="10_mj72h"]
@@ -329,15 +329,12 @@ script = ExtResource("7_my4uc")
 
 [node name="WD_Desk1" type="AudioStreamPlayer2D" parent="UIMainMenu/AudioplayerComplete"]
 stream = ExtResource("8_w16s8")
-bus = &"Music"
 
 [node name="WD_Desk2" type="AudioStreamPlayer2D" parent="UIMainMenu/AudioplayerComplete"]
 stream = ExtResource("9_kmvpm")
-bus = &"Music"
 
 [node name="WD_Fair2" type="AudioStreamPlayer2D" parent="UIMainMenu/AudioplayerComplete"]
 stream = ExtResource("10_mj72h")
-bus = &"Music"
 
 [connection signal="main_menu_options_button_pressed" from="." to="UIMainMenu/AudioplayerComplete" method="_on_top_node_ui_main_menu_main_menu_options_button_pressed"]
 [connection signal="main_menu_start" from="." to="UIMainMenu/AudioplayerComplete" method="_on_top_node_ui_main_menu_main_menu_start"]

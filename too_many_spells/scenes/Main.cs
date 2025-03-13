@@ -15,7 +15,7 @@ public partial class Main : Node2D
 
 	private PackedScene _gameTableScene = GD.Load<PackedScene>("res://scenes/GameTable/game_table.tscn");
 	private PackedScene _workTableScene = GD.Load<PackedScene>("res://scenes/WorkTable/work_table.tscn");
-	private PackedScene _menuScene = GD.Load<PackedScene>("res://scenes/Menu/ui_main_menu.tscn");
+	private PackedScene _menuScene = GD.Load<PackedScene>("res://scenes/Menu/top_node_ui_main_menu.tscn");
 	private PackedScene _pauseMenuScene = GD.Load<PackedScene>("res://scenes/PauseMenu/pause_menu.tscn");
 
 	private Node2D? activeGameScene = null;
@@ -51,9 +51,9 @@ public partial class Main : Node2D
 
 		switch (gameState)
 		{
-			//case GameState.Menu:
-				//this.ActivateMenuScene();
-				//break;
+			case GameState.Menu:
+				this.ActivateMenuScene();
+				break;
 			case GameState.WorkTable:
 				this.ActivateWorkTableScene();
 				break;
@@ -72,9 +72,7 @@ public partial class Main : Node2D
 	{
 		var menuScene = (Node2D)_menuScene.Instantiate();
 
-		menuScene.Connect("main_menu_play_clicked", Callable.From(() => GD.Print("this works")));
-
-		// menuScene.PlayClicked += () => this.SetGameState(GameState.WorkTable);
+		menuScene.Connect("main_menu_play_clicked", Callable.From(() => this.SetGameState(GameState.WorkTable)));
 
 		this.activeGameScene = menuScene;
 	}
