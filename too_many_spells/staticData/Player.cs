@@ -72,6 +72,12 @@ public partial class Player : Node
 
     public void AddExperience(int experience)
     {
+        if(this.Data.PromptsPlayed <= 2)
+        { 
+            GD.Print($"Player still in tutorial. Skipping exp calc. Prompts ({this.Data.PromptsPlayed}/2)");
+            return; 
+        }
+
         GD.Print($"Current level: {Level}");
         GD.Print($"Current experience: {Experience}");
         GD.Print($"Adding {experience} experience to player");
@@ -113,5 +119,6 @@ public partial class Player : Node
     {
         public int Level { get; set; } = 1;
         public int Experience { get; set; } = 0;
+        public int PromptsPlayed { get; set; } = 0;
     }
 }
