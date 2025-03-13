@@ -10,97 +10,124 @@
 			"What do you do?"
 		],
 		"PromptTags": [
-			"fire",
-			"combat"
 		],
 		"Answers": [
 			{
 				"AnswerTexts": [
-					"worst score answer"
+					"While big balls of fire have been the weapon of choice for generations of Wizards it still isn't smart to throw a bomb right in front of your feet.",
+					"The bandit is gone but so is a good chunk of your health, your eyebrows and half of your wand."
 				],
-				"FilterForIncludedSpellTags": [],
+				"FilterForIncludedSpellTags": ["Just Fireball"],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0
 			},
 			{
 				"AnswerTexts": [
-					"bad score answer"
+					"What an incredible demonstration of your water bending skills. You're a true master!",
+					"The bandits are gone but so is your team, and all trees not strong enough to withstand the tsunami you created.",
+					"Betty, Fred and Robin are not amused. The DM sighs."
 				],
-				"FilterForIncludedSpellTags": [],
+				"FilterForIncludedSpellTags": ["Surf"],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
-				"MaxScore": 0.2
+				"MaxScore": 0.0
 			},
 			{
 				"AnswerTexts": [
-					"wtf are you doing healing the bandit?!"
+					"You assume the position and after a moment of ominiously crackling static the bandit rushing you gets zapped!",
+					"It definitely hurt but it didn't kill the bandit, just deterred it from getting close to you again which just made it your teammate's problem."
 				],
-				"FilterForIncludedSpellTags": [
-					"healing"
-				],
-				"FilterForExcludedSpellTags": [
-					"self"
-				],
-				"MinScore": 0.0,
-				"MaxScore": 0.2
-			},
-			{
-				"AnswerTexts": [
-					"you healed yourself but the bandit still hits you"
-				],
-				"FilterForIncludedSpellTags": [
-					"healing",
-					"self"
-				],
+				"FilterForIncludedSpellTags": ["Generate Lightning"],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
-				"MaxScore": 0.2
+				"MaxScore": 0.0
 			},
 			{
 				"AnswerTexts": [
-					"mid"
+					"You look cool facing the bandit, spreading your hand as wave of ice magic overwhelms the bandit, freezing them in place like a statue reaching for you.",
+					"A push is enough and the next hit causes the bandit to explode into a shower of ice and bandit chunks. So cool! And gross!",
+					"You hope Betty saw how cool you were."
 				],
-				"FilterForIncludedSpellTags": [],
+				"FilterForIncludedSpellTags": ["Biting Frost"],
 				"FilterForExcludedSpellTags": [],
-				"MinScore": 0.3,
-				"MaxScore": 0.7
+				"MinScore": 0.0,
+				"MaxScore": 0.0
 			},
 			{
 				"AnswerTexts": [
-					"good score answer"
+					"It's rare that a finger gun jams but not unheard off. You panic for a second but get it working in time and - one, two, three - the bandit goes down.",
+					"The flair of blowing the smoke off the tip of your finger gun is slightly tarnished by the fact that you had to say 'pew-pew-pew' but that always gets a laugh out of Robin."
 				],
-				"FilterForIncludedSpellTags": [],
+				"FilterForIncludedSpellTags": ["Finger Gund"],
 				"FilterForExcludedSpellTags": [],
-				"MinScore": 0.7,
-				"MaxScore": 1
+				"MinScore": 0.0,
+				"MaxScore": 0.0
 			},
 			{
 				"AnswerTexts": [
-					"perfect score the bandit burns to ashes"
+					"Reciting some dubious academic paper how the measle outbreak in that big country does not have any ties to the decrease of vaccination is a bit of an ick but an incantation is an incantation.",
+					"The poor bandit looks convinced for a second before the brain rot takes effect and they go down screaming."
 				],
-				"FilterForIncludedSpellTags": [
-					"fire",
-					"combat"
-				],
+				"FilterForIncludedSpellTags": ["Mindfrick"],
 				"FilterForExcludedSpellTags": [],
-				"MinScore": 1,
-				"MaxScore": 1
+				"MinScore": 0.0,
+				"MaxScore": 0.0
 			},
 			{
 				"AnswerTexts": [
-					"perfect score the bandit burns to ashes from your fireball"
+					"Geneva Conventions aside watching the poor fellow twist and turn on the floor in front of you, blissfully tripping one moment and contorted in pain due to the acid burning his face the next.",
+					"There's a reason they call your specialisation Warcrime but you just blame the game for giving you these tools."
 				],
-				"FilterForIncludedSpellTags": [
-					"fireball",
-					"fire",
-					"combat"
+				"FilterForIncludedSpellTags": ["Acid Splash"],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0
+			},
+			{
+				"AnswerTexts": [
+					"The table gets real quiet when you decide on your spell, all eyes on you.",
+					"You remember why Fred is playing a fighter now and maybe there is still some conscience behind your decisions.",
+					"Betty will remember this."
 				],
-				"FilterForExcludedSpellTags": [
+				"FilterForIncludedSpellTags": ["Rock-a-lanche"],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0
+			},
+			{
+				"AnswerTexts": [
+					"What a lovely spell! Not only the bonus of defensive and offensive usage, it's always nice to do fancy somatics with your spell.",
+					"You describe in great detail what your imaginary, fiery cloak looks like as the flames burn the bandit's hands, making them jump back.",
+					"You even give your teammates a haughty little wink."
 				],
-				"MinScore": 1,
-				"MaxScore": 1
+				"FilterForIncludedSpellTags": ["Cloak of Fire"],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0
+			},
+			{
+				"AnswerTexts": [
+					"A bit over kill after Fred and Robin have done for the majority of the bandit troop already but, unlike for them, there's power in numbers.",
+					"Surface tension gets harder with speed and the water in the Golem's fist makes lovely, worbly water-sounds as it hits the bandit, sending them flying through the bushes with a gentle drizzle of rain."
+				],
+				"FilterForIncludedSpellTags": ["Summon Water Golem"],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0
+			},
+			{
+				"AnswerTexts": [
+					"It's so fancy and the reason why your character wears a headband and a blindfold over one eye sometimes.",
+					"Lightning Blade deals a lot of damage, has great utility, but with the shabby melee stats you have as a wizard the flair really costs with the risk.",
+					"Luckily enough the power gap between high level murder hobo and little bandit work in your favour and there is one less criminal about. In exchange for the smell of ozone and burned flesh."
+				],
+				"FilterForIncludedSpellTags": ["Lightning Blade"],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0
 			}
+			
 		]
 	}
 ]

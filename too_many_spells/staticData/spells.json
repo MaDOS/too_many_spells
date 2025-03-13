@@ -489,5 +489,157 @@
 		"SpellTags": [
 			"Summon Tent"
 		]
+	},
+	{
+		"Name": "Wizard",
+		"Artwork": "res://assets/book/pages/Wizard.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Wizard"
+		]
+	},
+	{
+		"Name": "Todo",
+		"Artwork": "res://assets/book/pages/Todo.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Todo"
+		]
+	},
+	{
+		"Name": "Sudoku",
+		"Artwork": "res://assets/book/pages/Sudoku.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Sudoku"
+		]
+	},
+	{
+		"Name": "Sammelkarten",
+		"Artwork": "res://assets/book/pages/Sammelkarten.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Sammelkarten"
+		]
+	},
+	{
+		"Name": "Rundfunk",
+		"Artwork": "res://assets/book/pages/Rundfunk.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Rundfunk"
+		]
+	},
+	{
+		"Name": "Procoontra",
+		"Artwork": "res://assets/book/pages/Procoontra.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Procoontra"
+		]
+	},
+	{
+		"Name": "Pixilated",
+		"Artwork": "res://assets/book/pages/Pixilated.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Pixilated"
+		]
+	},
+	{
+		"Name": "Pattern",
+		"Artwork": "res://assets/book/pages/Pattern.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Pattern"
+		]
+	},
+	{
+		"Name": "Kassenzettel",
+		"Artwork": "res://assets/book/pages/Kassenzettel.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Kassenzettel"
+		]
+	},
+	{
+		"Name": "Homework",
+		"Artwork": "res://assets/book/pages/Homework.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Homework"
+		]
+	},
+	{
+		"Name": "Getwellsooncard",
+		"Artwork": "res://assets/book/pages/Getwellsooncard.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Getwellsooncard"
+		]
+	},
+	{
+		"Name": "Einkaufsliste",
+		"Artwork": "res://assets/book/pages/Einkaufsliste.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Einkaufsliste"
+		]
+	},
+	{
+		"Name": "Doyoulikeme",
+		"Artwork": "res://assets/book/pages/Doyoulikeme.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Doyoulikeme"
+		]
+	},
+	{
+		"Name": "Doodles",
+		"Artwork": "res://assets/book/pages/Doodles.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Doodles"
+		]
+	},
+	{
+		"Name": "Chickens",
+		"Artwork": "res://assets/book/pages/Chickens.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Chickens"
+		]
+	},
+	{
+		"Name": "CHEESE",
+		"Artwork": "res://assets/book/pages/CHEESE.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"CHEESE"
+		]
+	},
+	{
+		"Name": "Censored",
+		"Artwork": "res://assets/book/pages/Censored.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Censored"
+		]
+	},
+	{
+		"Name": "Bluescreen",
+		"Artwork": "res://assets/book/pages/Bluescreen.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Bluescreen"
+		]
+	},
+	{
+		"Name": "Beemovie",
+		"Artwork": "res://assets/book/pages/Beemovie.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Beemovie"
+		]
 	}
 ]

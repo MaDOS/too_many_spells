@@ -66,8 +66,8 @@ public partial class GameTable : Node2D
     {
         Spells.Spell spell = Spells.Instance.GetSpell(_lastSpellCast)!;
 
-        float score = GameMaster.Instance.ScoreSpell(_gmPrompt, spell);
-        string[] answers = GameMaster.Instance.GetAnswer(_gmPrompt, spell, score);
+        //float score = GameMaster.Instance.ScoreSpell(_gmPrompt, spell);
+        string[] answers = GameMaster.Instance.GetAnswer(_gmPrompt, spell);
 
         GD.Print($"Answers: {string.Join(", ", answers)}");
 
