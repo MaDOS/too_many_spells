@@ -5,14 +5,14 @@
 [node name="Spelltrail" type="Node2D"]
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-amount = 20
+amount = 45
 texture = ExtResource("1_6871m")
 spread = 180.0
 gravity = Vector2(0, 0)
-initial_velocity_max = 30.0
+initial_velocity_max = 600.0
 angular_velocity_min = -720.0
 angular_velocity_max = 720.0
 angle_min = -720.0
 angle_max = 720.0
 scale_amount_min = 0.0
-scale_amount_max = 0.5
+scale_amount_max = 4.0

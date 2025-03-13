@@ -21,8 +21,10 @@ public partial class GameStateManager : Node
         {
             EmitSignal(nameof(GamePauseToggled));
 
-            var tree = GetTree();
-            tree.Paused = true;
+            GD.Print("Game pause toggled. Actually puasing is commented out though because it halts the game.");
+
+            // var tree = GetTree();
+            // tree.Paused = true;
         }
     }
 }

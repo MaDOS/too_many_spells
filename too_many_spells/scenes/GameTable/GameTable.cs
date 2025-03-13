@@ -47,16 +47,16 @@ public partial class GameTable : Node2D
 
         _gmPrompt = GameMaster.Instance.GetRandomPrompt();
 
-        DialoogBoxTalk(_gmPrompt.PromptTexts, "Game Master");
+        DialogBoxTalk(_gmPrompt.PromptTexts, "Game Master");
     }
 
     private void Book_SpellCast(string spellName)
     {
         this._lastSpellCast = spellName;
-        DialoogBoxTalk(new[] { $"You cast {spellName}!" }, "");
+        DialogBoxTalk(new[] { $"You cast {spellName}!" }, "");
     }
 
-    private void DialoogBoxTalk(string[] talkingPoints, string speaker)
+    private void DialogBoxTalk(string[] talkingPoints, string speaker)
     {
         _book.SetProcessInput(false);
         _dialogbox.Talk(talkingPoints, speaker);
@@ -71,7 +71,7 @@ public partial class GameTable : Node2D
 
         GD.Print($"Answers: {string.Join(", ", answers)}");
 
-        DialoogBoxTalk(answers, "Game Master");
+        DialogBoxTalk(answers, "Game Master");
     }
 
     private void OnPlayerLevelUp(int level)
@@ -84,11 +84,11 @@ public partial class GameTable : Node2D
 
         string[] talkingPoints = 
         {
-            "Coungratulations you leveled up!",
+            "Congratulations you leveled up!",
             $"Spell added: {string.Join(" ,", spellsAdded.Select(spell => spell.Name).ToList())}"
         };
 
-        DialoogBoxTalk(talkingPoints, "Game Master");
+        DialogBoxTalk(talkingPoints, "Game Master");
     }
 
     private void HandleAddExperience()

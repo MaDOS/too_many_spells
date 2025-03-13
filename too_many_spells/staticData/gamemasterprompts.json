@@ -2,6 +2,7 @@
 	{
 		"ScenarioName": "Scenario 1",
 		"MaxExperience": 100,
+		"TrashAnswer": "Go drunk you are home",
 		"PromptTexts": [
 			"A band of tattered bandits made the mistake of jumping out of the bushes to ambush you. Never would they have thought to meet such formidable adventurers in a group travelling by foot.",
 			"...or that such a powerful group would not waste a moment of talk but attack at once...",
@@ -9,15 +10,16 @@
 			"One of the bandits overextended and, seeing their comrades fall, thinks it a good idea to at least do some damage. Seeing you in your pretty but insubstantial robes the bandits comes for you.",
 			"What do you do?"
 		],
-		"PromptTags": [
-		],
+		"PromptTags": [],
 		"Answers": [
 			{
 				"AnswerTexts": [
 					"While big balls of fire have been the weapon of choice for generations of Wizards it still isn't smart to throw a bomb right in front of your feet.",
 					"The bandit is gone but so is a good chunk of your health, your eyebrows and half of your wand."
 				],
-				"FilterForIncludedSpellTags": ["Just Fireball"],
+				"FilterForIncludedSpellTags": [
+					"Just Fireball"
+				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0
@@ -28,7 +30,9 @@
 					"The bandits are gone but so is your team, and all trees not strong enough to withstand the tsunami you created.",
 					"Betty, Fred and Robin are not amused. The DM sighs."
 				],
-				"FilterForIncludedSpellTags": ["Surf"],
+				"FilterForIncludedSpellTags": [
+					"Surf"
+				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0
@@ -38,7 +42,9 @@
 					"You assume the position and after a moment of ominiously crackling static the bandit rushing you gets zapped!",
 					"It definitely hurt but it didn't kill the bandit, just deterred it from getting close to you again which just made it your teammate's problem."
 				],
-				"FilterForIncludedSpellTags": ["Generate Lightning"],
+				"FilterForIncludedSpellTags": [
+					"Generate Lightning"
+				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0
@@ -49,7 +55,9 @@
 					"A push is enough and the next hit causes the bandit to explode into a shower of ice and bandit chunks. So cool! And gross!",
 					"You hope Betty saw how cool you were."
 				],
-				"FilterForIncludedSpellTags": ["Biting Frost"],
+				"FilterForIncludedSpellTags": [
+					"Biting Frost"
+				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0
@@ -59,7 +67,9 @@
 					"It's rare that a finger gun jams but not unheard off. You panic for a second but get it working in time and - one, two, three - the bandit goes down.",
 					"The flair of blowing the smoke off the tip of your finger gun is slightly tarnished by the fact that you had to say 'pew-pew-pew' but that always gets a laugh out of Robin."
 				],
-				"FilterForIncludedSpellTags": ["Finger Gund"],
+				"FilterForIncludedSpellTags": [
+					"Finger Gun"
+				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0
@@ -69,7 +79,9 @@
 					"Reciting some dubious academic paper how the measle outbreak in that big country does not have any ties to the decrease of vaccination is a bit of an ick but an incantation is an incantation.",
 					"The poor bandit looks convinced for a second before the brain rot takes effect and they go down screaming."
 				],
-				"FilterForIncludedSpellTags": ["Mindfrick"],
+				"FilterForIncludedSpellTags": [
+					"Mindfrick"
+				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0
@@ -79,7 +91,9 @@
 					"Geneva Conventions aside watching the poor fellow twist and turn on the floor in front of you, blissfully tripping one moment and contorted in pain due to the acid burning his face the next.",
 					"There's a reason they call your specialisation Warcrime but you just blame the game for giving you these tools."
 				],
-				"FilterForIncludedSpellTags": ["Acid Splash"],
+				"FilterForIncludedSpellTags": [
+					"Acid Splash"
+				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0
@@ -90,7 +104,9 @@
 					"You remember why Fred is playing a fighter now and maybe there is still some conscience behind your decisions.",
 					"Betty will remember this."
 				],
-				"FilterForIncludedSpellTags": ["Rock-a-lanche"],
+				"FilterForIncludedSpellTags": [
+					"Rock-a-lanche"
+				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0
@@ -101,7 +117,9 @@
 					"You describe in great detail what your imaginary, fiery cloak looks like as the flames burn the bandit's hands, making them jump back.",
 					"You even give your teammates a haughty little wink."
 				],
-				"FilterForIncludedSpellTags": ["Cloak of Fire"],
+				"FilterForIncludedSpellTags": [
+					"Cloak of Fire"
+				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0
@@ -111,7 +129,9 @@
 					"A bit over kill after Fred and Robin have done for the majority of the bandit troop already but, unlike for them, there's power in numbers.",
 					"Surface tension gets harder with speed and the water in the Golem's fist makes lovely, worbly water-sounds as it hits the bandit, sending them flying through the bushes with a gentle drizzle of rain."
 				],
-				"FilterForIncludedSpellTags": ["Summon Water Golem"],
+				"FilterForIncludedSpellTags": [
+					"Summon Water Golem"
+				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0
@@ -122,12 +142,156 @@
 					"Lightning Blade deals a lot of damage, has great utility, but with the shabby melee stats you have as a wizard the flair really costs with the risk.",
 					"Luckily enough the power gap between high level murder hobo and little bandit work in your favour and there is one less criminal about. In exchange for the smell of ozone and burned flesh."
 				],
-				"FilterForIncludedSpellTags": ["Lightning Blade"],
+				"FilterForIncludedSpellTags": [
+					"Lightning Blade"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0
+			}					
+		]
+	},
+	{
+		"ScenarioName": "Scenario 2",
+		"MaxExperience": 100,
+		"TrashAnswer": "Go drunk you are home",
+		"PromptTexts": [
+			"You thought that wall looked odd, the moss had a strange colour and bounced back to your touch in a weird but intriguing manner.",
+			"When bushels of it started to fall off the wall, followed by chunks of earth and something green started showing you thought there was nothing here that could hurt a wizard as powerful as you.",
+			"You thought wrong! One hand in a grip of oozing green slime burning like hell no amount of pulling is able to get yourself free but you still got the other!",
+			"What do you do?"
+		],
+		"PromptTags": [],
+		"Answers": [
+			{
+				"AnswerTexts": [
+					"There's really no space for the Great Fireball to go anywhere and the DM strongly encourages you to pick a different spell or roll a new character..."
+				],
+				"FilterForIncludedSpellTags": [
+					"Just Fireball"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0
+			},
+			{
+				"AnswerTexts": [
+					"The pressure of the water slowly but surely frees your arm from the gloopy entrapment, clearing away the wall more and more, too, which shows you the oozing mass behind.",
+					"Only then do you remember, aka the DM reminds you, that you are in an enclosed room deep underground and how long you'll probably be able to hold your breath and maybe cast something to breath under water..."
+				],
+				"FilterForIncludedSpellTags": [
+					"Surf"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0
+			},
+			{
+				"AnswerTexts": [
+					"It takes you a moment to assume T-Pose but leaning into the gelatinous grapple you pull it off at an angle!",
+					"The very moment the first zap hits the ooze you can feel the grip loosening and concentrating on more zaps you fall free in a blink!"
+				],
+				"FilterForIncludedSpellTags": [
+					"Generate Lightning"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0
+			},
+			{
+				"AnswerTexts": [
+					"The effect is instantaneous but not to your advantage.",
+					"Not only doesn't the groop loosen but your hand is now deep frozen while getting acid burned which is a very abnormal feeling. One you could have done without, really."
+				],
+				"FilterForIncludedSpellTags": [
+					"Biting Frost"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0
+			},
+			{
+				"AnswerTexts": [
+					"With some strain and force you manage to make a finger gun but as you shoot the first shots you instantly know this isn't working out.",
+					"Two fingers down and your hand is still burning up while you're being sucked in."
+				],
+				"FilterForIncludedSpellTags": [
+					"Finger Gun"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0
+			},
+			{
+				"AnswerTexts": [
+					"Not much of a mind to mess up inside the greenish slime. Not much between your ears either touching weird ooze in a dungeon, says Fred.",
+					"Your hand stays stuck as you make puppy eyes at your teammates to get you out of this mess."
+				],
+				"FilterForIncludedSpellTags": [
+					"Mindfrick"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0
+			},
+			{
+				"AnswerTexts": [
+					"Fight fire with fire, they say. Seems it doesn't work with acid versus acid.",
+					"Feels like you're helping the enemy actually."
+				],
+				"FilterForIncludedSpellTags": [
+					"Acid Splash"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0
+			},
+			{
+				"AnswerTexts": [
+					"Your team doesn't need to say a word. Their looks alone make you reconsider 'potentially' burrying them all and you start leafing through your spells again."
+				],
+				"FilterForIncludedSpellTags": [
+					"Rock-a-lanche"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0
+			},
+			{
+				"AnswerTexts": [
+					"You manage to pull off the flourish with your weak hand and the familiar flames cover you.",
+					"It doesn't look like the slime cares much about the flames but just that little bit of room between your skin and the oozing mass seems to give you a some wiggle room to start pulling to some effect."
+				],
+				"FilterForIncludedSpellTags": [
+					"Cloak of Fire"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0
+			},
+			{
+				"AnswerTexts": [
+					"Now there's your three teammates and a huge water golem, unable to stand upright in the low tunnel, standing there and awkwardly watching you getting sucked in and burned by the greenz slime."
+				],
+				"FilterForIncludedSpellTags": [
+					"Summon Water Golem"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0
+			},
+			{
+				"AnswerTexts": [
+					"Intentional or not but unable to dodge the slime takes the full damage of your Lightning Blade!",
+					"Slowly hardening from the electric power and crumbling away faster than it can suck you back in you free your hand!"
+				],
+				"FilterForIncludedSpellTags": [
+					"Lightning Blade"
+				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0
 			}
-			
 		]
 	}
 ]

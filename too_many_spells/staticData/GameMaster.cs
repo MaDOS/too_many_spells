@@ -50,7 +50,12 @@ public partial class GameMaster : Node
     public string[] GetAnswer(GameMasterPrompt prompt, Spells.Spell spell)
     {
         Player.Instance.Data.PromptsPlayed++;
-        
+
+        if (spell.IsTrash)
+        {
+            return new[] { prompt.TrashAnswer };
+        }
+
         GD.Print($"Player played {Player.Instance.Data.PromptsPlayed} prompts now.");
         GD.Print($"Spell tags: {string.Join(", ", spell.SpellTags)}");
         GD.Print($"Prompt tags: {string.Join(", ", prompt.PromptTags)}");
@@ -71,6 +76,8 @@ public partial class GameMaster : Node
         public int MaxExperience { get; set; }
         public string[] PromptTexts { get; set; } = Array.Empty<string>();
         public string[] PromptTags { get; set; } = Array.Empty<string>();
+
+        public string TrashAnswer { get; set; } = string.Empty;
 
         public List<Answer> Answers { get; set; } = new List<Answer>();
 
