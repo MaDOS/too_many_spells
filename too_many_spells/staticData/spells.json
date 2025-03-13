@@ -1,5 +1,12 @@
 [
 	{
+		"Name": "Blank",
+		"Artwork": "res://assets/book/pages/blankspell.png",
+		"IsTrash": false,
+		"SpellTags": [
+		]
+	},
+	{
 		"Name": "Fireball",
 		"Artwork": "res://assets/book/pages/page1.png",
 		"IsTrash": false,
