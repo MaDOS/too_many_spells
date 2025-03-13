@@ -49,6 +49,9 @@ public partial class GameMaster : Node
 
     public string[] GetAnswer(GameMasterPrompt prompt, Spells.Spell spell, float score)
     {
+        Player.Instance.Data.PromptsPlayed++;
+        
+        GD.Print($"Player played {Player.Instance.Data.PromptsPlayed} prompts now.");
         GD.Print($"Spell tags: {string.Join(", ", spell.SpellTags)}");
         GD.Print($"Prompt tags: {string.Join(", ", prompt.PromptTags)}");
         GD.Print($"Score: {score}");

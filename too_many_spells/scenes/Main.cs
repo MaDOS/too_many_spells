@@ -4,7 +4,6 @@ public partial class Main : Node2D
 {
 	public enum GameState
 	{
-		Paused,
 		Menu,
 		WorkTable,
 		GameTable
@@ -15,19 +14,34 @@ public partial class Main : Node2D
 	private PackedScene _gameTableScene = GD.Load<PackedScene>("res://scenes/GameTable/game_table.tscn");
 	private PackedScene _workTableScene = GD.Load<PackedScene>("res://scenes/WorkTable/work_table.tscn");
 	private PackedScene _menuScene = GD.Load<PackedScene>("res://scenes/Menu/ui_main_menu.tscn");
+	private PackedScene _pauseMenuScene = GD.Load<PackedScene>("res://scenes/PauseMenu/pause_menu.tscn");
 
-	private Node2D? activeGameScene = null!;
+	private Node2D? activeGameScene = null;
+
+	private Node2D _pauseMenuSceneNode = null!;
 
 	public override void _Ready()
 	{
+		_pauseMenuSceneNode = _pauseMenuScene.Instantiate<Node2D>();
+		_pauseMenuSceneNode.Visible = false;
+		AddChild(_pauseMenuSceneNode);
+
 		this.SetGameState(GameState.Menu);
+
+		GameStateManager.Instance.GamePauseToggled += GamePauseToggled;
+	}
+
+	public void GamePauseToggled(bool paused)
+	{
+		_pauseMenuSceneNode.Visible = paused;
+		_pauseMenuSceneNode.SetProcessInput(paused);
 	}
 
 	public void SetGameState(GameState gameState)
 	{
 		GD.Print($"SetGameState({gameState})");
 
-		if(this.CurrentGameState != gameState)
+		if(activeGameScene is not null && this.CurrentGameState != gameState)
 		{
 			RemoveChild(activeGameScene);
 			activeGameScene = null;
@@ -35,8 +49,6 @@ public partial class Main : Node2D
 
 		switch (gameState)
 		{
-			case GameState.Paused:
-				break;
 			case GameState.Menu:
 				this.ActivateMenuScene();
 				break;

@@ -86,6 +86,20 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 1,
 				"MaxScore": 1
+			},
+			{
+				"AnswerTexts": [
+					"perfect score the bandit burns to ashes from your fireball"
+				],
+				"FilterForIncludedSpellTags": [
+					"fireball",
+					"fire",
+					"combat"
+				],
+				"FilterForExcludedSpellTags": [
+				],
+				"MinScore": 1,
+				"MaxScore": 1
 			}
 		]
 	}

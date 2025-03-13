@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bwknsfnid5hnc"]
+
+[node name="PauseMenu" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 497.0
+offset_top = 294.0
+offset_right = 658.0
+offset_bottom = 317.0
+text = "Dummy pause menu. Replace."
