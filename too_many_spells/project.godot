@@ -21,6 +21,11 @@ GameMaster="*res://staticData/GameMaster.cs"
 Spells="*res://staticData/Spells.cs"
 Player="*res://staticData/Player.cs"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
 [dotnet]
 
 project/assembly_name="too_many_spells"
