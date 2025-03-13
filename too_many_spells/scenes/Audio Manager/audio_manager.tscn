@@ -1,0 +1,115 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlw4y68fq4syw"]
+
+[ext_resource type="Script" uid="uid://c5sh0sv5xwhfs" path="res://Temporary/Scripts/audio_manager.gd" id="1_8rbl1"]
+[ext_resource type="FontFile" uid="uid://baj3xxd4vtp7g" path="res://assets/Temporary/Fonts/Believe Heart.otf" id="2_tq6fd"]
+[ext_resource type="FontFile" uid="uid://bfkna668oo3mb" path="res://assets/Temporary/Fonts/Finnfont-Regular.ttf" id="3_exfwh"]
+
+[node name="AudioManager" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8rbl1")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AudioWindow" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+
+[node name="Return" type="Button" parent="AudioWindow"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -168.0
+offset_bottom = 109.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("2_tq6fd")
+theme_override_font_sizes/font_size = 75
+text = "Return"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AudioWindow"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -441.5
+offset_top = -167.0
+offset_right = 441.5
+offset_bottom = 167.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 17
+
+[node name="MasterVolumeLabel" type="Label" parent="AudioWindow/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_exfwh")
+theme_override_font_sizes/font_size = 75
+text = "Master"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MasterVolumeSlider" type="HSlider" parent="AudioWindow/VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.0
+value = 1.0
+
+[node name="MusicVolumeLabel" type="Label" parent="AudioWindow/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_exfwh")
+theme_override_font_sizes/font_size = 75
+text = "Music"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicVolumeSlider" type="HSlider" parent="AudioWindow/VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.0
+value = 1.0
+
+[node name="SFXVolumeLabel" type="Label" parent="AudioWindow/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_exfwh")
+theme_override_font_sizes/font_size = 75
+text = "SFX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SFXVolumeSlider" type="HSlider" parent="AudioWindow/VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.0
+value = 1.0
+
+[connection signal="pressed" from="AudioWindow/Return" to="." method="_on_return_pressed"]
+[connection signal="value_changed" from="AudioWindow/VBoxContainer/MasterVolumeSlider" to="." method="_on_master_volume_slider_value_changed"]
+[connection signal="value_changed" from="AudioWindow/VBoxContainer/MusicVolumeSlider" to="." method="_on_music_volume_slider_value_changed"]
+[connection signal="value_changed" from="AudioWindow/VBoxContainer/SFXVolumeSlider" to="." method="_on_sfx_volume_slider_value_changed"]
