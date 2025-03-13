@@ -1,3 +1,5 @@
+using System;
+using System.Reflection;
 using Godot;
 
 public partial class Main : Node2D
@@ -66,14 +68,16 @@ public partial class Main : Node2D
 		GD.Print("SetGameState done");
 	}
 
-	//private void ActivateMenuScene()
-	//{
-		//var menuScene = _menuScene.Instantiate<UI_Main_Menu>();
-//
-		//menuScene.PlayClicked += () => this.SetGameState(GameState.WorkTable);
-//
-		//this.activeGameScene = menuScene;
-	//}
+	private void ActivateMenuScene()
+	{
+		var menuScene = (Node2D)_menuScene.Instantiate();
+
+		menuScene.Connect("main_menu_play_clicked", Callable.From(() => GD.Print("this works")));
+
+		// menuScene.PlayClicked += () => this.SetGameState(GameState.WorkTable);
+
+		this.activeGameScene = menuScene;
+	}
 
 	private void ActivateGameTableScene()
 	{

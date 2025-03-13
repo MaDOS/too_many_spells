@@ -5,6 +5,7 @@ extends Node2D
 @onready var credits_control: Control = $UIMainMenu/CreditsControl
 
 signal main_menu_start
+signal main_menu_play_clicked
 signal main_menu_options_button_pressed
 
 # Called when the node enters the scene tree for the first time.
@@ -19,7 +20,7 @@ func _process(delta: float) -> void:
 	
 
 func _on_start_game_button_pressed() -> void:
-	pass
+	main_menu_play_clicked.emit()
 
 func _on_options_button_pressed() -> void:
 	settings_panel_container.show()
