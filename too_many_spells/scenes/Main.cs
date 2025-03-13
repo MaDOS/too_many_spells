@@ -4,7 +4,6 @@ public partial class Main : Node2D
 {
     public enum GameState
     {
-        Paused,
         Menu,
         WorkTable,
         GameTable
