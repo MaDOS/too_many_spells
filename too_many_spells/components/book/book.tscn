@@ -448,8 +448,9 @@ animations = [{
 
 [node name="Book" type="AnimatedSprite2D"]
 texture_filter = 1
+position = Vector2(1, 2)
 sprite_frames = SubResource("SpriteFrames_vxube")
-animation = &"close_from_first"
+animation = &"next_from_first"
 autoplay = "closed_front"
 centered = false
 script = ExtResource("2_s0rqt")
@@ -460,10 +461,10 @@ anchor_left = 0.4
 anchor_top = 0.28
 anchor_right = 0.4
 anchor_bottom = 0.28
-offset_left = -2.80884
-offset_top = 2.79999
-offset_right = 604.191
-offset_bottom = 893.8
+offset_left = -24.0
+offset_top = -14.2
+offset_right = 624.0
+offset_bottom = 915.8
 expand_mode = 1
 
 [node name="PageLeft" type="TextureRect" parent="."]
@@ -473,10 +474,10 @@ anchor_left = 0.15
 anchor_top = 0.285
 anchor_right = 0.15
 anchor_bottom = 0.285
-offset_left = -3.80887
-offset_top = 2.59998
-offset_right = 597.191
-offset_bottom = 892.6
+offset_left = -20.0
+offset_top = -19.4
+offset_right = 624.0
+offset_bottom = 912.6
 rotation = 0.00133836
 expand_mode = 4
 

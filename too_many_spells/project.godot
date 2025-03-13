@@ -45,8 +45,8 @@ FmodManager="*res://addons/fmod/FmodManager.gd"
 
 window/size/viewport_width=2560
 window/size/viewport_height=1440
-window/size/window_width_override=1024
-window/size/window_height_override=576
+window/size/window_width_override=1280
+window/size/window_height_override=720
 window/stretch/mode="viewport"
 
 [dotnet]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cpvi8tds8qpem"]
+[gd_scene load_steps=6 format=3 uid="uid://cpvi8tds8qpem"]
 
 [ext_resource type="Script" uid="uid://dxfvskgpy33m2" path="res://scenes/GameTable/GameTable.cs" id="1_nec0s"]
+[ext_resource type="Texture2D" uid="uid://b4r8hlwon5mrh" path="res://assets/Spieltisch/SpieltischBase.png" id="2_4dcwo"]
 [ext_resource type="PackedScene" uid="uid://kf64j7pluy7o" path="res://components/book/book.tscn" id="2_wgycp"]
 [ext_resource type="Script" uid="uid://btnehme7vm2dt" path="res://components/book/GameBook.cs" id="3_4dcwo"]
 [ext_resource type="PackedScene" uid="uid://gd2rbdkmobyp" path="res://components/dialogbox/dialogbox.tscn" id="4_bqdcq"]
@@ -9,8 +10,11 @@
 process_mode = 1
 script = ExtResource("1_nec0s")
 
-[node name="Book" parent="." instance=ExtResource("2_wgycp")]
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("2_4dcwo")
 centered = false
+
+[node name="Book" parent="." instance=ExtResource("2_wgycp")]
 script = ExtResource("3_4dcwo")
 
 [node name="Dialogbox" parent="." instance=ExtResource("4_bqdcq")]
