@@ -27,6 +27,9 @@ public partial class Book : AnimatedSprite2D
 
 	public override void _Input(InputEvent @event)
 	{
+		if (_animationPlaying)
+		{ return; }
+
 		if (@event.IsActionPressed("next_page"))
 		{
 			this.OnNextPage();
@@ -86,7 +89,7 @@ public partial class Book : AnimatedSprite2D
 		GD.Print("Cleaning book");
 
 		//delete all buffer pages
-		for(int i = 0; i < _pages.Count; i++)
+		for (int i = 0; i < _pages.Count; i++)
 		{
 			var page = _pages[i];
 
@@ -107,6 +110,8 @@ public partial class Book : AnimatedSprite2D
 			file.StoreString(json);
 		}
 	}
+
+	bool _animationPlaying = false;
 
 	public void OnAnimationFinished()
 	{
@@ -133,13 +138,21 @@ public partial class Book : AnimatedSprite2D
 			this._leftPage.Texture = this._pages[_currentPage - 1].Texture;
 			this._rightPage.Texture = this._pages[_currentPage].Texture;
 		}
-		
-		this.SetProcessInput(true);
+
+		this._animationPlaying = false;
+	}
+
+	private void PlayAnimation(string animation)
+	{
+		Play(animation);
+		this._animationPlaying = true;
+		GD.Print($"Playing animation: {animation}");
 	}
 
 	private void GotoPage(int page)
 	{
-		this.SetProcessInput(false);
+		GD.Print($"CurrentPage: {_currentPage}");
+		GD.Print($"Page to go to {page}");
 
 		_leftPage.Texture = null;
 		_rightPage.Texture = null;
@@ -150,25 +163,25 @@ public partial class Book : AnimatedSprite2D
 			page = _pages.Count + 1;
 
 		if (_currentPage == -1 && page == 0)
-			Play("open_to_first");
+			PlayAnimation("open_to_first");
 		else if (_currentPage == 0 && page == -1)
-			Play("close_from_first");
+			PlayAnimation("close_from_first");
 		else if (_currentPage == 0 && page == 2)
-			Play("next_from_first");
+			PlayAnimation("next_from_first");
 		else if (_currentPage == 2 && page == 0)
-			Play("previous_to_first");
+			PlayAnimation("previous_to_first");
 		else if (_currentPage == _pages.Count - 2 && page == _pages.Count)
-			Play("next_to_last");
+			PlayAnimation("next_to_last");
 		else if (_currentPage == _pages.Count && page == _pages.Count + 1)
-			Play("close_from_last");
+			PlayAnimation("close_from_last");
 		else if (_currentPage == _pages.Count + 1 && page == _pages.Count)
-			Play("open_to_last");
+			PlayAnimation("open_to_last");
 		else
 		{
 			if (_currentPage < page)
-				Play("next_page");
+				PlayAnimation("next_page");
 			else if (_currentPage > page)
-				Play("previous_page");
+				PlayAnimation("previous_page");
 		}
 
 		_currentPage = page;

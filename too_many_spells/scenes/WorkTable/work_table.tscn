@@ -9,6 +9,7 @@ process_mode = 1
 script = ExtResource("1_m5rin")
 
 [node name="Book" parent="." instance=ExtResource("1_7idc7")]
+animation = &"closed_front"
 centered = false
 script = ExtResource("2_vkig8")
 
