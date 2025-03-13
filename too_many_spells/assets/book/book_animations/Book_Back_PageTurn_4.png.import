@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbsqemr5t61oc"
-path="res://.godot/imported/Animation 18.png-7d7581510990ad1f29640e1653eb4760.ctex"
+uid="uid://bma6mepuk7uf"
+path="res://.godot/imported/Book_Back_PageTurn_4.png-6582b89b1b5e876b14cab0099a84796a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/book/book_animations/Animation 18.png"
-dest_files=["res://.godot/imported/Animation 18.png-7d7581510990ad1f29640e1653eb4760.ctex"]
+source_file="res://assets/book/book_animations/Book_Back_PageTurn_4.png"
+dest_files=["res://.godot/imported/Book_Back_PageTurn_4.png-6582b89b1b5e876b14cab0099a84796a.ctex"]
 
 [params]
 
