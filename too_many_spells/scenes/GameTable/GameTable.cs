@@ -54,7 +54,7 @@ public partial class GameTable : Node2D
         float score = GameMaster.Instance.ScoreSpell(_gmPrompt, spell);
         string[] answers = GameMaster.Instance.GetAnswer(_gmPrompt, spell, score);
 
-        Player.Instance.AddExperience((int)(score * _gmPrompt.MaxExperience));
+        Player.Instance.AddExperience((int)(_gmPrompt.MaxExperience));
 
         GD.Print($"Answers: {string.Join(", ", answers)}");
 
