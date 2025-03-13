@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://de4htvb033nl"
-path="res://.godot/imported/Homework.png-ec270951c30e39a1899b1ead249e55b2.ctex"
+uid="uid://db7kou5mu1xlx"
+path="res://.godot/imported/Biting Frost.png-d4e1a9d067b3737a950314ded343e538.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/book/pages/Homework.png"
-dest_files=["res://.godot/imported/Homework.png-ec270951c30e39a1899b1ead249e55b2.ctex"]
+source_file="res://assets/book/pages/Biting Frost.png"
+dest_files=["res://.godot/imported/Biting Frost.png-d4e1a9d067b3737a950314ded343e538.ctex"]
 
 [params]
 

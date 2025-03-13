@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nj6014inte0c"
-path="res://.godot/imported/Doyoulikeme.png-b87883c60078045c73606e0117b7157a.ctex"
+uid="uid://cn7x147g1y2jk"
+path="res://.godot/imported/Acid Splash.png-b0140faa8a92055af2ee1d3b53098c61.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/book/pages/Doyoulikeme.png"
-dest_files=["res://.godot/imported/Doyoulikeme.png-b87883c60078045c73606e0117b7157a.ctex"]
+source_file="res://assets/book/pages/Acid Splash.png"
+dest_files=["res://.godot/imported/Acid Splash.png-b0140faa8a92055af2ee1d3b53098c61.ctex"]
 
 [params]
 

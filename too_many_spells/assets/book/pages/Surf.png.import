@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnk4gjmt87win"
-path="res://.godot/imported/blankspell.png-fc2ca627268d7108d7dfb921cde68335.ctex"
+uid="uid://wykxdl8j6ybu"
+path="res://.godot/imported/Surf.png-20c77c8d008328c8f8180db2bc863177.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/book/pages/blankspell.png"
-dest_files=["res://.godot/imported/blankspell.png-fc2ca627268d7108d7dfb921cde68335.ctex"]
+source_file="res://assets/book/pages/Surf.png"
+dest_files=["res://.godot/imported/Surf.png-20c77c8d008328c8f8180db2bc863177.ctex"]
 
 [params]
 

@@ -3,28 +3,13 @@
         "Level": 1,
         "Experience": 0,
         "AddedSpells": [
-            "Blank",
-            "Fireball",
-            "Eldritch Blast",
-            "Healing Touch",
-            "Einkaufsliste"
-        ]
-    },
-    {
-        "Level": 2,
-        "Experience": 25,
-        "AddedSpells": [
-            "Magic Missile",
-            "Summon Familiar",
-            "Homework"
-        ]
-    },
-    {
-        "Level": 3,
-        "Experience": 25,
-        "AddedSpells": [
-            "Time Stop",
-            "Doodle"
+            "Generate Lightning",
+            "Surf",
+            "Just Fireball",
+            "Mindfrick",
+            "Finger Gun",
+            "Acid Splash",
+            "Biting Frost"
         ]
     }
 ]

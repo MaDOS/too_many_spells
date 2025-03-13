@@ -268,6 +268,11 @@ public partial class Book : AnimatedSprite2D
 			TextureFile = textureFile;
 
 			Texture = ResourceLoader.Exists(textureFile) ? GD.Load<Texture2D>(textureFile) : null;
+
+			if(!string.IsNullOrEmpty(spellName) && Texture is null)
+			{
+				GD.Print($"[W] Artwork for Spell {spellName} not found!");
+			}
 		}
 	}
 }

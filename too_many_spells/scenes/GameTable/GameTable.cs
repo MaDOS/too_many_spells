@@ -111,6 +111,7 @@ public partial class GameTable : Node2D
         if(promptsThisSession == 0)
         {
             _state = State.SessionEnd;
+            AddvanceState();
         }
         else
         {

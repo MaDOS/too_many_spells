@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwscs2b7s0xfd"
-path="res://.godot/imported/Pixilated.png-fe8677d75d22b7ba3adf55e1dc2d7539.ctex"
+uid="uid://lsdle7vtgrft"
+path="res://.godot/imported/Finger Gun.png-c34bd8e3ee5e5e37ef9f3e025ffc7bc5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/book/pages/Pixilated.png"
-dest_files=["res://.godot/imported/Pixilated.png-fe8677d75d22b7ba3adf55e1dc2d7539.ctex"]
+source_file="res://assets/book/pages/Finger Gun.png"
+dest_files=["res://.godot/imported/Finger Gun.png-c34bd8e3ee5e5e37ef9f3e025ffc7bc5.ctex"]
 
 [params]
 

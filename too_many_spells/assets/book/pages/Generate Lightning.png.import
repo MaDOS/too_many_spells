@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxr1cleh8t2h4"
-path="res://.godot/imported/Einkaufsliste.png-c467d4585e5a4458a4c4832147c12be4.ctex"
+uid="uid://gtlsu4eeskgn"
+path="res://.godot/imported/Generate Lightning.png-cecc9a9cd116a7cd0f6cefd714063017.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/book/pages/Einkaufsliste.png"
-dest_files=["res://.godot/imported/Einkaufsliste.png-c467d4585e5a4458a4c4832147c12be4.ctex"]
+source_file="res://assets/book/pages/Generate Lightning.png"
+dest_files=["res://.godot/imported/Generate Lightning.png-cecc9a9cd116a7cd0f6cefd714063017.ctex"]
 
 [params]
 

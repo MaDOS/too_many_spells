@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bceje26kl2rsb"
-path="res://.godot/imported/CHEESE.png-86b3182531324cc1840a56ceac99c427.ctex"
+uid="uid://cwwqpqkynie3p"
+path="res://.godot/imported/Mindfrick.png-061648aaf29d7f5e785b117c3affc67c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/book/pages/CHEESE.png"
-dest_files=["res://.godot/imported/CHEESE.png-86b3182531324cc1840a56ceac99c427.ctex"]
+source_file="res://assets/book/pages/Mindfrick.png"
+dest_files=["res://.godot/imported/Mindfrick.png-061648aaf29d7f5e785b117c3affc67c.ctex"]
 
 [params]
 
