@@ -133,10 +133,14 @@ public partial class Book : AnimatedSprite2D
 			this._leftPage.Texture = this._pages[_currentPage - 1].Texture;
 			this._rightPage.Texture = this._pages[_currentPage].Texture;
 		}
+		
+		this.SetProcessInput(true);
 	}
 
 	private void GotoPage(int page)
 	{
+		this.SetProcessInput(false);
+
 		_leftPage.Texture = null;
 		_rightPage.Texture = null;
 
