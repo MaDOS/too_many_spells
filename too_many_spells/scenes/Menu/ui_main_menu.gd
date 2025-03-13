@@ -1,8 +1,8 @@
-extends Control
+extends Node2D
 
-@onready var settings_panel_container: PanelContainer = $SettingsPanelContainer
-@onready var audio_settings_manager: Control = $AudioSettingsManager
-@onready var credits_control: Control = $CreditsControl
+@onready var settings_panel_container: PanelContainer = $UIMainMenu/SettingsPanelContainer
+@onready var audio_settings_manager: Control = $UIMainMenu/AudioSettingsManager
+@onready var credits_control: Control = $UIMainMenu/CreditsControl
 
 signal main_menu_start
 signal main_menu_options_button_pressed

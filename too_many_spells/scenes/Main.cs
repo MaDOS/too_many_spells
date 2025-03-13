@@ -49,9 +49,9 @@ public partial class Main : Node2D
 
 		switch (gameState)
 		{
-			case GameState.Menu:
-				this.ActivateMenuScene();
-				break;
+			//case GameState.Menu:
+				//this.ActivateMenuScene();
+				//break;
 			case GameState.WorkTable:
 				this.ActivateWorkTableScene();
 				break;
@@ -66,14 +66,14 @@ public partial class Main : Node2D
 		GD.Print("SetGameState done");
 	}
 
-	private void ActivateMenuScene()
-	{
-		var menuScene = _menuScene.Instantiate<UI_Main_Menu>();
-
-		menuScene.PlayClicked += () => this.SetGameState(GameState.WorkTable);
-
-		this.activeGameScene = menuScene;
-	}
+	//private void ActivateMenuScene()
+	//{
+		//var menuScene = _menuScene.Instantiate<UI_Main_Menu>();
+//
+		//menuScene.PlayClicked += () => this.SetGameState(GameState.WorkTable);
+//
+		//this.activeGameScene = menuScene;
+	//}
 
 	private void ActivateGameTableScene()
 	{

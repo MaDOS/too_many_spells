@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dlw4y68fq4syw"]
 
-[ext_resource type="Script" uid="uid://c5sh0sv5xwhfs" path="res://Temporary/Scripts/audio_manager.gd" id="1_8rbl1"]
+[ext_resource type="Script" uid="uid://c5sh0sv5xwhfs" path="res://scenes/Audio Manager/audio_manager.gd" id="1_8rbl1"]
 [ext_resource type="FontFile" uid="uid://baj3xxd4vtp7g" path="res://assets/Temporary/Fonts/Believe Heart.otf" id="2_tq6fd"]
 [ext_resource type="FontFile" uid="uid://bfkna668oo3mb" path="res://assets/Temporary/Fonts/Finnfont-Regular.ttf" id="3_exfwh"]
 

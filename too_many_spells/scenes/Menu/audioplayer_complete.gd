@@ -15,11 +15,7 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_ui_main_menu_main_menu_start() -> void:
-	wd_desk_1.play()
-	
-
-func _on_ui_main_menu_main_menu_options_button_pressed() -> void:
+func _on_top_node_ui_main_menu_main_menu_options_button_pressed() -> void:
 	wd_desk_1.stop()
 	await get_tree().create_timer(1.0).timeout
 	wd_fair_2.play()
@@ -28,4 +24,8 @@ func _on_ui_main_menu_main_menu_options_button_pressed() -> void:
 func _on_settings_panel_container_settings_closed() -> void:
 	wd_fair_2.stop()
 	await get_tree().create_timer(1.0).timeout
+	wd_desk_1.play()
+
+
+func _on_top_node_ui_main_menu_main_menu_start() -> void:
 	wd_desk_1.play()

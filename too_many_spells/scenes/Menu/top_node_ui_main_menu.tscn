@@ -1,0 +1,351 @@
+[gd_scene load_steps=20 format=3 uid="uid://ba0tyfw81fodf"]
+
+[ext_resource type="Script" uid="uid://td4jis23odu" path="res://scenes/Menu/ui_main_menu.gd" id="1_5f0d0"]
+[ext_resource type="Texture2D" uid="uid://d1w5bq1nlxfo7" path="res://assets/Temporary/Images/6308_0_funny_wizard_1280x1280.jpg" id="2_b2fbi"]
+[ext_resource type="FontFile" uid="uid://bfkna668oo3mb" path="res://assets/Temporary/Fonts/Finnfont-Regular.ttf" id="3_5gksv"]
+[ext_resource type="FontFile" uid="uid://baj3xxd4vtp7g" path="res://assets/Temporary/Fonts/Believe Heart.otf" id="4_l3ujf"]
+[ext_resource type="Script" uid="uid://ealm8i08k883" path="res://scenes/Menu/settings_panel_container.gd" id="5_kg0e0"]
+[ext_resource type="PackedScene" uid="uid://dlw4y68fq4syw" path="res://scenes/Audio Manager/audio_manager.tscn" id="6_sgxvc"]
+[ext_resource type="Script" uid="uid://bnh15wb1ry7wn" path="res://scenes/Menu/audioplayer_complete.gd" id="7_my4uc"]
+[ext_resource type="AudioStream" uid="uid://cf8kytvqksd0h" path="res://assets/Temporary/Audio/WD_Desk1.mp3" id="8_w16s8"]
+[ext_resource type="AudioStream" uid="uid://dg42a8g8cu0nv" path="res://assets/Temporary/Audio/WD_Desk2.mp3" id="9_kmvpm"]
+[ext_resource type="AudioStream" uid="uid://e7dqyp2q0g8" path="res://assets/Temporary/Audio/WD_Fair2.mp3" id="10_mj72h"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mxwpg"]
+texture = ExtResource("2_b2fbi")
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+modulate_color = Color(0.678944, 0.678944, 0.678944, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n84fj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s3gmn"]
+bg_color = Color(0.76662, 0.76662, 0.76662, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.42)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5of4f"]
+bg_color = Color(0.421731, 0.421731, 0.421731, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.42)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2efse"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.42)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jk1c5"]
+bg_color = Color(0.984831, 0.664557, 0.126159, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.442536, 0.354092, 0.0664611, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tdqvf"]
+bg_color = Color(0.88859, 0.372607, 0.236361, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hl6yh"]
+bg_color = Color(0.984314, 0.662745, 0.12549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0gg4p"]
+bg_color = Color(0.814258, 0.529734, 0.134562, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[node name="TopNodeUIMainMenu" type="Node2D"]
+script = ExtResource("1_5f0d0")
+
+[node name="UIMainMenu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="UIMainMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_mxwpg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIMainMenu/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.5
+offset_top = -108.0
+offset_right = 100.5
+offset_bottom = 108.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="StartGameButton" type="Button" parent="UIMainMenu/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_5gksv")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n84fj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s3gmn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5of4f")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2efse")
+text = "Play"
+
+[node name="OptionsButton" type="Button" parent="UIMainMenu/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_5gksv")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n84fj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s3gmn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5of4f")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2efse")
+text = "Settings"
+
+[node name="ExitButton" type="Button" parent="UIMainMenu/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_5gksv")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n84fj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s3gmn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5of4f")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2efse")
+text = "Quit"
+
+[node name="Credits" type="Button" parent="UIMainMenu/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_5gksv")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n84fj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s3gmn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5of4f")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2efse")
+text = "Credits"
+
+[node name="Label" type="Label" parent="UIMainMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -313.5
+offset_top = -289.0
+offset_right = 313.5
+offset_bottom = -191.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.184314, 0.517647, 0.572549, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("3_5gksv")
+theme_override_font_sizes/font_size = 110
+theme_override_styles/normal = SubResource("StyleBoxFlat_jk1c5")
+text = "Wizard's Demize"
+
+[node name="CreditsControl" type="Control" parent="UIMainMenu"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CreditsBackground" type="ColorRect" parent="UIMainMenu/CreditsControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Credits" type="RichTextLabel" parent="UIMainMenu/CreditsControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.332881, 0.332881, 0.332881, 1)
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_offset_x = 0
+theme_override_fonts/normal_font = ExtResource("4_l3ujf")
+theme_override_fonts/bold_font = ExtResource("3_5gksv")
+theme_override_font_sizes/normal_font_size = 60
+theme_override_font_sizes/bold_font_size = 60
+bbcode_enabled = true
+text = "[b]Managing/Writing[/b]: Thomas
+[b]Programming[/b]: Amy, Niko
+[b]2D Art[/b]: Finn, Sunna
+[b]Sound[/b]: Mae
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitCredits" type="Button" parent="UIMainMenu/CreditsControl"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -168.0
+offset_bottom = 109.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_l3ujf")
+theme_override_font_sizes/font_size = 75
+text = "Return"
+
+[node name="SettingsPanelContainer" type="PanelContainer" parent="UIMainMenu"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.5
+offset_top = -123.5
+offset_right = 190.5
+offset_bottom = 123.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_tdqvf")
+script = ExtResource("5_kg0e0")
+
+[node name="SettingsMarginContainer" type="MarginContainer" parent="UIMainMenu/SettingsPanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 85
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 85
+theme_override_constants/margin_bottom = 60
+
+[node name="SettingsVBoxContainer" type="VBoxContainer" parent="UIMainMenu/SettingsPanelContainer/SettingsMarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="SettingsLabel" type="Label" parent="UIMainMenu/SettingsPanelContainer/SettingsMarginContainer/SettingsVBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_hl6yh")
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer" type="Control" parent="UIMainMenu/SettingsPanelContainer/SettingsMarginContainer/SettingsVBoxContainer"]
+layout_mode = 2
+
+[node name="SoundButton" type="Button" parent="UIMainMenu/SettingsPanelContainer/SettingsMarginContainer/SettingsVBoxContainer"]
+layout_mode = 2
+text = "Sound"
+
+[node name="ControlsButton" type="Button" parent="UIMainMenu/SettingsPanelContainer/SettingsMarginContainer/SettingsVBoxContainer"]
+layout_mode = 2
+text = "Controls"
+
+[node name="Control" type="Control" parent="UIMainMenu/SettingsPanelContainer/SettingsMarginContainer/SettingsVBoxContainer"]
+layout_mode = 2
+
+[node name="ExitSettingsButton" type="Button" parent="UIMainMenu/SettingsPanelContainer/SettingsMarginContainer/SettingsVBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 161.0
+offset_top = -206.5
+offset_right = 211.0
+offset_bottom = -149.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.96, 1)
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxFlat_0gg4p")
+text = "X"
+
+[node name="AudioSettingsManager" parent="UIMainMenu" instance=ExtResource("6_sgxvc")]
+visible = false
+layout_mode = 1
+
+[node name="AudioplayerComplete" type="Node2D" parent="UIMainMenu"]
+script = ExtResource("7_my4uc")
+
+[node name="WD_Desk1" type="AudioStreamPlayer2D" parent="UIMainMenu/AudioplayerComplete"]
+stream = ExtResource("8_w16s8")
+bus = &"Music"
+
+[node name="WD_Desk2" type="AudioStreamPlayer2D" parent="UIMainMenu/AudioplayerComplete"]
+stream = ExtResource("9_kmvpm")
+bus = &"Music"
+
+[node name="WD_Fair2" type="AudioStreamPlayer2D" parent="UIMainMenu/AudioplayerComplete"]
+stream = ExtResource("10_mj72h")
+bus = &"Music"
+
+[connection signal="main_menu_options_button_pressed" from="." to="UIMainMenu/AudioplayerComplete" method="_on_top_node_ui_main_menu_main_menu_options_button_pressed"]
+[connection signal="main_menu_start" from="." to="UIMainMenu/AudioplayerComplete" method="_on_top_node_ui_main_menu_main_menu_start"]
+[connection signal="pressed" from="UIMainMenu/Panel/VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="UIMainMenu/Panel/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="UIMainMenu/Panel/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="UIMainMenu/Panel/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="UIMainMenu/CreditsControl/ExitCredits" to="." method="_on_exit_credits_pressed"]
+[connection signal="settings_closed" from="UIMainMenu/SettingsPanelContainer" to="UIMainMenu/AudioplayerComplete" method="_on_settings_panel_container_settings_closed"]
+[connection signal="pressed" from="UIMainMenu/SettingsPanelContainer/SettingsMarginContainer/SettingsVBoxContainer/SoundButton" to="." method="_on_sound_button_pressed"]
+[connection signal="pressed" from="UIMainMenu/SettingsPanelContainer/SettingsMarginContainer/SettingsVBoxContainer/Control/ExitSettingsButton" to="UIMainMenu/SettingsPanelContainer" method="_on_exit_settings_button_pressed"]
