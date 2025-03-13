@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using Godot;
 
 public partial class GameTable : Node2D
@@ -8,8 +10,10 @@ public partial class GameTable : Node2D
     enum State
     {
         GMPrompt,
-        SpellCast,        
-        GMPromptScoring
+        SpellCast,
+        GMPromptScoring,
+        AddExperience,
+        SessionEnd
     }
 
     private State _state = State.GMPrompt;
@@ -20,8 +24,9 @@ public partial class GameTable : Node2D
 
     private GameMaster.GameMasterPrompt _gmPrompt = null!;
     private string _lastSpellCast = string.Empty;
+    private int promptsThisSession = Player.Instance.IsInTutorial ? 1 : GD.RandRange(1,3);
 
-    public override void _Ready() 
+    public override void _Ready()
     {
         _dialogbox = GetNode<Dialogbox>("Dialogbox");
         _book = GetNode<GameBook>("Book");
@@ -29,18 +34,26 @@ public partial class GameTable : Node2D
 
         _btnGoHome.Visible = false;
 
-        _dialogbox.TalkingPointsFinished += Dialogbox_TalkingPointsFinished;
+        _dialogbox.TalkingPointsFinished += AddvanceState;
         _book.SpellCast += Book_SpellCast;
+        Player.Instance.LevelUp += OnPlayerLevelUp;
+
+        this.BeginNewPrompt();
+    }
+
+    private void BeginNewPrompt()
+    {
+        _state = State.GMPrompt;
 
         _gmPrompt = GameMaster.Instance.GetRandomPrompt();
 
-        DialoogBoxTalk(_gmPrompt.PromptTexts, "Game Master");      
+        DialoogBoxTalk(_gmPrompt.PromptTexts, "Game Master");
     }
 
     private void Book_SpellCast(string spellName)
     {
         this._lastSpellCast = spellName;
-        DialoogBoxTalk(new [] {$"You cast {spellName}!"}, "");
+        DialoogBoxTalk(new[] { $"You cast {spellName}!" }, "");
     }
 
     private void DialoogBoxTalk(string[] talkingPoints, string speaker)
@@ -56,16 +69,58 @@ public partial class GameTable : Node2D
         float score = GameMaster.Instance.ScoreSpell(_gmPrompt, spell);
         string[] answers = GameMaster.Instance.GetAnswer(_gmPrompt, spell, score);
 
-        Player.Instance.AddExperience(_gmPrompt.MaxExperience);
-
         GD.Print($"Answers: {string.Join(", ", answers)}");
 
         DialoogBoxTalk(answers, "Game Master");
     }
 
-    private void Dialogbox_TalkingPointsFinished()
+    private void OnPlayerLevelUp(int level)
     {
-        switch(_state)
+        Player.LevelDefintion levelDefintion = Player.Instance.LevelDefintions.Single(lvlDef => lvlDef.Level == level);
+        List<Spells.Spell> spellsAdded = Spells.Instance.AllSpells
+            .Where(spell => levelDefintion.AddedSpells.Contains(spell.Name))
+            .Where(spell => !spell.IsTrash)
+            .ToList();
+
+        string[] talkingPoints = 
+        {
+            "Coungratulations you leveled up!",
+            $"Spell added: {string.Join(" ,", spellsAdded.Select(spell => spell.Name).ToList())}"
+        };
+
+        DialoogBoxTalk(talkingPoints, "Game Master");
+    }
+
+    private void HandleAddExperience()
+    {
+        var level = Player.Instance.Level;
+
+        promptsThisSession--;
+        Player.Instance.AddExperience(_gmPrompt.MaxExperience);
+
+        if(level == Player.Instance.Level) //No level up happened
+        {
+            AddvanceState();
+        }
+    }
+
+    private void HandleSessionContinuation()
+    {
+        GD.Print($"There are {promptsThisSession} prompts in this session left");
+
+        if(promptsThisSession == 0)
+        {
+            _state = State.SessionEnd;
+        }
+        else
+        {
+            BeginNewPrompt();
+        }
+    }
+
+    private void AddvanceState()
+    {
+        switch (_state)
         {
             case State.GMPrompt:
                 _state = State.SpellCast;
@@ -76,7 +131,14 @@ public partial class GameTable : Node2D
                 _state = State.GMPromptScoring;
                 HandleSpellCast();
                 break;
-            case State.GMPromptScoring: //todo scene end
+            case State.GMPromptScoring:
+                _state = State.AddExperience;
+                HandleAddExperience();
+                break;
+            case State.AddExperience:
+                HandleSessionContinuation();
+                break;
+            case State.SessionEnd:
                 _btnGoHome.Visible = true;
                 break;
         }

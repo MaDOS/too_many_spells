@@ -16,6 +16,7 @@ public partial class Player : Node
 
     public int Level => Data.Level;
     public int Experience => Data.Experience;
+    public bool IsInTutorial => Data.PromptsPlayed < 2;
 
     private const string LEVELDEFS = "res://staticData/leveldefs.json";
     private const string SAVEFILE = "user://player.json";
@@ -72,7 +73,7 @@ public partial class Player : Node
 
     public void AddExperience(int experience)
     {
-        if(this.Data.PromptsPlayed <= 2)
+        if(this.IsInTutorial)
         { 
             GD.Print($"Player still in tutorial. Skipping exp calc. Prompts ({this.Data.PromptsPlayed}/2)");
             return; 

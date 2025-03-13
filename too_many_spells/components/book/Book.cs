@@ -151,6 +151,7 @@ public partial class Book : AnimatedSprite2D
 
 	private void GotoPage(int page)
 	{
+		GD.Print($"Pagecount: {_pages.Count}");
 		GD.Print($"CurrentPage: {_currentPage}");
 		GD.Print($"Page to go to {page}");
 
