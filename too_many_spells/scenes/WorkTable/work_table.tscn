@@ -9,15 +9,15 @@ process_mode = 1
 script = ExtResource("1_m5rin")
 
 [node name="Book" parent="." instance=ExtResource("1_7idc7")]
-position = Vector2(574, 291)
-scale = Vector2(11.0547, 8.49219)
+centered = false
 script = ExtResource("2_vkig8")
 
 [node name="BtnNextSession" type="Button" parent="."]
-offset_left = 977.0
-offset_top = 590.0
-offset_right = 1141.0
-offset_bottom = 631.0
+offset_left = 2248.0
+offset_top = 1353.0
+offset_right = 2550.0
+offset_bottom = 1428.0
+theme_override_font_sizes/font_size = 48
 text = "Next session"
 
 [node name="LblSwapsRemaining" type="Label" parent="."]
@@ -25,6 +25,7 @@ offset_left = 32.0
 offset_top = 44.0
 offset_right = 201.0
 offset_bottom = 90.0
+theme_override_font_sizes/font_size = 48
 text = "Swaps remaining: 5"
 
 [connection signal="pressed" from="BtnNextSession" to="." method="_on_BtnNextSession_pressed"]

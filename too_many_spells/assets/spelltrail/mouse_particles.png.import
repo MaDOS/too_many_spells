@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjvsivqelodvj"
-path="res://.godot/imported/Rundfunk.png-c6d97c57874e3112b0b540c72ac92c1c.ctex"
+uid="uid://bnbq7hnkgrlco"
+path="res://.godot/imported/mouse_particles.png-302db1f5463f82c8f758b5af105b5eaf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://components/book/pages/Rundfunk.png"
-dest_files=["res://.godot/imported/Rundfunk.png-c6d97c57874e3112b0b540c72ac92c1c.ctex"]
+source_file="res://assets/spelltrail/mouse_particles.png"
+dest_files=["res://.godot/imported/mouse_particles.png-302db1f5463f82c8f758b5af105b5eaf.ctex"]
 
 [params]
 

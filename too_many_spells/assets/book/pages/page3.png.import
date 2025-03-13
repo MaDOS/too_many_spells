@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4r8hlwon5mrh"
-path="res://.godot/imported/SpieltischBase.png-3ded8e777e19503750ad62a48e761974.ctex"
+uid="uid://rt4rf8162ee5"
+path="res://.godot/imported/page3.png-b2399f359cb9eb1ed0ed196cde20aea8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Spieltisch/SpieltischBase.png"
-dest_files=["res://.godot/imported/SpieltischBase.png-3ded8e777e19503750ad62a48e761974.ctex"]
+source_file="res://assets/book/pages/page3.png"
+dest_files=["res://.godot/imported/page3.png-b2399f359cb9eb1ed0ed196cde20aea8.ctex"]
 
 [params]
 

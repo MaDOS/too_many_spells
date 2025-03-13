@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxr1cleh8t2h4"
-path="res://.godot/imported/Einkaufsliste.png-b121f58c919a36c95bf408ff1f193d81.ctex"
+uid="uid://bhi3eee6h7tn1"
+path="res://.godot/imported/page1.png-c6b325e247a88c2f1fb5833f22162231.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://components/book/pages/Einkaufsliste.png"
-dest_files=["res://.godot/imported/Einkaufsliste.png-b121f58c919a36c95bf408ff1f193d81.ctex"]
+source_file="res://assets/book/pages/page1.png"
+dest_files=["res://.godot/imported/page1.png-c6b325e247a88c2f1fb5833f22162231.ctex"]
 
 [params]
 

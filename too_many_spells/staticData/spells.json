@@ -1,7 +1,7 @@
 [
 	{
 		"Name": "Fireball",
-		"Artwork": "res://components/book/pages/page1.png",
+		"Artwork": "res://assets/book/pages/page1.png",
 		"IsTrash": false,
 		"SpellTags": [
 			"fireball",
@@ -11,7 +11,7 @@
 	},
 	{
 		"Name": "Eldritch Blast",
-		"Artwork": "res://components/book/pages/page2.png",
+		"Artwork": "res://assets/book/pages/page2.png",
 		"IsTrash": false,
 		"SpellTags": [
 			"destructive",
@@ -20,7 +20,7 @@
 	},
 	{
 		"Name": "Healing Touch",
-		"Artwork": "res://components/book/pages/page3.png",
+		"Artwork": "res://assets/book/pages/page3.png",
 		"IsTrash": false,
 		"SpellTags": [
 			"healing",
@@ -29,7 +29,7 @@
 	},
 	{
 		"Name": "Magic Missile",
-		"Artwork": "res://components/book/pages/page4.png",
+		"Artwork": "res://assets/book/pages/page4.png",
 		"IsTrash": false,
 		"SpellTags": [
 			"destructive",
@@ -38,7 +38,7 @@
 	},
 	{
 		"Name": "Summon Familiar",
-		"Artwork": "res://components/book/pages/page5.png",
+		"Artwork": "res://assets/book/pages/page5.png",
 		"IsTrash": false,
 		"SpellTags": [
 			"summoning",
@@ -47,7 +47,7 @@
 	},
 	{
 		"Name": "Teleport",
-		"Artwork": "res://components/book/pages/page6.png",
+		"Artwork": "res://assets/book/pages/page6.png",
 		"IsTrash": false,
 		"SpellTags": [
 			"movement",
@@ -56,7 +56,7 @@
 	},
 	{
 		"Name": "Time Stop",
-		"Artwork": "res://components/book/pages/page7.png",
+		"Artwork": "res://assets/book/pages/page7.png",
 		"IsTrash": false,
 		"SpellTags": [
 			"time",
@@ -65,7 +65,7 @@
 	},
 	{
 		"Name": "Wall of Force",
-		"Artwork": "res://components/book/pages/page8.png",
+		"Artwork": "res://assets/book/pages/page8.png",
 		"IsTrash": false,
 		"SpellTags": [
 			"defensive",
@@ -74,70 +74,70 @@
 	},
 	{
 		"Name": "Cheese",
-		"Artwork": "res://components/book/pages/CHEESE.png",
+		"Artwork": "res://assets/book/pages/CHEESE.png",
 		"IsTrash": true,
 		"SpellTags": [
 		]
 	},
 	{
 		"Name": "Doodle",
-		"Artwork": "res://components/book/pages/Doodles.png",
+		"Artwork": "res://assets/book/pages/Doodles.png",
 		"IsTrash": true,
 		"SpellTags": [
 		]
 	},
 	{
 		"Name": "Doyoulikeme",
-		"Artwork": "res://components/book/pages/Doyoulikeme.png",
+		"Artwork": "res://assets/book/pages/Doyoulikeme.png",
 		"IsTrash": true,
 		"SpellTags": [
 		]
 	},
 	{
 		"Name": "Einkaufsliste",
-		"Artwork": "res://components/book/pages/Einkaufsliste.png",
+		"Artwork": "res://assets/book/pages/Einkaufsliste.png",
 		"IsTrash": true,
 		"SpellTags": [
 		]
 	},
 	{
 		"Name": "Homework",
-		"Artwork": "res://components/book/pages/Homework.png",
+		"Artwork": "res://assets/book/pages/Homework.png",
 		"IsTrash": true,
 		"SpellTags": [
 		]
 	},
 	{
 		"Name": "Pattern",
-		"Artwork": "res://components/book/pages/Pattern.png",
+		"Artwork": "res://assets/book/pages/Pattern.png",
 		"IsTrash": true,
 		"SpellTags": [
 		]
 	},
 	{
 		"Name": "Beemovie",
-		"Artwork": "res://components/book/pages/Beemovie.png",
+		"Artwork": "res://assets/book/pages/Beemovie.png",
 		"IsTrash": true,
 		"SpellTags": [
 		]
 	},
 	{
 		"Name": "Pixilated",
-		"Artwork": "res://components/book/pages/Pixilated.png",
+		"Artwork": "res://assets/book/pages/Pixilated.png",
 		"IsTrash": true,
 		"SpellTags": [
 		]
 	},
 	{
 		"Name": "Rundfunk",
-		"Artwork": "res://components/book/pages/Rundfunk.png",
+		"Artwork": "res://assets/book/pages/Rundfunk.png",
 		"IsTrash": true,
 		"SpellTags": [
 		]
 	},
 	{
 		"Name": "Todo",
-		"Artwork": "res://components/book/pages/Todo.png",
+		"Artwork": "res://assets/book/pages/Todo.png",
 		"IsTrash": true,
 		"SpellTags": [
 		]

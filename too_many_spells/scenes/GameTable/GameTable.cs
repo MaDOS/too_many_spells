@@ -27,6 +27,8 @@ public partial class GameTable : Node2D
         _book = GetNode<GameBook>("Book");
         _btnGoHome = GetNode<Button>("BtnGoHome");
 
+        _btnGoHome.Visible = false;
+
         _dialogbox.TalkingPointsFinished += Dialogbox_TalkingPointsFinished;
         _book.SpellCast += Book_SpellCast;
 

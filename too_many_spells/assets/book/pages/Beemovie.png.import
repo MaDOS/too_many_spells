@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bop3pyvypwdqj"
-path="res://.godot/imported/Todo.png-a7b94e446c2306e5bfbd6dc78fce9e16.ctex"
+uid="uid://3i5exfb3gae2"
+path="res://.godot/imported/Beemovie.png-11d5873211ba0f16b05014ef67c28166.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://components/book/pages/Todo.png"
-dest_files=["res://.godot/imported/Todo.png-a7b94e446c2306e5bfbd6dc78fce9e16.ctex"]
+source_file="res://assets/book/pages/Beemovie.png"
+dest_files=["res://.godot/imported/Beemovie.png-11d5873211ba0f16b05014ef67c28166.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://nj6014inte0c"
-path="res://.godot/imported/Doyoulikeme.png-8392d5c46fc4a968fe62766b287e4bf4.ctex"
+path="res://.godot/imported/Doyoulikeme.png-b87883c60078045c73606e0117b7157a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://components/book/pages/Doyoulikeme.png"
-dest_files=["res://.godot/imported/Doyoulikeme.png-8392d5c46fc4a968fe62766b287e4bf4.ctex"]
+source_file="res://assets/book/pages/Doyoulikeme.png"
+dest_files=["res://.godot/imported/Doyoulikeme.png-b87883c60078045c73606e0117b7157a.ctex"]
 
 [params]
 

@@ -10,18 +10,17 @@ process_mode = 1
 script = ExtResource("1_nec0s")
 
 [node name="Book" parent="." instance=ExtResource("2_wgycp")]
-position = Vector2(862, 409)
-scale = Vector2(7.5625, 6.28125)
+centered = false
 script = ExtResource("3_4dcwo")
 
 [node name="Dialogbox" parent="." instance=ExtResource("4_bqdcq")]
 
 [node name="BtnGoHome" type="Button" parent="."]
-visible = false
-offset_left = 1005.0
-offset_top = 601.0
-offset_right = 1147.0
-offset_bottom = 640.0
+offset_left = 2327.0
+offset_top = 1347.0
+offset_right = 2545.0
+offset_bottom = 1422.0
+theme_override_font_sizes/font_size = 48
 text = "Go home"
 
 [connection signal="pressed" from="BtnGoHome" to="." method="_on_BtnGoHome_pressed"]
