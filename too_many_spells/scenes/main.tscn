@@ -11,6 +11,7 @@ script = ExtResource("1_o5qli")
 [node name="FmodEventEmitter2D" type="FmodEventEmitter2D" parent="."]
 event_name = "event:/Core/Spell Bad"
 event_guid = "{81d26a96-93bc-411e-9fb5-071afeb4c6e7}"
+autoplay = true
 script = ExtResource("2_0wfyh")
 
 [node name="FmodListener2D" type="FmodListener2D" parent="."]

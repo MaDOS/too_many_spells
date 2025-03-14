@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1w5bq1nlxfo7"
-path="res://.godot/imported/6308_0_funny_wizard_1280x1280.jpg-576f515d2b6daa0e4cd7499ba37f3c54.ctex"
+uid="uid://87kebonytkod"
+path="res://.godot/imported/Unbenanntes_Projekt-12.png-80d0e87336670d8058ffa98ee7278348.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Temporary/Images/6308_0_funny_wizard_1280x1280.jpg"
-dest_files=["res://.godot/imported/6308_0_funny_wizard_1280x1280.jpg-576f515d2b6daa0e4cd7499ba37f3c54.ctex"]
+source_file="res://assets/Menu/OptionsAnimation/Unbenanntes_Projekt-12.png"
+dest_files=["res://.godot/imported/Unbenanntes_Projekt-12.png-80d0e87336670d8058ffa98ee7278348.ctex"]
 
 [params]
 
