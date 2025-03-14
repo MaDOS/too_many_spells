@@ -8,6 +8,7 @@ public partial class WorkTable : Node2D
 
     private WorkBook _workBook = null!;
     private Label _lblSwapsRemaining = null!;
+    private Recyclebin _recyclebin = null!;
 
     private int _swapsRemaining = 5;
 
@@ -17,6 +18,10 @@ public partial class WorkTable : Node2D
 
         _workBook = GetNode<WorkBook>("Book");
         _lblSwapsRemaining = GetNode<Label>("LblSwapsRemaining");
+        _recyclebin = GetNode<Recyclebin>("Recyclebin");
+
+        _recyclebin.OnRecyclebinEntered += () => _workBook.DeletePage = true;
+        _recyclebin.OnRecyclebinExited += () => _workBook.DeletePage = false;
 
         _workBook.PageSwap += this.OnPageSwap;
     }
@@ -34,6 +39,7 @@ public partial class WorkTable : Node2D
         {
             this._workBook.DisableSwapping();
         }
+        
         _lblSwapsRemaining.Text = $"Swaps remaining: {_swapsRemaining}";
     }
 }

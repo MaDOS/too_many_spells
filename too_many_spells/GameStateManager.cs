@@ -18,9 +18,9 @@ public partial class GameStateManager : Node
 
     public override void _Ready()
     {
-        base._Ready();
-
         Instance = this;
+        
+        base._Ready();
     }
 
     public override void _Input(InputEvent @event)

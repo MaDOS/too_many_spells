@@ -35,12 +35,12 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+GameStateManager="*res://GameStateManager.cs"
 GameMaster="*res://staticData/GameMaster.cs"
 Spells="*res://staticData/Spells.cs"
-Player="*res://staticData/Player.cs"
-GameStateManager="*res://GameStateManager.cs"
 FmodManager="*res://addons/fmod/FmodManager.gd"
 FmodManagerSingleton="*res://fmod_manager_singleton.gd"
+Player="*res://staticData/Player.cs"
 
 [display]
 
