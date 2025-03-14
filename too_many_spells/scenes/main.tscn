@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cdd1y760obx05"]
+[gd_scene load_steps=6 format=3 uid="uid://cdd1y760obx05"]
 
 [ext_resource type="Script" uid="uid://cpu6i7mvkfbou" path="res://scenes/Main.cs" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://d14tpaenuojmq" path="res://scenes/music.gd" id="2_sugp2"]
+[ext_resource type="Script" uid="uid://dgmq7fplxnjpa" path="res://scenes/fmod_event_emitter_2d_music.gd" id="3_jyhfs"]
 [ext_resource type="Script" uid="uid://jj3b2kvahjal" path="res://scenes/effects.gd" id="3_sugp2"]
+[ext_resource type="Script" uid="uid://ck22bm5aeyjxs" path="res://scenes/fmod_event_emitter_2d_sfx.gd" id="5_tbgi4"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_o5qli")
@@ -21,6 +23,7 @@ script = ExtResource("2_sugp2")
 event_name = "event:/Music/Music Master1"
 event_guid = "{161b05a4-33ab-49e9-80de-b3cdc9e0985d}"
 autoplay = true
+script = ExtResource("3_jyhfs")
 
 [node name="Effects" type="Node2D" parent="Sound"]
 script = ExtResource("3_sugp2")
@@ -28,39 +31,49 @@ script = ExtResource("3_sugp2")
 [node name="CloseBookEmitter" type="FmodEventEmitter2D" parent="Sound/Effects"]
 event_name = "event:/Core/Close Book"
 event_guid = "{38d77663-55c8-4446-8d90-43fe69f974bc}"
+script = ExtResource("5_tbgi4")
 
 [node name="LeafingEmitter" type="FmodEventEmitter2D" parent="Sound/Effects"]
 event_name = "event:/Core/Leafing"
 event_guid = "{6ecbdce1-0b95-41ec-acf7-98632c357af5}"
+script = ExtResource("5_tbgi4")
 
 [node name="OpenBookEmitter" type="FmodEventEmitter2D" parent="Sound/Effects"]
 event_name = "event:/Core/Open Book"
 event_guid = "{6058dec9-a3ba-4196-b3d2-d152e8bcc2a3}"
+script = ExtResource("5_tbgi4")
 
 [node name="SpellBadEmitter" type="FmodEventEmitter2D" parent="Sound/Effects"]
 event_name = "event:/Core/Spell Bad"
 event_guid = "{81d26a96-93bc-411e-9fb5-071afeb4c6e7}"
+script = ExtResource("5_tbgi4")
 
 [node name="SpellNeutralEmitter" type="FmodEventEmitter2D" parent="Sound/Effects"]
 event_name = "event:/Core/Spell Neutral"
 event_guid = "{abf2278f-1e6a-4e65-8ca1-191f580d981f}"
+script = ExtResource("5_tbgi4")
 
 [node name="SpellGoodEmitter" type="FmodEventEmitter2D" parent="Sound/Effects"]
 event_name = "event:/Core/Spell Good"
 event_guid = "{d9617dba-9ca4-4f1a-b8ce-10c89f3c48a0}"
+script = ExtResource("5_tbgi4")
 
 [node name="SpellPerfectEmitter" type="FmodEventEmitter2D" parent="Sound/Effects"]
 event_name = "event:/Core/Spell Perfect"
 event_guid = "{68dea503-2208-4463-9b1a-430dddb5a51b}"
+script = ExtResource("5_tbgi4")
 
 [node name="DragPlopEmitter" type="FmodEventEmitter2D" parent="Sound/Effects"]
 event_name = "event:/Core/Drag Plop"
 event_guid = "{400bc0f4-1193-4d1a-8f88-dbc0793a748f}"
+script = ExtResource("5_tbgi4")
 
 [node name="DropPlopEmitter" type="FmodEventEmitter2D" parent="Sound/Effects"]
 event_name = "event:/Core/Drop Plop"
 event_guid = "{42b82064-e74a-4005-96e5-693a7a61bf67}"
+script = ExtResource("5_tbgi4")
 
 [node name="TrashcanEmitter" type="FmodEventEmitter2D" parent="Sound/Effects"]
 event_name = "event:/Core/Trashcan"
 event_guid = "{ee1841b0-3583-4435-8a46-05c78e73a98a}"
+script = ExtResource("5_tbgi4")

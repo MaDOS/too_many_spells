@@ -43,11 +43,9 @@ func _on_credits_pressed() -> void:
 
 func _on_area_2d_mouse_entered() -> void:
 	mouse_in_tablet = true
-	print("true")
 
 func _on_area_2d_mouse_exited() -> void:
 	mouse_in_tablet = false
-	print ("false")
 
 #Tablet Buttons and Controls
 
@@ -63,4 +61,4 @@ func _on_exit_settings_button_pressed() -> void:
 	sound_control.hide()
 
 func _on_reset_save_button_pressed() -> void:
-	GameStateManager.Instance.Resetsave()
+	GameStateManager.ResetSave()
