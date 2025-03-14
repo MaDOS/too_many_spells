@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://disenhn2wv3if"]
+[gd_scene load_steps=40 format=3 uid="uid://disenhn2wv3if"]
 
 [ext_resource type="Script" uid="uid://td4jis23odu" path="res://scenes/Menu/ui_main_menu.gd" id="1_5f0d0"]
 [ext_resource type="Texture2D" uid="uid://dk2akbfdtpk2m" path="res://assets/Menu/Hauptmenue_.png" id="2_s3gmn"]
@@ -69,6 +69,35 @@ animations = [{
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s3gmn"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n84fj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s3gmn"]
+bg_color = Color(0.76662, 0.76662, 0.76662, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.42)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5of4f"]
+bg_color = Color(0.421731, 0.421731, 0.421731, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.42)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2efse"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.42)
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a5pp5"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_utcp0"]
@@ -124,6 +153,8 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_gg6kq")
 position = Vector2(1280, 720)
 sprite_frames = SubResource("SpriteFrames_fm4mm")
 animation = &"tablet_animated"
+frame = 10
+frame_progress = 1.0
 
 [node name="StartGameButton" type="Button" parent="UIMainMenu/Panel"]
 layout_mode = 2
@@ -136,6 +167,26 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_jk1c5")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_5of4f")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_2efse")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_s3gmn")
+
+[node name="OptionsButton" type="Button" parent="UIMainMenu/Panel"]
+layout_mode = 2
+offset_left = 1758.0
+offset_top = 506.0
+offset_right = 1955.0
+offset_bottom = 763.0
+rotation = -0.588528
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_5gksv")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n84fj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s3gmn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5of4f")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2efse")
+text = "Settings"
 
 [node name="ExitButton" type="Button" parent="UIMainMenu/Panel"]
 layout_mode = 2
@@ -228,7 +279,6 @@ visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-mouse_filter = 2
 
 [node name="SoundButton" type="Button" parent="UIMainMenu/SoundControl"]
 layout_mode = 2
@@ -282,11 +332,10 @@ layout_mode = 1
 
 [connection signal="animation_finished" from="UIMainMenu/Panel/TabletAnimation" to="." method="_on_tablet_animation_animation_finished"]
 [connection signal="pressed" from="UIMainMenu/Panel/StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="UIMainMenu/Panel/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="UIMainMenu/Panel/ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="UIMainMenu/Panel/Credits" to="." method="_on_credits_pressed"]
 [connection signal="mouse_entered" from="UIMainMenu/Panel/Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="UIMainMenu/Panel/Area2D" to="." method="_on_area_2d_mouse_exited"]
 [connection signal="pressed" from="UIMainMenu/CreditsControl/ExitCredits" to="." method="_on_exit_credits_pressed"]
 [connection signal="pressed" from="UIMainMenu/SoundControl/SoundButton" to="." method="_on_sound_button_pressed"]
-[connection signal="pressed" from="UIMainMenu/SoundControl/ExitSettingsButton" to="." method="_on_exit_settings_button_pressed"]
-[connection signal="pressed" from="UIMainMenu/SoundControl/ResetSaveButton" to="." method="_on_reset_save_button_pressed"]

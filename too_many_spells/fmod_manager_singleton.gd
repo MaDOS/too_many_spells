@@ -1,6 +1,7 @@
 extends Node
 
 var master_volume : float = 1
+var status : bool
 
 signal set_volume(master_volume)
 
