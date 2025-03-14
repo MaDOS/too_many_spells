@@ -9,9 +9,9 @@ func _ready() -> void:
 func music_change(parameter: String) -> void:	
 	print("music change called " + parameter)
 	#_musicEmitter.set_parameter("SceneChange", 1.0)
-	var paramEmitter = _musicEmitter.get_parameter_by_id(-17628221880779407)
+	#var paramEmitter = _musicEmitter.get_parameter_by_id(-17628221880779407)
 
-	print("paramEmitter: " + str(paramEmitter))
+	#print("paramEmitter: " + str(paramEmitter))
 	
 	_musicEmitter.set_parameter_by_id(-17628221880779407, 1.0)
 	_musicEmitter.play()

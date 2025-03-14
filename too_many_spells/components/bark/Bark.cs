@@ -21,7 +21,7 @@ public partial class Bark : Node2D
     {
         GD.Print("Bark enabled");
 
-        var timerInterval = GD.RandRange(5, 15);
+        var timerInterval = GD.RandRange(10, 35);
         GD.Print($"Bark timer interval: {timerInterval}");
         _barkTimer.Start(timerInterval);
     }

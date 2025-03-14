@@ -2,15 +2,121 @@
     {
         "SpeakerName": "Game Master",
         "TalkingPoints": [
-            "Bark 1",
-            "1"
+            "Why do you guys never prepare your turn?"
+        ]
+    },    
+    {
+        "SpeakerName": "Game Master",
+        "TalkingPoints": [
+            "A battle round is 6 seconds!"
+        ]
+    },   
+    {
+        "SpeakerName": "Game Master",
+        "TalkingPoints": [
+            "If you want to try that... sure."
+        ]
+    },  
+    {
+        "SpeakerName": "Game Master",
+        "TalkingPoints": [
+            "Nope. You didn't 'recently' read about that."
         ]
     },
     {
         "SpeakerName": "Betty",
         "TalkingPoints":  [
-            "Bark 2",
-            "2"
+            "I think I'm gonna seduce the towns guard!"
+        ]
+    },
+    {
+        "SpeakerName": "Betty",
+        "TalkingPoints":  [
+            "Can I give Bardic Inspiration?"
+        ]
+    },
+    {
+        "SpeakerName": "Betty",
+        "TalkingPoints":  [
+            "I cast Guidance!"
+        ]
+    },
+    {
+        "SpeakerName": "Betty",
+        "TalkingPoints":  [
+            "Can I give myself Inspiration and Guidance?"
+        ]
+    },
+    {
+        "SpeakerName": "Betty",
+        "TalkingPoints":  [
+            "What do you mean Guidance isn't stealthy?"
+        ]
+    },
+    {
+        "SpeakerName": "Betty",
+        "TalkingPoints":  [
+            "I think I'm going to paint that scene!"
+        ]
+    },
+    {
+        "SpeakerName": "Betty",
+        "TalkingPoints":  [
+            "How do you like my new dice?"
+        ]
+    },
+    {
+        "SpeakerName": "Betty",
+        "TalkingPoints":  [
+            "There is no such thing as 'too many dice', lol."
+        ]
+    },
+    {
+        "SpeakerName": "Betty",
+        "TalkingPoints":  [
+            "Imagine we would have called it Spellbock goes brrrrr - skibidi edition, haha."
+        ]
+    },
+    {
+        "SpeakerName": "Fred",
+        "TalkingPoints":  [
+            "Can I have your dice for my tower?"
+        ]
+    },
+    {
+        "SpeakerName": "Fred",
+        "TalkingPoints":  [
+            "Fred has built all the dice towers."
+        ]
+    },
+    {
+        "SpeakerName": "Fred",
+        "TalkingPoints":  [
+            "When do you guys want to order food?"
+        ]
+    },
+    {
+        "SpeakerName": "Fred",
+        "TalkingPoints":  [
+            "Can we get thai this time??"
+        ]
+    },
+    {
+        "SpeakerName": "Fred",
+        "TalkingPoints":  [
+            "Why do you guys always take so long with your turns, man?"
+        ]
+    },
+    {
+        "SpeakerName": "Fred",
+        "TalkingPoints":  [
+            "You only have how many hitpoints?!"
+        ]
+    },
+    {
+        "SpeakerName": "Fred",
+        "TalkingPoints":  [
+            "Do you guys remember where we left our horse and cart?"
         ]
     }
 ]

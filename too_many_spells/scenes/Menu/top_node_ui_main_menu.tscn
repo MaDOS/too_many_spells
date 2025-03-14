@@ -16,9 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://bqlegg3wi156u" path="res://assets/Menu/OptionsAnimation/Unbenanntes_Projekt-9.png" id="12_utcp0"]
 [ext_resource type="Texture2D" uid="uid://cu7c52qjie7ot" path="res://assets/Menu/OptionsAnimation/Unbenanntes_Projekt-10.png" id="13_12r7g"]
 [ext_resource type="Texture2D" uid="uid://b3177kfjlvtml" path="res://assets/Menu/OptionsAnimation/Unbenanntes_Projekt-12.png" id="13_n84fj"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gg6kq"]
-texture = ExtResource("2_s3gmn")
+[ext_resource type="PackedScene" uid="uid://c87875qjekd4g" path="res://components/torchlight/torchlight.tscn" id="17_w16s8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fm4mm"]
 animations = [{
@@ -118,7 +116,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_gg6kq")
 
 [node name="TabletAnimation" type="AnimatedSprite2D" parent="UIMainMenu/Panel"]
 position = Vector2(1280, 720)
@@ -279,6 +276,22 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_mj72h")
 [node name="AudioSettingsManager" parent="UIMainMenu" instance=ExtResource("6_sgxvc")]
 visible = false
 layout_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_s3gmn")
+centered = false
+
+[node name="lightTorchRight2" parent="Sprite2D" instance=ExtResource("17_w16s8")]
+position = Vector2(1924, 405)
+
+[node name="lightTorchRight1" parent="Sprite2D" instance=ExtResource("17_w16s8")]
+position = Vector2(1763, 406)
+
+[node name="lightTorchLeft2" parent="Sprite2D" instance=ExtResource("17_w16s8")]
+position = Vector2(775, 414)
+
+[node name="lightTorchLeft1" parent="Sprite2D" instance=ExtResource("17_w16s8")]
+position = Vector2(593, 417)
 
 [connection signal="animation_finished" from="UIMainMenu/Panel/TabletAnimation" to="." method="_on_tablet_animation_animation_finished"]
 [connection signal="pressed" from="UIMainMenu/Panel/StartGameButton" to="." method="_on_start_game_button_pressed"]
