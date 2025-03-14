@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://vfreuxxb27c"]
+
+[ext_resource type="Texture2D" uid="uid://cianat3yny5yb" path="res://assets/cat/Katze 1.png" id="1_51jtq"]
+[ext_resource type="Script" uid="uid://8wa58sflbf8y" path="res://components/cat/Cat.cs" id="1_umiaj"]
+[ext_resource type="Texture2D" uid="uid://cdjpdlqebto4a" path="res://assets/cat/Katze 2.png" id="2_umiaj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b7j27"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_51jtq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_umiaj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_umiaj"]
+radius = 293.0
+height = 1572.0
+
+[node name="Cat" type="Node2D"]
+script = ExtResource("1_umiaj")
+
+[node name="CatSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(2560, 0)
+sprite_frames = SubResource("SpriteFrames_b7j27")
+frame_progress = 0.720832
+centered = false
+
+[node name="CatArea" type="Area2D" parent="CatSprite"]
+position = Vector2(-2560, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CatSprite/CatArea"]
+position = Vector2(3715, 832)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_umiaj")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true

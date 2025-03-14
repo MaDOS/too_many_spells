@@ -1,11 +1,14 @@
 [gd_scene load_steps=40 format=3 uid="uid://disenhn2wv3if"]
 
 [ext_resource type="Script" uid="uid://td4jis23odu" path="res://scenes/Menu/ui_main_menu.gd" id="1_5f0d0"]
-[ext_resource type="Texture2D" uid="uid://dk2akbfdtpk2m" path="res://assets/Menu/Hauptmenue_.png" id="2_s3gmn"]
 [ext_resource type="FontFile" uid="uid://bfkna668oo3mb" path="res://assets/Fonts/Finnfont-Regular.ttf" id="3_5gksv"]
+[ext_resource type="Texture2D" uid="uid://b7267gxdowjuv" path="res://assets/Menu/Hauptmenue/Book.png" id="3_mj72h"]
 [ext_resource type="Texture2D" uid="uid://4w6mgl21xnwl" path="res://assets/Menu/OptionsAnimation/Unbenanntes_Projekt-1.png" id="4_5of4f"]
 [ext_resource type="FontFile" uid="uid://baj3xxd4vtp7g" path="res://assets/Fonts/Believe Heart.otf" id="4_l3ujf"]
+[ext_resource type="Texture2D" uid="uid://cch5py6liqmat" path="res://assets/Menu/Hauptmenue/Poster.png" id="4_mxwpg"]
 [ext_resource type="Texture2D" uid="uid://druhtxjv0kuin" path="res://assets/Menu/OptionsAnimation/Unbenanntes_Projekt-2.png" id="5_2efse"]
+[ext_resource type="Texture2D" uid="uid://sfmxagk8ot1v" path="res://assets/Menu/Hauptmenue/Tisch.png" id="5_mxwpg"]
+[ext_resource type="Texture2D" uid="uid://cqoho2ji0uh1t" path="res://assets/Menu/Hauptmenue/Tuer.png" id="5_n84fj"]
 [ext_resource type="Texture2D" uid="uid://bty7u20eqylqd" path="res://assets/Menu/OptionsAnimation/Unbenanntes_Projekt-3.png" id="6_jk1c5"]
 [ext_resource type="PackedScene" uid="uid://dlw4y68fq4syw" path="res://scenes/Audio Manager/audio_manager.tscn" id="6_sgxvc"]
 [ext_resource type="Texture2D" uid="uid://cmkultu2inq76" path="res://assets/Menu/OptionsAnimation/Unbenanntes_Projekt-4.png" id="7_tdqvf"]
@@ -17,6 +20,9 @@
 [ext_resource type="Texture2D" uid="uid://cu7c52qjie7ot" path="res://assets/Menu/OptionsAnimation/Unbenanntes_Projekt-10.png" id="13_12r7g"]
 [ext_resource type="Texture2D" uid="uid://b3177kfjlvtml" path="res://assets/Menu/OptionsAnimation/Unbenanntes_Projekt-12.png" id="13_n84fj"]
 [ext_resource type="PackedScene" uid="uid://c87875qjekd4g" path="res://components/torchlight/torchlight.tscn" id="17_w16s8"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_s3gmn"]
+load_path = "res://.godot/imported/HauptmenueCleaner.png-77d0f82e00a3453febc50dc9eac1562b.ctex"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fm4mm"]
 animations = [{
@@ -182,7 +188,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="UIMainMenu/Panel"]
-texture = ExtResource("2_s3gmn")
+texture = SubResource("CompressedTexture2D_s3gmn")
 centered = false
 
 [node name="lightTorchRight2" parent="UIMainMenu/Panel/Sprite2D" instance=ExtResource("17_w16s8")]
@@ -196,6 +202,22 @@ position = Vector2(775, 414)
 
 [node name="lightTorchLeft1" parent="UIMainMenu/Panel/Sprite2D" instance=ExtResource("17_w16s8")]
 position = Vector2(593, 417)
+
+[node name="Poster" type="Sprite2D" parent="UIMainMenu/Panel/Sprite2D"]
+texture = ExtResource("4_mxwpg")
+centered = false
+
+[node name="Tuer" type="Sprite2D" parent="UIMainMenu/Panel/Sprite2D"]
+texture = ExtResource("5_n84fj")
+centered = false
+
+[node name="Tisch" type="Sprite2D" parent="UIMainMenu/Panel/Sprite2D"]
+texture = ExtResource("5_mxwpg")
+centered = false
+
+[node name="Book" type="Sprite2D" parent="UIMainMenu/Panel/Sprite2D"]
+texture = ExtResource("3_mj72h")
+centered = false
 
 [node name="TabletAnimation" type="AnimatedSprite2D" parent="UIMainMenu/Panel"]
 z_index = 1

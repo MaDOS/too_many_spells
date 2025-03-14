@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://bj3wdy2t5m88c"]
+[gd_scene load_steps=9 format=3 uid="uid://bj3wdy2t5m88c"]
 
 [ext_resource type="PackedScene" uid="uid://kf64j7pluy7o" path="res://components/book/book.tscn" id="1_7idc7"]
 [ext_resource type="Script" uid="uid://dm0mifipepk1p" path="res://scenes/WorkTable/WorkTable.cs" id="1_m5rin"]
 [ext_resource type="Texture2D" uid="uid://cfpwlebqrmkc2" path="res://assets/Schreibtisch/SchreibtischBase.png" id="2_d55wh"]
 [ext_resource type="Script" uid="uid://38r0e4ro2sme" path="res://components/book/WorkBook.cs" id="2_vkig8"]
 [ext_resource type="PackedScene" uid="uid://bju5jr41d4c5b" path="res://components/recyclebin/recyclebin.tscn" id="5_esrdk"]
+[ext_resource type="Texture2D" uid="uid://c5xxp813ubbs5" path="res://assets/Schreibtisch/Swaps.png" id="6_obr7n"]
+[ext_resource type="Texture2D" uid="uid://82w23avqbb7f" path="res://assets/Schreibtisch/NextSession.png" id="7_3w5cr"]
+[ext_resource type="Texture2D" uid="uid://4vgy5xshmgng" path="res://assets/TabletInGame/Unbenanntes_Projekt-1.png" id="8_6hon4"]
 
 [node name="WorkTable" type="Node2D"]
 process_mode = 1
@@ -35,6 +38,18 @@ theme_override_font_sizes/font_size = 48
 text = "Swaps remaining: 5"
 
 [node name="Recyclebin" parent="." instance=ExtResource("5_esrdk")]
-position = Vector2(2324, 297)
+position = Vector2(215, 1133)
+
+[node name="Swaps" type="Sprite2D" parent="."]
+texture = ExtResource("6_obr7n")
+centered = false
+
+[node name="NextSession" type="Sprite2D" parent="."]
+texture = ExtResource("7_3w5cr")
+centered = false
+
+[node name="UnbenanntesProjekt-1" type="Sprite2D" parent="."]
+texture = ExtResource("8_6hon4")
+centered = false
 
 [connection signal="pressed" from="BtnNextSession" to="." method="_on_BtnNextSession_pressed"]

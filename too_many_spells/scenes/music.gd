@@ -13,5 +13,5 @@ func music_change(parameter: String) -> void:
 
 	#print("paramEmitter: " + str(paramEmitter))
 	
-	_musicEmitter.set_parameter_by_id(-17628221880779407, 1.0)
-	_musicEmitter.play()
+	#_musicEmitter.set_parameter_by_id(-17628221880779407, 1.0)
+	#_musicEmitter.play()
