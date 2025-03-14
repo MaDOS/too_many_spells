@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cpvi8tds8qpem"]
+[gd_scene load_steps=9 format=3 uid="uid://cpvi8tds8qpem"]
 
 [ext_resource type="Script" uid="uid://dxfvskgpy33m2" path="res://scenes/GameTable/GameTable.cs" id="1_nec0s"]
 [ext_resource type="Texture2D" uid="uid://b4r8hlwon5mrh" path="res://assets/Spieltisch/SpieltischBase.png" id="2_4dcwo"]
@@ -6,6 +6,10 @@
 [ext_resource type="Script" uid="uid://btnehme7vm2dt" path="res://components/book/GameBook.cs" id="3_4dcwo"]
 [ext_resource type="PackedScene" uid="uid://gd2rbdkmobyp" path="res://components/dialogbox/dialogbox.tscn" id="4_bqdcq"]
 [ext_resource type="PackedScene" uid="uid://dtxn3215304pb" path="res://components/bark/bark.tscn" id="6_4dcwo"]
+[ext_resource type="PackedScene" uid="uid://vfreuxxb27c" path="res://components/cat/cat.tscn" id="7_7gw0v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bqdcq"]
+size = Vector2(1470, 1096.5)
 
 [node name="GameTable" type="Node2D"]
 process_mode = 1
@@ -18,6 +22,12 @@ centered = false
 [node name="Book" parent="." instance=ExtResource("2_wgycp")]
 script = ExtResource("3_4dcwo")
 
+[node name="BookArea" type="Area2D" parent="Book"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Book/BookArea"]
+position = Vector2(999, 833.25)
+shape = SubResource("RectangleShape2D_bqdcq")
+
 [node name="Dialogbox" parent="." instance=ExtResource("4_bqdcq")]
 
 [node name="BtnGoHome" type="Button" parent="."]
@@ -29,5 +39,7 @@ theme_override_font_sizes/font_size = 48
 text = "Go home"
 
 [node name="Bark" parent="." instance=ExtResource("6_4dcwo")]
+
+[node name="Cat" parent="." instance=ExtResource("7_7gw0v")]
 
 [connection signal="pressed" from="BtnGoHome" to="." method="_on_BtnGoHome_pressed"]

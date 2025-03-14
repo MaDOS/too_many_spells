@@ -22,6 +22,8 @@ public partial class GameTable : Node2D
     private GameBook _book = null!;
     private Button _btnGoHome = null!;
     private Bark _bark = null!;
+    private Cat _cat = null!;
+    private Area2D _bookArea = null!;
 
     private GameMaster.GameMasterPrompt _gmPrompt = null!;
 
@@ -34,14 +36,31 @@ public partial class GameTable : Node2D
         _book = GetNode<GameBook>("Book");
         _btnGoHome = GetNode<Button>("BtnGoHome");
         _bark = GetNode<Bark>("Bark");
+        _cat = GetNode<Cat>("Cat");
+        _bookArea = GetNode<Area2D>("Book/BookArea");
 
         _btnGoHome.Visible = false;
 
+        _bookArea.AreaEntered += OnBodyEnteredBookArea;
+        _bookArea.AreaExited += OnBodyExitedBookArea;
+
         _dialogbox.TalkingPointsFinished += AddvanceState;
+
         _book.SpellCast += Book_SpellCast;
+
         Player.Instance.LevelUp += OnPlayerLevelUp;
 
         this.BeginNewPrompt();
+    }
+
+    public void OnBodyEnteredBookArea(Area2D area)
+    {
+        _book.SetProcessInput(false);
+    }
+
+    public void OnBodyExitedBookArea(Area2D area)
+    {
+        _book.SetProcessInput(true);
     }
 
     private void BeginNewPrompt()
@@ -56,6 +75,7 @@ public partial class GameTable : Node2D
     private void Book_SpellCast(string spellName)
     {
         _bark.Disable();
+        _cat.Disable();
         this._lastSpellCast = spellName;
         DialogBoxTalk(new[] { $"You cast {spellName}!" }, "");
     }
@@ -132,6 +152,7 @@ public partial class GameTable : Node2D
                 _book.SetProcessInput(true);
                 _book.AllowedToCast = true;
                 _bark.Enable();
+                _cat.Reset();
                 break;
             case State.SpellCast:
                 _state = State.GMPromptScoring;
