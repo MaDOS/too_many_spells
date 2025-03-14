@@ -3,25 +3,27 @@ extends Node2D
 @onready var settings_panel_container: PanelContainer = $UIMainMenu/SettingsPanelContainer
 @onready var audio_settings_manager: Control = $UIMainMenu/AudioSettingsManager
 @onready var credits_control: Control = $UIMainMenu/CreditsControl
+@onready var tablet_animation: AnimatedSprite2D = $UIMainMenu/Panel/TabletAnimation
+
 
 signal main_menu_start
 signal main_menu_play_clicked
 signal main_menu_options_button_pressed
 
-signal play_music
-
+var mouse_in_tablet : bool
+var tablet_open : bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	show()
-	#main_menu_start.emit()
-	self.connect("play_music", FmodManagerSingleton.playmusic_singleton)
-
+	tablet_open = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
-	
+	if mouse_in_tablet == true and Input.is_action_just_pressed("click") and tablet_open == false:
+		tablet_animation.play("tablet_animated")
+		tablet_open = true
+			
 
 func _on_start_game_button_pressed() -> void:
 	main_menu_play_clicked.emit()
@@ -51,5 +53,10 @@ func _on_resume_button_pressed() -> void:
 	#game_root_node.pause_status = false
 
 
-func _on_test_button_pressed() -> void:
-	play_music.emit()
+func _on_area_2d_mouse_entered() -> void:
+	mouse_in_tablet = true
+	print("true")
+
+func _on_area_2d_mouse_exited() -> void:
+	mouse_in_tablet = false
+	print ("false")

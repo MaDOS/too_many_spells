@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://disenhn2wv3if"]
+[gd_scene load_steps=37 format=3 uid="uid://disenhn2wv3if"]
 
 [ext_resource type="Script" uid="uid://td4jis23odu" path="res://scenes/Menu/ui_main_menu.gd" id="1_5f0d0"]
 [ext_resource type="Texture2D" uid="uid://dk2akbfdtpk2m" path="res://assets/Menu/Hauptmenue_.png" id="2_s3gmn"]
@@ -24,6 +24,9 @@
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gg6kq"]
 texture = ExtResource("2_s3gmn")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5f0d0"]
+bg_color = Color(1, 1, 1, 1)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fm4mm"]
 animations = [{
@@ -103,22 +106,6 @@ corner_radius_bottom_left = 16
 shadow_size = 5
 shadow_offset = Vector2(0, 3.42)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a5pp5"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_utcp0"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_12r7g"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4c1jx"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tdqvf"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hl6yh"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0gg4p"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xr624"]
-
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_s3gmn"]
 points = PackedVector2Array(-3.88156, -19.4007, 40.8553, 9.70891, 40.8553, 13.3048, -12.8728, 14.6747, -47.3026, -13.4075, -47.0833, -18.2021)
 
@@ -167,6 +154,19 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_gg6kq")
 
+[node name="TestButton" type="Button" parent="UIMainMenu/Panel"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 39.0
+offset_right = 354.0
+offset_bottom = 192.0
+scale = Vector2(1.304, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_l3ujf")
+theme_override_font_sizes/font_size = 101
+theme_override_styles/normal = SubResource("StyleBoxFlat_5f0d0")
+text = "Play  music"
+
 [node name="TabletAnimation" type="AnimatedSprite2D" parent="UIMainMenu/Panel"]
 position = Vector2(1280, 720)
 sprite_frames = SubResource("SpriteFrames_fm4mm")
@@ -212,10 +212,6 @@ offset_right = 2493.0
 offset_bottom = 936.0
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("3_5gksv")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_a5pp5")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_utcp0")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_12r7g")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_4c1jx")
 
 [node name="Credits" type="Button" parent="UIMainMenu/Panel"]
 layout_mode = 0
@@ -224,10 +220,6 @@ offset_top = 287.0
 offset_right = 495.0
 offset_bottom = 861.0
 size_flags_vertical = 3
-theme_override_styles/focus = SubResource("StyleBoxEmpty_tdqvf")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_hl6yh")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_0gg4p")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_xr624")
 
 [node name="Area2D" type="Area2D" parent="UIMainMenu/Panel"]
 
@@ -267,8 +259,8 @@ theme_override_constants/shadow_offset_y = 0
 theme_override_constants/shadow_offset_x = 0
 theme_override_fonts/normal_font = ExtResource("4_l3ujf")
 theme_override_fonts/bold_font = ExtResource("3_5gksv")
-theme_override_font_sizes/normal_font_size = 120
-theme_override_font_sizes/bold_font_size = 120
+theme_override_font_sizes/normal_font_size = 60
+theme_override_font_sizes/bold_font_size = 60
 bbcode_enabled = true
 text = "[b]Managing/Writing[/b]: Thomas
 [b]Programming[/b]: Amy, Niko
@@ -376,6 +368,7 @@ stream = ExtResource("10_mj72h")
 
 [connection signal="main_menu_options_button_pressed" from="." to="UIMainMenu/AudioplayerComplete" method="_on_top_node_ui_main_menu_main_menu_options_button_pressed"]
 [connection signal="main_menu_start" from="." to="UIMainMenu/AudioplayerComplete" method="_on_top_node_ui_main_menu_main_menu_start"]
+[connection signal="pressed" from="UIMainMenu/Panel/TestButton" to="." method="_on_test_button_pressed"]
 [connection signal="animation_finished" from="UIMainMenu/Panel/TabletAnimation" to="." method="_on_tablet_animation_animation_finished"]
 [connection signal="pressed" from="UIMainMenu/Panel/StartGameButton" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="UIMainMenu/Panel/OptionsButton" to="." method="_on_options_button_pressed"]
