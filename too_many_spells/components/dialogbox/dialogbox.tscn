@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://gd2rbdkmobyp"]
+[gd_scene load_steps=3 format=3 uid="uid://gd2rbdkmobyp"]
 
 [ext_resource type="Script" uid="uid://bs264d343476j" path="res://components/dialogbox/Dialogbox.cs" id="1_005st"]
+[ext_resource type="Texture2D" uid="uid://dulml835qd3ut" path="res://assets/dialogbox/frame.png" id="2_d5r8c"]
 
 [node name="Dialogbox" type="Control"]
 layout_mode = 3
@@ -11,23 +12,35 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_005st")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 60.0
+offset_top = 770.0
+offset_right = 2479.0
+offset_bottom = 1419.0
+texture = ExtResource("2_d5r8c")
+
 [node name="lblDialogText" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.035
 anchor_bottom = 0.035
-offset_left = 115.0
-offset_top = 452.0
-offset_right = 959.68
-offset_bottom = 600.32
+offset_left = 95.0
+offset_top = 925.0
+offset_right = 2354.4
+offset_bottom = 1355.6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
 text = "Dialog Text"
 autowrap_mode = 2
 
 [node name="lblSpeekerName" type="Label" parent="."]
 layout_mode = 0
-offset_left = 115.0
-offset_top = 379.0
-offset_right = 355.0
-offset_bottom = 434.0
-theme_override_font_sizes/font_size = 34
+offset_left = 86.0
+offset_top = 781.0
+offset_right = 679.0
+offset_bottom = 896.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
 text = "Speaker Name"

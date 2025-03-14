@@ -47,19 +47,22 @@ public partial class GameMaster : Node
         return prompt.PromptTags.Intersect(spell.SpellTags).Count() / (float)prompt.PromptTags.Length;
     }
 
-    public string[] GetAnswer(GameMasterPrompt prompt, Spells.Spell spell, float score)
+    public string[] GetAnswer(GameMasterPrompt prompt, Spells.Spell spell)
     {
         Player.Instance.Data.PromptsPlayed++;
-        
+
+        if (spell.IsTrash)
+        {
+            return new[] { prompt.TrashAnswer };
+        }
+
         GD.Print($"Player played {Player.Instance.Data.PromptsPlayed} prompts now.");
         GD.Print($"Spell tags: {string.Join(", ", spell.SpellTags)}");
         GD.Print($"Prompt tags: {string.Join(", ", prompt.PromptTags)}");
-        GD.Print($"Score: {score}");
 
         List<GameMasterPrompt.Answer> answers = prompt.Answers
             .Where(answer => spell.SpellTags.Intersect(answer.FilterForIncludedSpellTags).Count() == answer.FilterForIncludedSpellTags.Length)
             .Where(answer => !spell.SpellTags.Intersect(answer.FilterForExcludedSpellTags).Any())
-            .Where(answer => score >= answer.MinScore && score <= answer.MaxScore)
             .ToList();
 
         GD.Print($"Found {answers.Count} answers");
@@ -73,6 +76,8 @@ public partial class GameMaster : Node
         public int MaxExperience { get; set; }
         public string[] PromptTexts { get; set; } = Array.Empty<string>();
         public string[] PromptTags { get; set; } = Array.Empty<string>();
+
+        public string TrashAnswer { get; set; } = string.Empty;
 
         public List<Answer> Answers { get; set; } = new List<Answer>();
 

@@ -1,145 +1,645 @@
 [
 	{
-		"Name": "Fireball",
-		"Artwork": "res://components/book/pages/page1.png",
+		"Name": "Just Fireball",
+		"Artwork": "res://assets/book/pages/Just Fireball.png",
 		"IsTrash": false,
 		"SpellTags": [
-			"fireball",
-			"destructive",
-			"fire"
+			"Just Fireball",
+			"combat",
+			"fire",
+			"attack"
 		]
 	},
 	{
-		"Name": "Eldritch Blast",
-		"Artwork": "res://components/book/pages/page2.png",
+		"Name": "Surf",
+		"Artwork": "res://assets/book/pages/Surf.png",
 		"IsTrash": false,
 		"SpellTags": [
-			"destructive",
-			"dark"
+			"Surf",
+			"combat",
+			"water",
+			"attack",
+			"utility"
 		]
-	},
+	},	
 	{
-		"Name": "Healing Touch",
-		"Artwork": "res://components/book/pages/page3.png",
+		"Name": "Generate Lightning",
+		"Artwork": "res://assets/book/pages/Generate Lightning.png",
 		"IsTrash": false,
 		"SpellTags": [
-			"healing",
-			"light"
+			"Generate Lightning",
+			"combat",
+			"water",
+			"attack",
+			"utility"
 		]
-	},
+	},	
 	{
-		"Name": "Magic Missile",
-		"Artwork": "res://components/book/pages/page4.png",
+		"Name": "Biting Frost",
+		"Artwork": "res://assets/book/pages/Biting Frost.png",
 		"IsTrash": false,
 		"SpellTags": [
-			"destructive",
-			"light"
+			"Biting Frost",
+			"combat",
+			"water",
+			"attack",
+			"utility"
 		]
-	},
+	},	
 	{
-		"Name": "Summon Familiar",
-		"Artwork": "res://components/book/pages/page5.png",
+		"Name": "Finger Gun",
+		"Artwork": "res://assets/book/pages/Finger Gun.png",
 		"IsTrash": false,
 		"SpellTags": [
-			"summoning",
-			"light"
+			"Finger Gun",
+			"combat",
+			"social",
+			"attack",
+			"physical",
+			"pun"
 		]
-	},
+	},	
 	{
-		"Name": "Teleport",
-		"Artwork": "res://components/book/pages/page6.png",
+		"Name": "Mindfrick",
+		"Artwork": "res://assets/book/pages/Mindfrick.png",
 		"IsTrash": false,
 		"SpellTags": [
-			"movement",
-			"light"
+			"Mindfrick",
+			"combat",
+			"social",
+			"attack",
+			"psychic"
 		]
-	},
+	},	
 	{
-		"Name": "Time Stop",
-		"Artwork": "res://components/book/pages/page7.png",
+		"Name": "Acid Splash",
+		"Artwork": "res://assets/book/pages/Acid Splash.png",
 		"IsTrash": false,
 		"SpellTags": [
-			"time",
-			"light"
+			"Acid Splash",
+			"combat",
+			"poison",
+			"attack",
+			"utility"
 		]
-	},
+	},	
 	{
-		"Name": "Wall of Force",
-		"Artwork": "res://components/book/pages/page8.png",
+		"Name": "Rock-a-lanche",
+		"Artwork": "res://assets/book/pages/Rock-a-lanche.png",
 		"IsTrash": false,
 		"SpellTags": [
-			"defensive",
-			"light"
+			"Rock-a-lanche",
+			"combat",
+			"earth",
+			"attack",
+			"utility"
+		]
+	},	
+	{
+		"Name": "Meteor",
+		"Artwork": "res://assets/book/pages/Meteor.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Meteor",
+			"combat",
+			"earth",
+			"attack"
+		]
+	},	
+	{
+		"Name": "Poison Breath",
+		"Artwork": "res://assets/book/pages/Poison Breath.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Poison Breath",
+			"combat",
+			"poison",
+			"attack"
+		]
+	},	
+	{
+		"Name": "1000 Years of Pain",
+		"Artwork": "res://assets/book/pages/1000 Years of Pain.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"1000 Years of Pain",
+			"combat",
+			"social",
+			"physical",
+			"attack",
+			"pun"
 		]
 	},
 	{
-		"Name": "Cheese",
-		"Artwork": "res://components/book/pages/CHEESE.png",
-		"IsTrash": true,
+		"Name": "Ice Crystal Missile",
+		"Artwork": "res://assets/book/pages/Ice Crystal Missile.png",
+		"IsTrash": false,
 		"SpellTags": [
+			"Ice Crystal Missile",
+			"combat",
+			"water",
+			"attack"
 		]
 	},
 	{
-		"Name": "Doodle",
-		"Artwork": "res://components/book/pages/Doodles.png",
-		"IsTrash": true,
+		"Name": "Lightning Blade",
+		"Artwork": "res://assets/book/pages/Lightning Blade.png",
+		"IsTrash": false,
 		"SpellTags": [
+			"Lightning Blade",
+			"combat",
+			"lightning",
+			"attack",
+			"utility"
 		]
 	},
 	{
-		"Name": "Doyoulikeme",
-		"Artwork": "res://components/book/pages/Doyoulikeme.png",
-		"IsTrash": true,
+		"Name": "Summon Water Golem",
+		"Artwork": "res://assets/book/pages/Summon Water Golem.png",
+		"IsTrash": false,
 		"SpellTags": [
+			"Summon Water Golem",
+			"combat",
+			"survival",
+			"water",
+			"attack",
+			"defense",
+			"utility"
 		]
 	},
 	{
-		"Name": "Einkaufsliste",
-		"Artwork": "res://components/book/pages/Einkaufsliste.png",
-		"IsTrash": true,
+		"Name": "Cloak of Fire",
+		"Artwork": "res://assets/book/pages/Cloak of Fire.png",
+		"IsTrash": false,
 		"SpellTags": [
+			"Cloak of Fire",
+			"combat",
+			"fire",
+			"attack",
+			"defense",
+			"utility"
 		]
 	},
 	{
-		"Name": "Homework",
-		"Artwork": "res://components/book/pages/Homework.png",
-		"IsTrash": true,
+		"Name": "Fireblob",
+		"Artwork": "res://assets/book/pages/Fireblob.png",
+		"IsTrash": false,
 		"SpellTags": [
+			"Fireblob",
+			"combat",
+			"fire",
+			"attack",
+			"utility"
 		]
 	},
 	{
-		"Name": "Pattern",
-		"Artwork": "res://components/book/pages/Pattern.png",
-		"IsTrash": true,
+		"Name": "Water Whip",
+		"Artwork": "res://assets/book/pages/Water Whip.png",
+		"IsTrash": false,
 		"SpellTags": [
+			"Water Whip",
+			"combat",
+			"water",
+			"attack",
+			"defense",
+			"utility"
 		]
 	},
 	{
-		"Name": "Beemovie",
-		"Artwork": "res://components/book/pages/Beemovie.png",
-		"IsTrash": true,
+		"Name": "Thunderstruck",
+		"Artwork": "res://assets/book/pages/Thunderstruck.png",
+		"IsTrash": false,
 		"SpellTags": [
+			"Thunderstruck",
+			"combat",
+			"social",
+			"lightning",
+			"attack",
+			"utility"
 		]
 	},
 	{
-		"Name": "Pixilated",
-		"Artwork": "res://components/book/pages/Pixilated.png",
-		"IsTrash": true,
+		"Name": "Frost Nova",
+		"Artwork": "res://assets/book/pages/Frost Nova.png",
+		"IsTrash": false,
 		"SpellTags": [
+			"Frost Nova",
+			"combat",
+			"water",
+			"attack",
+			"defense"
 		]
 	},
 	{
-		"Name": "Rundfunk",
-		"Artwork": "res://components/book/pages/Rundfunk.png",
+		"Name": "Summon Apple",
+		"Artwork": "res://assets/book/pages/Summon Apple.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Summon Apple",
+			"combat",
+			"social",
+			"physical",
+			"attack",
+			"utility"
+		]
+	},
+	{
+		"Name": "Testicular Torsion",
+		"Artwork": "res://assets/book/pages/Testicular Torsion.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Testicular Torsion",
+			"combat",
+			"social",
+			"water",
+			"attack"
+		]
+	},
+	{
+		"Name": "Freezer Burn",
+		"Artwork": "res://assets/book/pages/Freezer Burn.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Freezer Burn",
+			"combat",
+			"social",
+			"water",
+			"attack"
+		]
+	},
+	{
+		"Name": "Walls of Fire",
+		"Artwork": "res://assets/book/pages/Walls of Fire.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Walls of Fire",
+			"combat",
+			"fire",
+			"attack",
+			"defense",
+			"utility"
+		]
+	},
+	{
+		"Name": "Magic Rizz",
+		"Artwork": "res://assets/book/pages/Magic Rizz.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Magic Rizz",
+			"social",
+			"psychic",
+			"utility"
+		]
+	},
+	{
+		"Name": "Calm the F Down",
+		"Artwork": "res://assets/book/pages/Calm the F Down.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Calm the F Down",
+			"social",
+			"psychic",
+			"defense",
+			"support",
+			"utility"
+		]
+	},
+	{
+		"Name": "Command",
+		"Artwork": "res://assets/book/pages/Command.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Command",
+			"social",
+			"psychic",
+			"utility"
+		]
+	},
+	{
+		"Name": "Comprehend Languages",
+		"Artwork": "res://assets/book/pages/Comprehend Languages.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Comprehend Languages",
+			"social",
+			"psychic",
+			"utility"
+		]
+	},
+	{
+		"Name": "Star Gem",
+		"Artwork": "res://assets/book/pages/Star Gem.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Star Gem",
+			"social",
+			"defense",
+			"support",
+			"utility"
+		]
+	},
+	{
+		"Name": "Modify Mind",
+		"Artwork": "res://assets/book/pages/Modify Mind.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Modify Mind"
+		]
+	},
+	{
+		"Name": "Social Fart",
+		"Artwork": "res://assets/book/pages/Social Fart.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Social Fart"
+		]
+	},
+	{
+		"Name": "Get Stick",
+		"Artwork": "res://assets/book/pages/Get Stick.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Get Stick"
+		]
+	},
+	{
+		"Name": "Fact Check",
+		"Artwork": "res://assets/book/pages/Fact Check.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Fact Check",
+			"social",
+			"survival",
+			"psychic",
+			"support",
+			"utility"
+		]
+	},
+	{
+		"Name": "Summon Grilled Cheese",
+		"Artwork": "res://assets/book/pages/Summon Grilled Cheese.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Summon Grilled Cheese",
+			"social",
+			"survival",
+			"support",
+			"utility"
+		]
+	},
+	{
+		"Name": "Alarm",
+		"Artwork": "res://assets/book/pages/Alarm.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Alarm",
+			"survival",
+			"utility"
+		]
+	},
+	{
+		"Name": "Five more Minutes",
+		"Artwork": "res://assets/book/pages/Five more Minutes.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Five more Minutes",
+			"social",
+			"survival",
+			"psychic",
+			"support",
+			"utility"
+		]
+	},
+	{
+		"Name": "Healing",
+		"Artwork": "res://assets/book/pages/Healing.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Healing"
+		]
+	},
+	{
+		"Name": "Barrier",
+		"Artwork": "res://assets/book/pages/Barrier.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Barrier"
+		]
+	},
+	{
+		"Name": "I Like Animals",
+		"Artwork": "res://assets/book/pages/I Like Animals.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"I Like Animals"
+		]
+	},
+	{
+		"Name": "Make Water Do Things",
+		"Artwork": "res://assets/book/pages/Make Water Do Things.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Make Water Do Things"
+		]
+	},
+	{
+		"Name": "Make Things Do Things",
+		"Artwork": "res://assets/book/pages/Make Things Do Things.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Make Things Do Things"
+		]
+	},
+	{
+		"Name": "Mage Hand",
+		"Artwork": "res://assets/book/pages/Mage Hand.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Mage Hand"
+		]
+	},
+	{
+		"Name": "Sesame",
+		"Artwork": "res://assets/book/pages/Sesame.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Sesame"
+		]
+	},
+	{
+		"Name": "Clean Laundry",
+		"Artwork": "res://assets/book/pages/Clean Laundry.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Clean Laundry"
+		]
+	},
+	{
+		"Name": "Remove Static from Clothing",
+		"Artwork": "res://assets/book/pages/Remove Static from Clothing.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Remove Static from Clothing"
+		]
+	},
+	{
+		"Name": "Summon Tent",
+		"Artwork": "res://assets/book/pages/Summon Tent.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Summon Tent"
+		]
+	},
+	{
+		"Name": "Wizard",
+		"Artwork": "res://assets/book/pages/Wizard.png",
 		"IsTrash": true,
 		"SpellTags": [
+			"Wizard"
 		]
 	},
 	{
 		"Name": "Todo",
-		"Artwork": "res://components/book/pages/Todo.png",
+		"Artwork": "res://assets/book/pages/Todo.png",
 		"IsTrash": true,
 		"SpellTags": [
+			"Todo"
+		]
+	},
+	{
+		"Name": "Sudoku",
+		"Artwork": "res://assets/book/pages/Sudoku.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Sudoku"
+		]
+	},
+	{
+		"Name": "Sammelkarten",
+		"Artwork": "res://assets/book/pages/Sammelkarten.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Sammelkarten"
+		]
+	},
+	{
+		"Name": "Rundfunk",
+		"Artwork": "res://assets/book/pages/Rundfunk.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Rundfunk"
+		]
+	},
+	{
+		"Name": "Procoontra",
+		"Artwork": "res://assets/book/pages/Procoontra.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Procoontra"
+		]
+	},
+	{
+		"Name": "Pixilated",
+		"Artwork": "res://assets/book/pages/Pixilated.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Pixilated"
+		]
+	},
+	{
+		"Name": "Pattern",
+		"Artwork": "res://assets/book/pages/Pattern.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Pattern"
+		]
+	},
+	{
+		"Name": "Kassenzettel",
+		"Artwork": "res://assets/book/pages/Kassenzettel.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Kassenzettel"
+		]
+	},
+	{
+		"Name": "Homework",
+		"Artwork": "res://assets/book/pages/Homework.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Homework"
+		]
+	},
+	{
+		"Name": "Getwellsooncard",
+		"Artwork": "res://assets/book/pages/Getwellsooncard.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Getwellsooncard"
+		]
+	},
+	{
+		"Name": "Einkaufsliste",
+		"Artwork": "res://assets/book/pages/Einkaufsliste.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Einkaufsliste"
+		]
+	},
+	{
+		"Name": "Doyoulikeme",
+		"Artwork": "res://assets/book/pages/Doyoulikeme.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Doyoulikeme"
+		]
+	},
+	{
+		"Name": "Doodles",
+		"Artwork": "res://assets/book/pages/Doodles.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Doodles"
+		]
+	},
+	{
+		"Name": "Chickens",
+		"Artwork": "res://assets/book/pages/Chickens.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Chickens"
+		]
+	},
+	{
+		"Name": "CHEESE",
+		"Artwork": "res://assets/book/pages/CHEESE.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"CHEESE"
+		]
+	},
+	{
+		"Name": "Censored",
+		"Artwork": "res://assets/book/pages/Censored.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Censored"
+		]
+	},
+	{
+		"Name": "Bluescreen",
+		"Artwork": "res://assets/book/pages/Bluescreen.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Bluescreen"
+		]
+	},
+	{
+		"Name": "Beemovie",
+		"Artwork": "res://assets/book/pages/Beemovie.png",
+		"IsTrash": true,
+		"SpellTags": [
+			"Beemovie"
 		]
 	}
 ]
