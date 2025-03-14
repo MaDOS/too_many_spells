@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://dlw4y68fq4syw"]
+[gd_scene load_steps=10 format=3 uid="uid://dlw4y68fq4syw"]
 
 [ext_resource type="Script" uid="uid://c5sh0sv5xwhfs" path="res://scenes/Audio Manager/audio_manager.gd" id="1_8rbl1"]
 [ext_resource type="Texture2D" uid="uid://cb1qhcu65hcho" path="res://assets/Menu/Soundeinstellungen.png" id="2_di7gk"]
 [ext_resource type="FontFile" uid="uid://baj3xxd4vtp7g" path="res://assets/Fonts/Believe Heart.otf" id="2_tq6fd"]
 [ext_resource type="Texture2D" uid="uid://bcbvcoia1xyc5" path="res://assets/Menu/sliderIcon.png" id="4_di7gk"]
+[ext_resource type="Texture2D" uid="uid://1cs2dluqght6" path="res://assets/Menu/FurtherOptions/sliderIcon.png" id="5_u1kl0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_di7gk"]
 
@@ -84,9 +85,9 @@ value = 1.0
 
 [node name="SFXVolumeSlider" type="HSlider" parent="TextureRect/VBoxContainer"]
 layout_mode = 2
-theme_override_icons/grabber = ExtResource("4_di7gk")
-theme_override_icons/grabber_highlight = ExtResource("4_di7gk")
-theme_override_icons/grabber_disabled = ExtResource("4_di7gk")
+theme_override_icons/grabber = ExtResource("5_u1kl0")
+theme_override_icons/grabber_highlight = ExtResource("5_u1kl0")
+theme_override_icons/grabber_disabled = ExtResource("5_u1kl0")
 max_value = 1.0
 step = 0.0
 value = 1.0
