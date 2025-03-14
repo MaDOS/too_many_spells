@@ -1,16 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://cdd1y760obx05"]
+[gd_scene load_steps=3 format=3 uid="uid://cdd1y760obx05"]
 
 [ext_resource type="Script" uid="uid://cpu6i7mvkfbou" path="res://scenes/Main.cs" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://dgmq7fplxnjpa" path="res://scenes/fmod_event_emitter_2d.gd" id="2_0wfyh"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_o5qli")
 
 [node name="FmodBankLoader" type="FmodBankLoader" parent="."]
-bank_paths = ["res://assets/sound/Master.strings.bank", "res://assets/sound/Master.bank", "res://assets/sound/Music.bank"]
 
 [node name="FmodEventEmitter2D" type="FmodEventEmitter2D" parent="."]
-event_name = "event:/Music/Music Desk"
-event_guid = "{386d1bf2-c35a-46c6-892b-57ce8929183a}"
-autoplay = true
+event_name = "event:/Core/Spell Bad"
+event_guid = "{81d26a96-93bc-411e-9fb5-071afeb4c6e7}"
+script = ExtResource("2_0wfyh")
 
 [node name="FmodListener2D" type="FmodListener2D" parent="."]

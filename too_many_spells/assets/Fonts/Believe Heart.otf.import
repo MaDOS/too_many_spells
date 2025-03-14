@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://baj3xxd4vtp7g"
-path="res://.godot/imported/Believe Heart.otf-1bc72d4e6c113851b99a6001cb8ec656.fontdata"
+path="res://.godot/imported/Believe Heart.otf-d8e23d2671fed7b33d3f3518e103e02a.fontdata"
 
 [deps]
 
-source_file="res://assets/Temporary/Fonts/Believe Heart.otf"
-dest_files=["res://.godot/imported/Believe Heart.otf-1bc72d4e6c113851b99a6001cb8ec656.fontdata"]
+source_file="res://assets/Fonts/Believe Heart.otf"
+dest_files=["res://.godot/imported/Believe Heart.otf-d8e23d2671fed7b33d3f3518e103e02a.fontdata"]
 
 [params]
 

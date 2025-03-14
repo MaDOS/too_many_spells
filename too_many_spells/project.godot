@@ -40,11 +40,12 @@ Spells="*res://staticData/Spells.cs"
 Player="*res://staticData/Player.cs"
 GameStateManager="*res://GameStateManager.cs"
 FmodManager="*res://addons/fmod/FmodManager.gd"
+FmodManagerSingleton="*res://fmod_manager_singleton.gd"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
+window/size/viewport_width=2560
+window/size/viewport_height=1440
 
 [dotnet]
 

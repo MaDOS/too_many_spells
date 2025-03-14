@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bfkna668oo3mb"
-path="res://.godot/imported/Finnfont-Regular.ttf-9fa33d3feae1cbf52ca7e4579659a792.fontdata"
+path="res://.godot/imported/Finnfont-Regular.ttf-61ad47ad447d432e0d726a0c291c3127.fontdata"
 
 [deps]
 
-source_file="res://assets/Temporary/Fonts/Finnfont-Regular.ttf"
-dest_files=["res://.godot/imported/Finnfont-Regular.ttf-9fa33d3feae1cbf52ca7e4579659a792.fontdata"]
+source_file="res://assets/Fonts/Finnfont-Regular.ttf"
+dest_files=["res://.godot/imported/Finnfont-Regular.ttf-61ad47ad447d432e0d726a0c291c3127.fontdata"]
 
 [params]
 

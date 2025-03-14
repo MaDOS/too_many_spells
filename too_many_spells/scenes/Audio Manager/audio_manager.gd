@@ -15,6 +15,7 @@ func _ready() -> void:
 	music_index = AudioServer.get_bus_index("Music")
 	sfx_index = AudioServer.get_bus_index("SFX")
 	
+	master_volume_slider.connect("value_changed", FmodManagerSingleton.master_volume_extender)
 	
 func _process(delta: float) -> void:
 	pass

@@ -8,10 +8,14 @@ signal main_menu_start
 signal main_menu_play_clicked
 signal main_menu_options_button_pressed
 
+signal play_music
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	show()
-	main_menu_start.emit()
+	#main_menu_start.emit()
+	self.connect("play_music", FmodManagerSingleton.playmusic_singleton)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -45,3 +49,7 @@ func _on_game_toggle_game_paused():
 func _on_resume_button_pressed() -> void:
 	show()
 	#game_root_node.pause_status = false
+
+
+func _on_test_button_pressed() -> void:
+	play_music.emit()

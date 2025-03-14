@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://td4jis23odu" path="res://scenes/Menu/ui_main_menu.gd" id="1_i7mca"]
 [ext_resource type="Texture2D" uid="uid://d1w5bq1nlxfo7" path="res://assets/Temporary/Images/6308_0_funny_wizard_1280x1280.jpg" id="2_elrpt"]
-[ext_resource type="FontFile" uid="uid://bfkna668oo3mb" path="res://assets/Temporary/Fonts/Finnfont-Regular.ttf" id="3_nq4jm"]
-[ext_resource type="FontFile" uid="uid://baj3xxd4vtp7g" path="res://assets/Temporary/Fonts/Believe Heart.otf" id="4_0xljj"]
+[ext_resource type="FontFile" uid="uid://bfkna668oo3mb" path="res://assets/Fonts/Finnfont-Regular.ttf" id="3_nq4jm"]
+[ext_resource type="FontFile" uid="uid://baj3xxd4vtp7g" path="res://assets/Fonts/Believe Heart.otf" id="4_0xljj"]
 [ext_resource type="Script" uid="uid://ealm8i08k883" path="res://scenes/Menu/settings_panel_container.gd" id="5_ka48x"]
 [ext_resource type="PackedScene" uid="uid://dlw4y68fq4syw" path="res://scenes/Audio Manager/audio_manager.tscn" id="6_jaf1h"]
 [ext_resource type="Script" uid="uid://bnh15wb1ry7wn" path="res://scenes/Menu/audioplayer_complete.gd" id="7_xe3l3"]
