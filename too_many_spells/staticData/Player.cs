@@ -25,6 +25,7 @@ public partial class Player : Node
         Instance = this;
 
         GameStateManager.Instance.GameSaved += this.SavePlayer;
+        GameStateManager.Instance.ReloadGameFiles += this.LoadPlayer;
 
         this.LoadPlayer();
     }

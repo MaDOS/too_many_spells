@@ -7,6 +7,9 @@ public partial class GameStateManager : Node
 
     [Signal]
     public delegate void GameSavedEventHandler();
+
+    [Signal]
+    public delegate void ReloadGameFilesEventHandler();
     
     public const string PLAYERSAVEFILE = "user://player.json";
 	public const string BOOKSAVEFILE = "user://book.json";
@@ -69,5 +72,7 @@ public partial class GameStateManager : Node
 
             DirAccess.RemoveAbsolute(absPath);
         }
+
+        EmitSignal(nameof(ReloadGameFiles));
     }
 }

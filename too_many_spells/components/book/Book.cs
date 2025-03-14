@@ -19,6 +19,7 @@ public partial class Book : AnimatedSprite2D
 		_rightPage = GetNode<TextureRect>("PageRight");
 
 		GameStateManager.Instance.GameSaved += this.SavePages;
+		GameStateManager.Instance.ReloadGameFiles += this.LoadPages;
 
 		this.LoadPages();
 
