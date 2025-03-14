@@ -100,6 +100,70 @@ points = PackedVector2Array(-3.88156, -19.4007, 40.8553, 9.70891, 40.8553, 13.30
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mj72h"]
 
+[sub_resource type="Animation" id="Animation_w16s8"]
+resource_name = "fade out"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:theme_override_styles/panel:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:theme_override_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_kmvpm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:theme_override_styles/panel:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:theme_override_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mj72h"]
+_data = {
+&"RESET": SubResource("Animation_kmvpm"),
+&"fade out": SubResource("Animation_w16s8")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w16s8"]
+bg_color = Color(0, 0, 0, 1)
+
 [node name="TopNodeUIMainMenu" type="Node2D"]
 script = ExtResource("1_5f0d0")
 
@@ -156,12 +220,13 @@ texture = ExtResource("3_mj72h")
 centered = false
 
 [node name="TabletAnimation" type="AnimatedSprite2D" parent="UIMainMenu/Panel"]
+z_index = 1
 position = Vector2(1280, 720)
 sprite_frames = SubResource("SpriteFrames_fm4mm")
 animation = &"tablet_animated"
 
 [node name="StartGameButton" type="Button" parent="UIMainMenu/Panel"]
-layout_mode = 2
+z_index = 1
 offset_left = 978.0
 offset_top = 382.0
 offset_right = 1592.0
@@ -173,11 +238,11 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_2efse")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_s3gmn")
 
 [node name="ExitButton" type="Button" parent="UIMainMenu/Panel"]
-layout_mode = 2
+z_index = 1
 offset_left = 2011.0
 offset_top = 280.0
 offset_right = 2493.0
-offset_bottom = 936.0
+offset_bottom = 952.0
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("3_5gksv")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_a5pp5")
@@ -186,7 +251,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_12r7g")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4c1jx")
 
 [node name="Credits" type="Button" parent="UIMainMenu/Panel"]
-layout_mode = 0
+z_index = 1
 offset_left = 133.0
 offset_top = 287.0
 offset_right = 495.0
@@ -198,6 +263,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_0gg4p")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xr624")
 
 [node name="Area2D" type="Area2D" parent="UIMainMenu/Panel"]
+z_index = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UIMainMenu/Panel/Area2D"]
 position = Vector2(1894.7, 972.3)
@@ -314,6 +380,31 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_mj72h")
 [node name="AudioSettingsManager" parent="UIMainMenu" instance=ExtResource("6_sgxvc")]
 visible = false
 layout_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UIMainMenu"]
+root_node = NodePath("Panel2")
+libraries = {
+&"": SubResource("AnimationLibrary_mj72h")
+}
+
+[node name="Panel2" type="Panel" parent="UIMainMenu/AnimationPlayer"]
+z_index = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_w16s8")
+
+[node name="Label" type="Label" parent="UIMainMenu/AnimationPlayer/Panel2"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 669.0
+offset_right = 2445.0
+offset_bottom = 827.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 116
+text = "This game saves automatically...magically!"
 
 [connection signal="animation_finished" from="UIMainMenu/Panel/TabletAnimation" to="." method="_on_tablet_animation_animation_finished"]
 [connection signal="pressed" from="UIMainMenu/Panel/StartGameButton" to="." method="_on_start_game_button_pressed"]
