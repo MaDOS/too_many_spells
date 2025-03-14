@@ -26,7 +26,7 @@ public partial class GameTable : Node2D
     private GameMaster.GameMasterPrompt _gmPrompt = null!;
 
     private string _lastSpellCast = string.Empty;
-    private int promptsThisSession = Player.Instance.IsInTutorial ? 1 : GD.RandRange(1,3);
+    private int promptsThisSession = Player.Instance.IsInTutorial ? 1 : GD.RandRange(1,2);
 
     public override void _Ready()
     {
