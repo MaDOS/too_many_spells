@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3177kfjlvtml"
-path="res://.godot/imported/Unbenanntes_Projekt-12.png-80d0e87336670d8058ffa98ee7278348.ctex"
+uid="uid://cerccsjnj7xiv"
+path="res://.godot/imported/Cursor_klein.png-f7e735381d0771ddd033c2a68152684d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Menu/OptionsAnimation/Unbenanntes_Projekt-12.png"
-dest_files=["res://.godot/imported/Unbenanntes_Projekt-12.png-80d0e87336670d8058ffa98ee7278348.ctex"]
+source_file="res://assets/Miscs/Cursor_klein.png"
+dest_files=["res://.godot/imported/Cursor_klein.png-f7e735381d0771ddd033c2a68152684d.ctex"]
 
 [params]
 
