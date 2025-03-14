@@ -117,6 +117,22 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
+[node name="Sprite2D" type="Sprite2D" parent="UIMainMenu/Panel"]
+texture = ExtResource("2_s3gmn")
+centered = false
+
+[node name="lightTorchRight2" parent="UIMainMenu/Panel/Sprite2D" instance=ExtResource("17_w16s8")]
+position = Vector2(1924, 405)
+
+[node name="lightTorchRight1" parent="UIMainMenu/Panel/Sprite2D" instance=ExtResource("17_w16s8")]
+position = Vector2(1763, 406)
+
+[node name="lightTorchLeft2" parent="UIMainMenu/Panel/Sprite2D" instance=ExtResource("17_w16s8")]
+position = Vector2(775, 414)
+
+[node name="lightTorchLeft1" parent="UIMainMenu/Panel/Sprite2D" instance=ExtResource("17_w16s8")]
+position = Vector2(593, 417)
+
 [node name="TabletAnimation" type="AnimatedSprite2D" parent="UIMainMenu/Panel"]
 position = Vector2(1280, 720)
 sprite_frames = SubResource("SpriteFrames_fm4mm")
@@ -276,22 +292,6 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_mj72h")
 [node name="AudioSettingsManager" parent="UIMainMenu" instance=ExtResource("6_sgxvc")]
 visible = false
 layout_mode = 1
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_s3gmn")
-centered = false
-
-[node name="lightTorchRight2" parent="Sprite2D" instance=ExtResource("17_w16s8")]
-position = Vector2(1924, 405)
-
-[node name="lightTorchRight1" parent="Sprite2D" instance=ExtResource("17_w16s8")]
-position = Vector2(1763, 406)
-
-[node name="lightTorchLeft2" parent="Sprite2D" instance=ExtResource("17_w16s8")]
-position = Vector2(775, 414)
-
-[node name="lightTorchLeft1" parent="Sprite2D" instance=ExtResource("17_w16s8")]
-position = Vector2(593, 417)
 
 [connection signal="animation_finished" from="UIMainMenu/Panel/TabletAnimation" to="." method="_on_tablet_animation_animation_finished"]
 [connection signal="pressed" from="UIMainMenu/Panel/StartGameButton" to="." method="_on_start_game_button_pressed"]
