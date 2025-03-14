@@ -21,8 +21,10 @@ public partial class GameTable : Node2D
     private Dialogbox _dialogbox = null!;
     private GameBook _book = null!;
     private Button _btnGoHome = null!;
+    private Bark _bark = null!;
 
     private GameMaster.GameMasterPrompt _gmPrompt = null!;
+
     private string _lastSpellCast = string.Empty;
     private int promptsThisSession = Player.Instance.IsInTutorial ? 1 : GD.RandRange(1,3);
 
@@ -31,6 +33,7 @@ public partial class GameTable : Node2D
         _dialogbox = GetNode<Dialogbox>("Dialogbox");
         _book = GetNode<GameBook>("Book");
         _btnGoHome = GetNode<Button>("BtnGoHome");
+        _bark = GetNode<Bark>("Bark");
 
         _btnGoHome.Visible = false;
 
@@ -52,6 +55,7 @@ public partial class GameTable : Node2D
 
     private void Book_SpellCast(string spellName)
     {
+        _bark.Disable();
         this._lastSpellCast = spellName;
         DialogBoxTalk(new[] { $"You cast {spellName}!" }, "");
     }
@@ -127,6 +131,7 @@ public partial class GameTable : Node2D
                 _state = State.SpellCast;
                 _book.SetProcessInput(true);
                 _book.AllowedToCast = true;
+                _bark.Enable();
                 break;
             case State.SpellCast:
                 _state = State.GMPromptScoring;

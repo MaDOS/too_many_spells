@@ -41,6 +41,7 @@ Spells="*res://staticData/Spells.cs"
 FmodManager="*res://addons/fmod/FmodManager.gd"
 FmodManagerSingleton="*res://fmod_manager_singleton.gd"
 Player="*res://staticData/Player.cs"
+Barks="*res://staticData/Barks.cs"
 
 [display]
 

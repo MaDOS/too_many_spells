@@ -1,0 +1,16 @@
+[
+    {
+        "SpeakerName": "Game Master",
+        "TalkingPoints": [
+            "Bark 1",
+            "1"
+        ]
+    },
+    {
+        "SpeakerName": "Betty",
+        "TalkingPoints":  [
+            "Bark 2",
+            "2"
+        ]
+    }
+]
