@@ -19,11 +19,12 @@ public partial class Player : Node
     public bool IsInTutorial => Data.PromptsPlayed < 2;
 
     private const string LEVELDEFS = "res://staticData/leveldefs.json";
-    private const string SAVEFILE = "user://player.json";
 
     public override void _Ready()
     {
         Instance = this;
+
+        GameStateManager.Instance.GameSaved += this.SavePlayer;
 
         this.LoadPlayer();
     }
@@ -45,9 +46,9 @@ public partial class Player : Node
             GD.Print("Leveldefs file does not exist");
         }
 
-        if (FileAccess.FileExists(SAVEFILE))
+        if (FileAccess.FileExists(GameStateManager.PLAYERSAVEFILE))
         {
-            using (FileAccess file = FileAccess.Open(SAVEFILE, FileAccess.ModeFlags.Read))
+            using (FileAccess file = FileAccess.Open(GameStateManager.PLAYERSAVEFILE, FileAccess.ModeFlags.Read))
             {
                 string json = file.GetAsText();
                 Data = JsonSerializer.Deserialize<PlayerData>(json)!;
@@ -64,7 +65,7 @@ public partial class Player : Node
 
     public void SavePlayer()
     {
-        using (FileAccess file = FileAccess.Open(SAVEFILE, FileAccess.ModeFlags.Write))
+        using (FileAccess file = FileAccess.Open(GameStateManager.PLAYERSAVEFILE, FileAccess.ModeFlags.Write))
         {
             string json = JsonSerializer.Serialize(Data);
             file.StoreString(json);
