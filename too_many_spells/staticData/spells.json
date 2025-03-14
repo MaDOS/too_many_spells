@@ -206,6 +206,44 @@
 		]
 	},
 	{
+		"Name": "Combat Fart",
+		"Artwork": "res://assets/book/pages/Combat Fart.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Combat Fart",
+			"combat",
+			"air",
+			"attack",
+			"defense",
+			"utility"
+		]
+	},
+	{
+		"Name": "Sand Prison",
+		"Artwork": "res://assets/book/pages/Sand Prison.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Sand Prison",
+			"combat",
+			"earth",
+			"attack",
+			"utility"
+		]
+	},
+	{
+		"Name": "Gravel",
+		"Artwork": "res://assets/book/pages/Gravel.png",
+		"IsTrash": false,
+		"SpellTags": [
+			"Gravel",
+			"combat",
+			"social",
+			"earth",
+			"defense",
+			"utility"
+		]
+	},
+	{
 		"Name": "Thunderstruck",
 		"Artwork": "res://assets/book/pages/Thunderstruck.png",
 		"IsTrash": false,

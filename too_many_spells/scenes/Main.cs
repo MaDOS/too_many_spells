@@ -49,6 +49,8 @@ public partial class Main : Node2D
 			activeGameScene = null;
 		}
 
+		GameStateManager.Instance.SaveGame();
+
 		switch (gameState)
 		{
 			case GameState.Menu:

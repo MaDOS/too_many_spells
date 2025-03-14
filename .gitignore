@@ -13,3 +13,4 @@ export_credentials.cfg
 .mono/
 data_*/
 mono_crash.*.json
+too_many_spells/addons/fmod/libs/windows/~libGodotFmod.windows.editor.x86_64.dll

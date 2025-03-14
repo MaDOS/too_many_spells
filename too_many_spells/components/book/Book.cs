@@ -7,8 +7,6 @@ using System.Text.Json.Serialization;
 
 public partial class Book : AnimatedSprite2D
 {
-	private const string SAVEFILE = "user://book.json";
-
 	private TextureRect _leftPage = null!;
 	private TextureRect _rightPage = null!;
 
@@ -19,6 +17,9 @@ public partial class Book : AnimatedSprite2D
 	{
 		_leftPage = GetNode<TextureRect>("PageLeft");
 		_rightPage = GetNode<TextureRect>("PageRight");
+
+		GameStateManager.Instance.GameSaved += this.SavePages;
+		GameStateManager.Instance.ReloadGameFiles += this.LoadPages;
 
 		this.LoadPages();
 
@@ -42,9 +43,9 @@ public partial class Book : AnimatedSprite2D
 
 	private void LoadPages()
 	{
-		if (FileAccess.FileExists(SAVEFILE))
+		if (FileAccess.FileExists(GameStateManager.BOOKSAVEFILE))
 		{
-			using (FileAccess file = FileAccess.Open(SAVEFILE, FileAccess.ModeFlags.Read))
+			using (FileAccess file = FileAccess.Open(GameStateManager.BOOKSAVEFILE, FileAccess.ModeFlags.Read))
 			{
 				string json = file.GetAsText();
 				_pages = JsonSerializer.Deserialize<List<Page>>(json)!;
@@ -104,7 +105,7 @@ public partial class Book : AnimatedSprite2D
 
 	protected void SavePages()
 	{
-		using (FileAccess file = FileAccess.Open(SAVEFILE, FileAccess.ModeFlags.Write))
+		using (FileAccess file = FileAccess.Open(GameStateManager.BOOKSAVEFILE, FileAccess.ModeFlags.Write))
 		{
 			var json = JsonSerializer.Serialize(_pages);
 			file.StoreString(json);
