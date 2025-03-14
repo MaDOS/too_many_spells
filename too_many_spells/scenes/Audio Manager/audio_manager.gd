@@ -1,9 +1,9 @@
 extends Control
 
 @onready var audio_window: Panel = $AudioWindow
-@onready var master_volume_slider: HSlider = $AudioWindow/VBoxContainer/MasterVolumeSlider
-@onready var music_volume_slider: HSlider = $AudioWindow/VBoxContainer/MusicVolumeSlider
-@onready var sfx_volume_slider: HSlider = $AudioWindow/VBoxContainer/SFXVolumeSlider
+@onready var master_volume_slider: HSlider = $TextureRect/VBoxContainer/MasterVolumeSlider
+@onready var music_volume_slider: HSlider = $TextureRect/VBoxContainer/MusicVolumeSlider
+@onready var sfx_volume_slider: HSlider = $TextureRect/VBoxContainer/SFXVolumeSlider
 
 var master_index : int
 var music_index : int
@@ -16,6 +16,8 @@ func _ready() -> void:
 	sfx_index = AudioServer.get_bus_index("SFX")
 	
 	master_volume_slider.connect("value_changed", FmodManagerSingleton.master_volume_extender)
+	music_volume_slider.connect("value_changed", FmodManagerSingleton.music_volume_extender)
+	sfx_volume_slider.connect("value_changed", FmodManagerSingleton.sfx_volume_extender)
 	
 func _process(delta: float) -> void:
 	pass

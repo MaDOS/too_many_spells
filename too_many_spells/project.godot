@@ -46,8 +46,6 @@ Player="*res://staticData/Player.cs"
 
 window/size/viewport_width=2560
 window/size/viewport_height=1440
-window/size/window_width_override=1280
-window/size/window_height_override=720
 window/stretch/mode="viewport"
 mouse_cursor/custom_image="uid://cerccsjnj7xiv"
 mouse_cursor/custom_image_hotspot=Vector2(50, 10)
