@@ -18,15 +18,20 @@ public partial class Dialogbox : Control
     {
         _dialogLabel = GetNode<Label>("lblDialogText");
         _speakerNameLabel = GetNode<Label>("lblSpeekerName");
+
+        this.Hide();
     }
 
-	public override void _Input(InputEvent @event)
-	{
-		if (@event.IsActionPressed("advance_talking_points"))
+    public override void _Input(InputEvent @event)
+    {
+        if (@event.IsActionPressed("advance_talking_points"))
         {
-            this.AdvanceTalkingPoints();
+            if (this.Visible)
+            {
+                this.AdvanceTalkingPoints();
+            }
         }
-	}
+    }
 
     public void Talk(string[] talkingPoints, string speekerName)
     {
