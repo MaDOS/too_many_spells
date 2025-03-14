@@ -4,6 +4,9 @@ extends Node2D
 @onready var credits_control: Control = $UIMainMenu/CreditsControl
 @onready var tablet_animation: AnimatedSprite2D = $UIMainMenu/Panel/TabletAnimation
 @onready var sound_control: Control = $UIMainMenu/SoundControl
+@onready var animation_player: AnimationPlayer = $UIMainMenu/AnimationPlayer
+@onready var panel_2: Panel = $UIMainMenu/AnimationPlayer/Panel2
+
 
 
 signal main_menu_start
@@ -17,6 +20,11 @@ var tablet_open : bool
 func _ready() -> void:
 	show()
 	tablet_open = false
+	animation_player.play("fade out")
+	await animation_player.animation_finished
+	panel_2.hide()
+	print("hidden")
+	
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
