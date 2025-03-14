@@ -159,7 +159,360 @@
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
 				"AnswerSound": "SpellGood"
-			}					
+			},
+			{
+				"AnswerTexts": [
+					"You snap your hand forward and watch the ice-cold projectiles pierce the poor guy.",
+					"Some miss with the spread in close combat but the force of impact slows the bandit, the wounds slow them more and even with your low physical stats they don't present a real threat anymore.",
+					"Bonk. Done. Exp."
+				],
+				"FilterForIncludedSpellTags": [
+					"Ice Crystal Missle"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+					"It's a fun spell, for one side of the encounter, and has great impact but, again, your physical prowess is not the best as a wizard and the enemy is charging you head-on.",
+					"It's not a thousand years but even with some healing from Betty you'll definitely feel this encounter for a couple of days."
+				],
+				"FilterForIncludedSpellTags": [
+					"1000 Years of Pain"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"A potent spell and long-term deterrent keeping friend and foe from getting into close combat with you.",
+					"Way to make the situation awkward though.",
+					"The bandit stopped before they could take a full breath of your spell and as they cough you look at each other getting quite uncomfortable until Robin gets them from behind."
+				],
+				"FilterForIncludedSpellTags": [
+					"Poison Breath"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellNeutral"
+			},
+			{
+				"AnswerTexts": [
+					"A meteor for a guy who probably worked a farm or some trade not long ago. Interesting choice and quite an upcast but it works.",
+					"Gauntlet closed around the rock you tear reality grabbing for a meteor to yeet into the bandit's face."
+				],
+				"FilterForIncludedSpellTags": [
+					"Meteor"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellNeutral"
+			},
+			{
+				"AnswerTexts": [
+					"A small spell for a small enemy! Maybe a bit too small but the surprise factor enhanced by fire magic does the trick!",
+					"The bandit stops, baffled for a moment, before the blob ignites and errupts on their chest.",
+					"The rest is easy murder-hobo-handiwork."
+				],
+				"FilterForIncludedSpellTags": [
+					"Fireblob"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+					"With the reflexes of a water-bending master you whip your water, disarm the clueless bandit and yank them off their feet.",
+					"Fred finishes them in passing and you braved another situation in style and without even getting dirt on your new robe."
+				],
+				"FilterForIncludedSpellTags": [
+					"What Whip"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+					"You haven't played in a while but everyone loves this spell. When you take out your air guitar people beam with anticipation.",
+					"Robin starts early, as always, and as soon as your 'Ahhahhahhahhahhhhahhhhh's hit, so does Thunder and lightning.",
+					"The crowd roars, the encora slaps hard! Inspiration incoming."
+				],
+				"FilterForIncludedSpellTags": [
+					"Thunderstruck"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+					"A bit much for one bandit and so you turn only once to put them off balance and slow their movement with the magical chill.",
+					"Easy pickings for a party with a fighter and a rogue."
+				],
+				"FilterForIncludedSpellTags": [
+					"Frost Nova"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+					"Guessing by the sound of the impact this bandit had not practiced medicine in their prior employment but it surprises them enough to get them off balance.",
+					"Off balance is enough for you to land one, two hits and let Betty take them down. That's fuckin' teamwork."
+				],
+				"FilterForIncludedSpellTags": [
+					"Summon Apple"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+					"You raise your arms in grand gestures, huge walls of flame rise from the ground and close around the screaming bandit.",
+					"The screams stop with a startled choke, the bandit is still alive because you messed up the placement of the walls.",
+					"Your team talks about when to order food as you all wait for the duration to time out and do rollies about who gets to kill the last bandit."
+				],
+				"FilterForIncludedSpellTags": [
+					"Walls of Fire"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellNeutral"
+			},
+			{
+				"AnswerTexts": [
+					"You've been on the receiving end of it multiple times and asking Betty if she's still actually alive is a running joke in your group.",
+					"Giving her a look as you do the same to the poor bandit, you all watch as they scream in pain, slowly freezing up."
+				],
+				"FilterForIncludedSpellTags": [
+					"Freezer Burn"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+					"Warcrimes is an understatement and the DM is full of regret but it was your birthday when you asked for this spell after finding it on reddit.",
+					"Finding it on reddit should have been enough reason to say no but here we are and the bandit is not."
+				],
+				"FilterForIncludedSpellTags": [
+					"Testicular Torsion"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+					"The bandit might be a low level mob but still above some gravel. Bad call on your side.",
+					"Betty and Robin save you from the pummeling but nothing will save you from the mockery to come."
+				],
+				"FilterForIncludedSpellTags": [
+					"Gravel"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"Unusual and definitely an odd choice but with the bandit's heart already not fully in it anymore they are surprisingly susceptible to an outcome that doesn't include fighting and potentially dying.",
+					"Your group is shaking their heads and you probably got to have 'the talk' with your new friend real soon. It's not them, it's you and maybe you can stay friends."
+				],
+				"FilterForIncludedSpellTags": [
+					"Magic Rizz"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+					"In any other situation the bandit might have been open to it but who enjoys being told to calm down in that kind of situation??",
+					"It slows the bandit for a moment of doubt but not enough. Only Fred intercepting saves you from the retort you probably deserved."
+				],
+				"FilterForIncludedSpellTags": [
+					"Calm the F down"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"You're probably the most surprised between yourself and the bandit and they definitely were way too into it to kneel on your command.",
+					"...",
+					"Uh...",
+					"The spell is only one command but they are still kneeling and waiting for you to say something.",
+					"Awkward."
+				],
+				"FilterForIncludedSpellTags": [
+					"Command"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+					"Fred, Betty and Robin start questioning your sanity but the bandit stops and rejoices as someone starts speaking in their dialect.",
+					"Turns out the green owl is mightier than the sword and all it needed was understanding one another to create peace where there was conflict."
+				],
+				"FilterForIncludedSpellTags": [
+					"Comprehend languages"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+					"This is a first. Not just for you but for the bandit and your party, too.",
+					"Fred and Betty are shook by the appearance of a Magical Girl and the dance number, basking in the glorious strawberry glitter.",
+					"While the two ask the mysterious figure questions, Robin stabs the bandit and asks themselves where Harald went."
+				],
+				"FilterForIncludedSpellTags": [
+					"Star Gem Power Glow Up"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+					"The very real fear for their life makes the bandit's mental resolve easy to overcome. You're in and have a gander through their goals, fears, believes, traumas and other things you'd rather not seen.",
+					"While Fred and Robin turn the rest of the bandit troop into red mush and EXP you have a serious heart to heart with Billy the bandit.",
+					"It doesn't take long and just a little bit of emotional support and Billy is off to start an apprenticeship as a masseur."
+				],
+				"FilterForIncludedSpellTags": [
+					"Modify Mind"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+					"What a way to waste a spell slot!",
+					"There's nobody hurt, not yet, not counting corpses as 'hurt'. Doubly unlucky that the bandit stabs you after your heal spell blows out useless."
+				],
+				"FilterForIncludedSpellTags": [
+					"Healing"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"The distance between you and the bandit is longer than either of you expected. Especially with you doing nothing. Waiting for the perfect moment.",
+					"Cut to the bandit war-crying as they charge you. Cut to you waiting for them. Cut to the bandit crying a little less. Cut to you...",
+					"The very last moment you throw up your hand and block the dagger with a transparent wall of mana.",
+					"The bandit stumbles backward from the force of the impact reflected. You trip them, stab them, win. Quite anticlimactic but practical, I guess."
+				],
+				"FilterForIncludedSpellTags": [
+					"Barrier"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+					"There's several glances shared between the DM and the other players.",
+					"The bandit is clearly not an animal and nothing more impressive or useful than a squirrel around everyone starts asking if you are okay.",
+					"Most hurtful maybe that the bandit asks you the same."
+				],
+				"FilterForIncludedSpellTags": [
+					"I Like Animals"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"There's really not that much water around to make it do much, least of all help you against the charging bandit.",
+					"And to make the bandit's water do things you're not powerful enough without a full moon."
+				],
+				"FilterForIncludedSpellTags": [
+					"Make Water"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"You cast the spell and your mind is flooded by information.",
+					"This is indeed the latro latrunculus common in this area. They typically live in packs of about 5 up to 20 individuals and are very territorial.",
+					"They are omnivorous and their dietary specifics are closely related to the environment they inhabit. The city bandit strongly differs from their cousins in the wilderness.",
+					"The flood of information suddenly stops as the bandit knocks you out cold."
+				],
+				"FilterForIncludedSpellTags": [
+					"Fact Check"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"You were staring at Betty a little too much and were completely surprised when it was your turn, which is still a lame excuse for your choice of spell.",
+					"Betty asking you what you want to animate doesn't help a lot and when you animate your dagger to tele-stab the bandit... and almost miss... snorts and rolled eyes are your response."
+				],
+				"FilterForIncludedSpellTags": [
+					"Make things do things"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellNeutral"
+			},
+			{
+				"AnswerTexts": [
+					"You exchange a knife wound for a grilled cheese sandwich.",
+					"Only you can say if that was worth it."
+				],
+				"FilterForIncludedSpellTags": [
+					"Summon Grilled Cheese"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			}
 		]
 	},
 	{
