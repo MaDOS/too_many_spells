@@ -5,6 +5,9 @@ public partial class WorkBook : Book
 	[Signal]
 	public delegate void PageSwapEventHandler();
 
+	[Signal]
+	public delegate void PageDeletedEventHandler();
+
 	public bool DeletePage { get; set; } = false;
 
 	private Page? draggingPage = null;
@@ -60,6 +63,11 @@ public partial class WorkBook : Book
 						this._pages.Insert(draggingFromIndex, this.draggingPage);
 					}
 				}
+			}
+			else
+			{
+				GD.Print("Page deleted");
+				EmitSignal(nameof(PageDeleted));
 			}
 
 			this.CleanBook();

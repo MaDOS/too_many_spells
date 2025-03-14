@@ -23,6 +23,8 @@ public partial class WorkTable : Node2D
         _recyclebin.OnRecyclebinEntered += () => _workBook.DeletePage = true;
         _recyclebin.OnRecyclebinExited += () => _workBook.DeletePage = false;
 
+        _workBook.PageDeleted += () => _recyclebin.NomNomNm();
+
         _workBook.PageSwap += this.OnPageSwap;
     }
 

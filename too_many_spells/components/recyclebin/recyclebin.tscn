@@ -1,7 +1,39 @@
-[gd_scene load_steps=4 format=3 uid="uid://bju5jr41d4c5b"]
+[gd_scene load_steps=6 format=3 uid="uid://bju5jr41d4c5b"]
 
 [ext_resource type="Script" uid="uid://dpse1q27qy2w6" path="res://components/recyclebin/Recyclebin.cs" id="1_2ensd"]
 [ext_resource type="Texture2D" uid="uid://feg564ky4qic" path="res://assets/Schreibtisch/MüllNormal.png" id="1_03ssu"]
+[ext_resource type="Texture2D" uid="uid://db0rau0mwx0ib" path="res://assets/Schreibtisch/MüllBreit.png" id="3_1xp66"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gd0al"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_03ssu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_03ssu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1xp66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_03ssu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1xp66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_03ssu")
+}],
+"loop": false,
+"name": &"nomnomnom",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2ensd"]
 radius = 167.0
@@ -10,8 +42,11 @@ height = 476.0
 [node name="Recyclebin" type="Node2D"]
 script = ExtResource("1_2ensd")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_03ssu")
+[node name="TrashCanSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_gd0al")
+animation = &"nomnomnom"
+frame = 4
+frame_progress = 1.0
 
 [node name="Area2D" type="Area2D" parent="."]
 
