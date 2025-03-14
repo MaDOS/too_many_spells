@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://b26eahbpa6ggj" path="res://assets/Menu/OptionsAnimation/Unbenanntes_Projekt-8.png" id="11_a5pp5"]
 [ext_resource type="Texture2D" uid="uid://bqlegg3wi156u" path="res://assets/Menu/OptionsAnimation/Unbenanntes_Projekt-9.png" id="12_utcp0"]
 [ext_resource type="Texture2D" uid="uid://cu7c52qjie7ot" path="res://assets/Menu/OptionsAnimation/Unbenanntes_Projekt-10.png" id="13_12r7g"]
-[ext_resource type="Texture2D" uid="uid://87kebonytkod" path="res://assets/Menu/OptionsAnimation/Unbenanntes_Projekt-12.png" id="13_n84fj"]
+[ext_resource type="Texture2D" uid="uid://b3177kfjlvtml" path="res://assets/Menu/OptionsAnimation/Unbenanntes_Projekt-12.png" id="13_n84fj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gg6kq"]
 texture = ExtResource("2_s3gmn")
@@ -58,7 +58,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"tablet_animated",
-"speed": 5.0
+"speed": 12.0
 }]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jk1c5"]
