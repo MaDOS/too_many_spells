@@ -11,8 +11,6 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bqdcq"]
 size = Vector2(1470, 1096.5)
 
-[ext_resource type="Texture2D" uid="uid://desml7lbiv26b" path="res://assets/Spieltisch/GoHome.png" id="7_bqdcq"]
-
 [node name="GameTable" type="Node2D"]
 process_mode = 1
 script = ExtResource("1_nec0s")
@@ -43,8 +41,5 @@ text = "Go home"
 [node name="Bark" parent="." instance=ExtResource("6_4dcwo")]
 
 [node name="Cat" parent="." instance=ExtResource("7_7gw0v")]
-[node name="GoHome" type="Sprite2D" parent="."]
-texture = ExtResource("7_bqdcq")
-centered = false
 
 [connection signal="pressed" from="BtnGoHome" to="." method="_on_BtnGoHome_pressed"]

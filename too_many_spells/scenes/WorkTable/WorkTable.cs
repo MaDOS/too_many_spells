@@ -17,7 +17,7 @@ public partial class WorkTable : Node2D
         base._Ready();
 
         _workBook = GetNode<WorkBook>("Book");
-        _lblSwapsRemaining = GetNode<Label>("LblSwapsRemaining");
+        _lblSwapsRemaining = GetNode<Label>("SwapsLeftSprite/LblSwapsRemaining");
         _recyclebin = GetNode<Recyclebin>("Recyclebin");
 
         _recyclebin.OnRecyclebinEntered += () => _workBook.DeletePage = true;
@@ -31,6 +31,11 @@ public partial class WorkTable : Node2D
     private void _on_BtnNextSession_pressed()
     {
         EmitSignal(nameof(NextSession));
+    }    
+    
+    private void _on_BtnTablet_pressed()
+    {
+        GameStateManager.Instance.FireBackToMainMenu();
     }
 
     private void OnPageSwap()
@@ -42,6 +47,6 @@ public partial class WorkTable : Node2D
             this._workBook.DisableSwapping();
         }
         
-        _lblSwapsRemaining.Text = $"Swaps remaining: {_swapsRemaining}";
+        _lblSwapsRemaining.Text = $"{_swapsRemaining}";
     }
 }

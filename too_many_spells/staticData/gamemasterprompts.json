@@ -529,14 +529,15 @@
 		"Answers": [
 			{
 				"AnswerTexts": [
-					"There's really no space for the Great Fireball to go anywhere and the DM strongly encourages you to pick a different spell or roll a new character..."
+					"There's really no space for the Great Fireball to go anywhere and the DM strongly encourages you to pick a different spell or you might have to roll a new character..."
 				],
 				"FilterForIncludedSpellTags": [
 					"Just Fireball"
 				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
-				"MaxScore": 0.0
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
@@ -548,19 +549,21 @@
 				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
-				"MaxScore": 0.0
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
-					"It takes you a moment to assume T-Pose but leaning into the gelatinous grapple you pull it off at an angle!",
-					"The very moment the first zap hits the ooze you can feel the grip loosening and concentrating on more zaps you fall free in a blink!"
+				"It takes you a moment to assume T-Pose but leaning into the gelatinous grapple you pull it off at an angle!",
+				"The very moment the first zap hits the ooze you can feel the grip loosening and concentrating on more zaps you fall free in a blink!"
 				],
 				"FilterForIncludedSpellTags": [
 					"Generate Lightning"
 				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
-				"MaxScore": 0.0
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
 			},
 			{
 				"AnswerTexts": [
@@ -572,7 +575,8 @@
 				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
-				"MaxScore": 0.0
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
@@ -584,7 +588,8 @@
 				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
-				"MaxScore": 0.0
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
@@ -596,7 +601,8 @@
 				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
-				"MaxScore": 0.0
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
@@ -608,7 +614,8 @@
 				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
-				"MaxScore": 0.0
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
@@ -619,7 +626,8 @@
 				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
-				"MaxScore": 0.0
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
@@ -631,7 +639,8 @@
 				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
-				"MaxScore": 0.0
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellNeutral"
 			},
 			{
 				"AnswerTexts": [
@@ -642,7 +651,8 @@
 				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
-				"MaxScore": 0.0
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
@@ -654,7 +664,1147 @@
 				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
-				"MaxScore": 0.0
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+					"There is no way for the slime to dodge but neither is there room for the projectiles to accelerate enough without hurting your own hands.",
+					"It's still sharp ice crystals firing away though and they manage to cut away some of the slime but the recoil cuts you, too."
+				],
+				"FilterForIncludedSpellTags": [
+					"Ice Crystal Missle"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellNeutral"
+			},
+			{
+				"AnswerTexts": [
+					"... how do you imagine this playing out?"
+				],
+				"FilterForIncludedSpellTags": [
+					"1000 Years of Pain"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"There is no nostrils, no face and even you must realise a slime probably doesn't breathe.",
+					"Maybe taking a round of acid burn damage will kickstart your idea machine into a higher gear."
+				],
+				"FilterForIncludedSpellTags": [
+					"Poison Breath"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"There's not much space but somehow you manage. Manage to knock yourself out in the process."
+				],
+				"FilterForIncludedSpellTags": [
+					"Meteor"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"Luckily your own blob doesn't burn you but that's about it. Better luck next turn."
+				],
+				"FilterForIncludedSpellTags": [
+					"Fireblob"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"There's no space to use it with the caught hand and there is not much contact surface to do any good with your free hand either.",
+					"Ignoring Fred's offer of help knowing it might cost you an arm, you turn to Betty and Robin, trying to look as endearing as possible."
+				],
+				"FilterForIncludedSpellTags": [
+					"What Whip"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"It would be a great improvement to everybody's mood but you can't play this kind of song one-handed.",
+					"Remembering your last grand performance your teammates take pity on you and free you at once."
+				],
+				"FilterForIncludedSpellTags": [
+					"Thunderstruck"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"You can't do a full spin and that's a good thing. This way it doesn't have much power as you frost blast Robin who wanted to help you.",
+					"They might be less inclined to now."
+				],
+				"FilterForIncludedSpellTags": [
+					"Frost Nova"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"It could be worse, I guess? You could feel your hand burning away without a snack."
+				],
+				"FilterForIncludedSpellTags": [
+					"Summon Apple"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"You raise your free hand in a great gesture once, twice, thr-...",
+					"You remember that this spell needs both your hand and just hope the others didn't see you uselessly wave your arm."
+				],
+				"FilterForIncludedSpellTags": [
+					"Walls of Fire"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"For the longest time nothing happens until you feel your own hand growing increasingly cold.",
+					"Fred and Robin both slap their forehead at exactly the same time."
+
+				],
+				"FilterForIncludedSpellTags": [
+					"Freezer Burn"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Testicular Torsion"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Gravel"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Magic Rizz"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Calm the F down"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Command"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Comprehend languages"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Star Gem Power Glow Up"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Modify Mind"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Healing"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Barrier"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"I Like Animals"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Make Water"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Fact Check"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Make things do things"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellNeutral"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Summon Grilled Cheese"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			}
+		]
+	},
+	{
+		"ScenarioName": "Scenario 3",
+		"MaxExperience": 100,
+		"TrashAnswer": "Go drunk you are home",
+		"PromptTexts": [
+		],
+		"PromptTags": [],
+		"Answers": [
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Just Fireball"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Surf"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Generate Lightning"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellNeutral"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Biting Frost"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Finger Gun"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Mindfrick"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Acid Splash"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellNeutral"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Rock-a-lanche"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Cloak of Fire"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Summon Water Golem"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Lightning Blade"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Ice Crystal Missle"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"1000 Years of Pain"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Poison Breath"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellNeutral"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Meteor"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellNeutral"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Fireblob"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"What Whip"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Thunderstruck"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Frost Nova"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Summon Apple"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Walls of Fire"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellNeutral"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Freezer Burn"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Testicular Torsion"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Gravel"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Magic Rizz"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Calm the F down"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Command"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Comprehend languages"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Star Gem Power Glow Up"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Modify Mind"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Healing"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Barrier"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"I Like Animals"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Make Water"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Fact Check"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Make things do things"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellNeutral"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Summon Grilled Cheese"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			}
+		]
+	},
+	{
+		"ScenarioName": "Scenario 4",
+		"MaxExperience": 100,
+		"TrashAnswer": "Go drunk you are home",
+		"PromptTexts": [
+		],
+		"PromptTags": [],
+		"Answers": [
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Just Fireball"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Surf"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Generate Lightning"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellNeutral"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Biting Frost"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Finger Gun"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Mindfrick"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Acid Splash"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellNeutral"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Rock-a-lanche"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Cloak of Fire"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Summon Water Golem"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Lightning Blade"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Ice Crystal Missle"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"1000 Years of Pain"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Poison Breath"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellNeutral"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Meteor"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellNeutral"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Fireblob"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"What Whip"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Thunderstruck"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Frost Nova"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Summon Apple"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Walls of Fire"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellNeutral"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Freezer Burn"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Testicular Torsion"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Gravel"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Magic Rizz"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Calm the F down"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Command"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Comprehend languages"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Star Gem Power Glow Up"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Modify Mind"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Healing"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Barrier"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"I Like Animals"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Make Water"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Fact Check"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Make things do things"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellNeutral"
+			},
+			{
+				"AnswerTexts": [
+				],
+				"FilterForIncludedSpellTags": [
+					"Summon Grilled Cheese"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
 			}
 		]
 	}

@@ -1,13 +1,35 @@
-[gd_scene load_steps=9 format=3 uid="uid://bj3wdy2t5m88c"]
+[gd_scene load_steps=13 format=3 uid="uid://bj3wdy2t5m88c"]
 
 [ext_resource type="PackedScene" uid="uid://kf64j7pluy7o" path="res://components/book/book.tscn" id="1_7idc7"]
 [ext_resource type="Script" uid="uid://dm0mifipepk1p" path="res://scenes/WorkTable/WorkTable.cs" id="1_m5rin"]
 [ext_resource type="Texture2D" uid="uid://cfpwlebqrmkc2" path="res://assets/Schreibtisch/SchreibtischBase.png" id="2_d55wh"]
 [ext_resource type="Script" uid="uid://38r0e4ro2sme" path="res://components/book/WorkBook.cs" id="2_vkig8"]
 [ext_resource type="PackedScene" uid="uid://bju5jr41d4c5b" path="res://components/recyclebin/recyclebin.tscn" id="5_esrdk"]
+[ext_resource type="Texture2D" uid="uid://rvuw7xhvjsdg" path="res://assets/Schreibtisch/NextSessionShimmer.png" id="6_6hon4"]
 [ext_resource type="Texture2D" uid="uid://c5xxp813ubbs5" path="res://assets/Schreibtisch/Swaps.png" id="6_obr7n"]
 [ext_resource type="Texture2D" uid="uid://82w23avqbb7f" path="res://assets/Schreibtisch/NextSession.png" id="7_3w5cr"]
-[ext_resource type="Texture2D" uid="uid://4vgy5xshmgng" path="res://assets/TabletInGame/Unbenanntes_Projekt-1.png" id="8_6hon4"]
+[ext_resource type="FontFile" uid="uid://baj3xxd4vtp7g" path="res://assets/Fonts/Believe Heart.otf" id="9_3w5cr"]
+[ext_resource type="Texture2D" uid="uid://d0or725axppas" path="res://assets/TabletInGame/tablet.png" id="10_uus2h"]
+[ext_resource type="Texture2D" uid="uid://c4mgb385qi18g" path="res://assets/TabletInGame/tabletshimmer.png" id="11_1d8ie"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uus2h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_3w5cr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_6hon4")
+}],
+"loop": true,
+"name": &"shimmer_on_hover",
+"speed": 5.0
+}]
 
 [node name="WorkTable" type="Node2D"]
 process_mode = 1
@@ -21,21 +43,15 @@ centered = false
 animation = &"closed_front"
 script = ExtResource("2_vkig8")
 
-[node name="BtnNextSession" type="Button" parent="."]
-offset_left = 2248.0
-offset_top = 1353.0
-offset_right = 2550.0
-offset_bottom = 1428.0
-theme_override_font_sizes/font_size = 48
-text = "Next session"
+[node name="NextSessionButton" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_uus2h")
+centered = false
 
-[node name="LblSwapsRemaining" type="Label" parent="."]
-offset_left = 32.0
-offset_top = 44.0
-offset_right = 201.0
-offset_bottom = 90.0
-theme_override_font_sizes/font_size = 48
-text = "Swaps remaining: 5"
+[node name="BtnNextSession" type="Button" parent="NextSessionButton"]
+offset_left = 2172.0
+offset_top = 1312.0
+offset_right = 2474.0
+offset_bottom = 1387.0
 
 [node name="Recyclebin" parent="." instance=ExtResource("5_esrdk")]
 position = Vector2(215, 1133)
@@ -44,12 +60,25 @@ position = Vector2(215, 1133)
 texture = ExtResource("6_obr7n")
 centered = false
 
-[node name="NextSession" type="Sprite2D" parent="."]
-texture = ExtResource("7_3w5cr")
-centered = false
+[node name="LblSwapsRemaining" type="Label" parent="Swaps"]
+offset_left = 142.0
+offset_top = 161.0
+offset_right = 195.0
+offset_bottom = 295.0
+rotation = -0.247837
+theme_override_colors/font_color = Color(0.41677, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_3w5cr")
+theme_override_font_sizes/font_size = 106
+text = "5"
 
-[node name="UnbenanntesProjekt-1" type="Sprite2D" parent="."]
-texture = ExtResource("8_6hon4")
-centered = false
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 2120.0
+offset_right = 2554.0
+offset_bottom = 514.0
+texture_normal = ExtResource("10_uus2h")
+texture_hover = ExtResource("11_1d8ie")
 
-[connection signal="pressed" from="BtnNextSession" to="." method="_on_BtnNextSession_pressed"]
+[connection signal="mouse_entered" from="NextSessionButton/BtnNextSession" to="NextSessionButton" method="play" binds= ["shimmer_on_hover"]]
+[connection signal="mouse_exited" from="NextSessionButton/BtnNextSession" to="NextSessionButton" method="play" binds= ["default"]]
+[connection signal="pressed" from="NextSessionButton/BtnNextSession" to="." method="_on_BtnNextSession_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_BtnTablet_pressed"]

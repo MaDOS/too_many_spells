@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db0rau0mwx0ib"
-path="res://.godot/imported/MüllBreit.png-0dc2aea95db65e1ec506864993a741bd.ctex"
+uid="uid://c4mgb385qi18g"
+path="res://.godot/imported/tabletshimmer.png-dbe43d8d5e93ca2ec1977623bab44594.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Schreibtisch/MüllBreit.png"
-dest_files=["res://.godot/imported/MüllBreit.png-0dc2aea95db65e1ec506864993a741bd.ctex"]
+source_file="res://assets/TabletInGame/tabletshimmer.png"
+dest_files=["res://.godot/imported/tabletshimmer.png-dbe43d8d5e93ca2ec1977623bab44594.ctex"]
 
 [params]
 

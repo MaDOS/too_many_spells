@@ -1,14 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://bju5jr41d4c5b"]
+[gd_scene load_steps=9 format=3 uid="uid://bju5jr41d4c5b"]
 
 [ext_resource type="Script" uid="uid://dpse1q27qy2w6" path="res://components/recyclebin/Recyclebin.cs" id="1_2ensd"]
-[ext_resource type="Texture2D" uid="uid://feg564ky4qic" path="res://assets/Schreibtisch/MüllNormal.png" id="1_03ssu"]
-[ext_resource type="Texture2D" uid="uid://db0rau0mwx0ib" path="res://assets/Schreibtisch/MüllBreit.png" id="3_1xp66"]
+[ext_resource type="Texture2D" uid="uid://baxjd4vx8oxa2" path="res://assets/recyclebin/glow.png" id="2_0dgru"]
+[ext_resource type="Texture2D" uid="uid://c22a2ilb505it" path="res://assets/recyclebin/Hamster1.png" id="3_0dgru"]
+[ext_resource type="Texture2D" uid="uid://bhtckk5w5g68q" path="res://assets/recyclebin/Hamster2.png" id="4_ab3ba"]
+[ext_resource type="Texture2D" uid="uid://b3l4nmiiisrr0" path="res://assets/recyclebin/Hamster3.png" id="5_qicu3"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gd0al"]
+load_path = "res://.godot/imported/MüllNormal.png-8aced6c954d784477ebc0100d7ed1ad1.ctex"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gd0al"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_03ssu")
+"texture": SubResource("CompressedTexture2D_gd0al")
 }],
 "loop": true,
 "name": &"default",
@@ -16,19 +21,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_03ssu")
+"texture": ExtResource("3_0dgru")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_1xp66")
+"texture": ExtResource("4_ab3ba")
 }, {
 "duration": 1.0,
-"texture": ExtResource("1_03ssu")
+"texture": ExtResource("5_qicu3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_1xp66")
+"texture": ExtResource("3_0dgru")
 }, {
 "duration": 1.0,
-"texture": ExtResource("1_03ssu")
+"texture": ExtResource("5_qicu3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0dgru")
 }],
 "loop": false,
 "name": &"nomnomnom",
@@ -42,10 +50,14 @@ height = 476.0
 [node name="Recyclebin" type="Node2D"]
 script = ExtResource("1_2ensd")
 
+[node name="GlowSprite" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_0dgru")
+
 [node name="TrashCanSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gd0al")
 animation = &"nomnomnom"
-frame = 4
+frame = 5
 frame_progress = 1.0
 
 [node name="Area2D" type="Area2D" parent="."]

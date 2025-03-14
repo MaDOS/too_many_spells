@@ -9,12 +9,14 @@ public partial class Recyclebin : Node2D
     public delegate void OnRecyclebinExitedEventHandler();
 
     private AnimatedSprite2D _trashCanSprite = null!;
+    private Sprite2D _glowSprite = null!;
 
     public override void _Ready()
     {
         base._Ready();
 
         _trashCanSprite = GetNode<AnimatedSprite2D>("TrashCanSprite");
+        _glowSprite = GetNode<Sprite2D>("GlowSprite");
     }
 
     public void NomNomNm()
@@ -28,10 +30,13 @@ public partial class Recyclebin : Node2D
     {
         GD.Print("Recyclebin entered");
         EmitSignal(nameof(OnRecyclebinEntered));
+        _glowSprite.Visible = true;
     }
 
     public void OnRecyclebinAreaExited()
     {
         GD.Print("Recyclebin exited");
-        EmitSignal(nameof(OnRecyclebinExited));}
+        EmitSignal(nameof(OnRecyclebinExited));
+        _glowSprite.Visible = false;
+    }
 }

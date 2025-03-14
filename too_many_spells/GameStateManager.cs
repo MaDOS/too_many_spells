@@ -16,6 +16,9 @@ public partial class GameStateManager : Node
 
     [Signal]
     public delegate void PlayEffectEventHandler(string effect_name);
+
+    [Signal]
+    public delegate void BackToMainMenuEventHandler();
     
     public const string PLAYERSAVEFILE = "user://player.json";
 	public const string BOOKSAVEFILE = "user://book.json";
@@ -90,5 +93,10 @@ public partial class GameStateManager : Node
     public void FirePlayEffect(string effect_name)
     {
         EmitSignal(nameof(PlayEffect), effect_name);
+    }
+
+    public void FireBackToMainMenu()
+    {
+        EmitSignal(nameof(BackToMainMenu));
     }
 }

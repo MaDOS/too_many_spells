@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hrptih4vxj6q"
-path="res://.godot/imported/Unbenanntes_Projekt-2.png-edffa5d39621bf3cdd1f8a255c813f2a.ctex"
+uid="uid://c22a2ilb505it"
+path="res://.godot/imported/Hamster1.png-a0ca80ee1f4ea5d43770313aab8d2009.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/TabletInGame/Unbenanntes_Projekt-2.png"
-dest_files=["res://.godot/imported/Unbenanntes_Projekt-2.png-edffa5d39621bf3cdd1f8a255c813f2a.ctex"]
+source_file="res://assets/recyclebin/Hamster1.png"
+dest_files=["res://.godot/imported/Hamster1.png-a0ca80ee1f4ea5d43770313aab8d2009.ctex"]
 
 [params]
 

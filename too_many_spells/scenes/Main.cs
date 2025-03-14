@@ -31,6 +31,7 @@ public partial class Main : Node2D
 		this.SetGameState(GameState.Menu);
 
 		GameStateManager.Instance.GamePauseToggled += GamePauseToggled;
+		GameStateManager.Instance.BackToMainMenu += () => this.SetGameState(GameState.Menu);
 	}
 
 	public void GamePauseToggled(bool paused)

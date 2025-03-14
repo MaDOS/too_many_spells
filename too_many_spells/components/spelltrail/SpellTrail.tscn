@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d0dhcuvwi1b6u"]
 
-[ext_resource type="Texture2D" uid="uid://bnbq7hnkgrlco" path="res://assets/spelltrail/mouse_particles.png" id="1_6871m"]
+[ext_resource type="Texture2D" uid="uid://ch7ks16q7rhd4" path="res://assets/PartikelGruen.png" id="1_6871m"]
 
 [node name="Spelltrail" type="Node2D"]
 
