@@ -14,8 +14,6 @@ signal play_music
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	show()
-	#main_menu_start.emit()
-	self.connect("play_music", FmodManagerSingleton.playmusic_singleton)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,6 +1,5 @@
-[gd_scene load_steps=56 format=3 uid="uid://kf64j7pluy7o"]
+[gd_scene load_steps=46 format=3 uid="uid://kf64j7pluy7o"]
 
-[ext_resource type="Texture2D" uid="uid://bjq13iyvup1t6" path="res://assets/book/Book_Sheet_64x64.png" id="1_nusbk"]
 [ext_resource type="Texture2D" uid="uid://bdvs7k2sdrdsw" path="res://assets/book/book_animations/Book_Front_Open_7.png" id="1_uebh5"]
 [ext_resource type="Script" uid="uid://ck4q70ndjf6a3" path="res://components/book/Book.cs" id="2_s0rqt"]
 [ext_resource type="Texture2D" uid="uid://b4csc10jhcpxf" path="res://assets/book/book_animations/Book_Front_Open_6.png" id="2_tvs66"]
@@ -45,42 +44,6 @@
 [ext_resource type="Texture2D" uid="uid://cq2f0dduyk4sc" path="res://assets/book/book_animations/Book_Back_PageTurn_8.png" id="42_wekmx"]
 [ext_resource type="Texture2D" uid="uid://cnvtxccg88ceb" path="res://assets/book/book_animations/Book_Back_PageTurn_9_Complete.png" id="43_cjo1n"]
 [ext_resource type="Texture2D" uid="uid://jxek4rkoc47h" path="res://assets/book/book_animations/Book_Front_Open_8_Complete.png" id="44_xqu5u"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0g6l1"]
-atlas = ExtResource("1_nusbk")
-region = Rect2(0, 320, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tk74d"]
-atlas = ExtResource("1_nusbk")
-region = Rect2(64, 320, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ic0yr"]
-atlas = ExtResource("1_nusbk")
-region = Rect2(128, 320, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rhlk0"]
-atlas = ExtResource("1_nusbk")
-region = Rect2(192, 320, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1lrhu"]
-atlas = ExtResource("1_nusbk")
-region = Rect2(256, 320, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ag6f2"]
-atlas = ExtResource("1_nusbk")
-region = Rect2(320, 320, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sg16a"]
-atlas = ExtResource("1_nusbk")
-region = Rect2(384, 320, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s2atx"]
-atlas = ExtResource("1_nusbk")
-region = Rect2(448, 320, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ssnp5"]
-atlas = ExtResource("1_nusbk")
-region = Rect2(512, 320, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vxube"]
 animations = [{
@@ -142,34 +105,7 @@ animations = [{
 "name": &"close_from_last",
 "speed": 12.0
 }, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0g6l1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tk74d")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ic0yr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rhlk0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1lrhu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ag6f2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sg16a")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_s2atx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ssnp5")
-}],
+"frames": [],
 "loop": false,
 "name": &"close_from_middle",
 "speed": 12.0
@@ -448,9 +384,8 @@ animations = [{
 
 [node name="Book" type="AnimatedSprite2D"]
 texture_filter = 1
-position = Vector2(1, 2)
 sprite_frames = SubResource("SpriteFrames_vxube")
-animation = &"next_page"
+animation = &"open_first"
 autoplay = "closed_front"
 centered = false
 script = ExtResource("2_s0rqt")
@@ -458,11 +393,11 @@ script = ExtResource("2_s0rqt")
 [node name="PageRight" type="TextureRect" parent="."]
 anchors_preset = -1
 anchor_left = 0.4
-anchor_top = 0.28
+anchor_top = 0.27
 anchor_right = 0.4
 anchor_bottom = 0.28
 offset_left = -24.0
-offset_top = -14.2
+offset_top = 0.199982
 offset_right = 624.0
 offset_bottom = 915.8
 expand_mode = 1

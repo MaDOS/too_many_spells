@@ -67,7 +67,11 @@ public partial class GameMaster : Node
 
         GD.Print($"Found {answers.Count} answers");
 
-        return answers[GD.RandRange(0, answers.Count - 1)].AnswerTexts;
+        var answer = answers[GD.RandRange(0, answers.Count - 1)];
+
+        GameStateManager.Instance.FirePlayEffect(answer.AnswerSound);
+
+        return answer.AnswerTexts;
     }
 
     public record GameMasterPrompt
@@ -88,6 +92,7 @@ public partial class GameMaster : Node
             public string[] FilterForExcludedSpellTags { get; set; } = Array.Empty<string>();
             public float MinScore { get; set; }
             public float MaxScore { get; set; }
+            public string AnswerSound { get; set; } = string.Empty; //SpellGood, SpellBad, SpellNeutral, SpellPerfect
         }
     }
 }

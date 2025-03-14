@@ -10,6 +10,12 @@ public partial class GameStateManager : Node
 
     [Signal]
     public delegate void ReloadGameFilesEventHandler();
+
+    [Signal]
+    public delegate void MusicChangeEventHandler(string parameter);
+
+    [Signal]
+    public delegate void PlayEffectEventHandler(string effect_name);
     
     public const string PLAYERSAVEFILE = "user://player.json";
 	public const string BOOKSAVEFILE = "user://book.json";
@@ -19,7 +25,7 @@ public partial class GameStateManager : Node
     public override void _Ready()
     {
         Instance = this;
-        
+
         base._Ready();
     }
 
@@ -74,5 +80,15 @@ public partial class GameStateManager : Node
         }
 
         EmitSignal(nameof(ReloadGameFiles));
+    }
+
+    public void FireMusicChangeEvent(string parameter)
+    {
+        EmitSignal(nameof(MusicChange), parameter);
+    }
+
+    public void FirePlayEffect(string effect_name)
+    {
+        EmitSignal(nameof(PlayEffect), effect_name);
     }
 }

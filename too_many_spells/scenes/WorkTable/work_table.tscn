@@ -35,7 +35,6 @@ theme_override_font_sizes/font_size = 48
 text = "Swaps remaining: 5"
 
 [node name="Recyclebin" parent="." instance=ExtResource("5_esrdk")]
-position = Vector2(110, 1276)
-scale = Vector2(0.5, 0.5)
+position = Vector2(2324, 297)
 
 [connection signal="pressed" from="BtnNextSession" to="." method="_on_BtnNextSession_pressed"]

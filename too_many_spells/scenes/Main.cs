@@ -75,6 +75,7 @@ public partial class Main : Node2D
 		var menuScene = (Node2D)_menuScene.Instantiate();
 
 		menuScene.Connect("main_menu_play_clicked", Callable.From(() => this.SetGameState(GameState.WorkTable)));
+		GameStateManager.Instance.FireMusicChangeEvent("Menu");
 
 		this.activeGameScene = menuScene;
 	}
@@ -84,6 +85,7 @@ public partial class Main : Node2D
 		var gameTableScene = _gameTableScene.Instantiate<GameTable>();
 
 		gameTableScene.GoHome += () => this.SetGameState(GameState.WorkTable);
+		GameStateManager.Instance.FireMusicChangeEvent("Woods");
 
 		this.activeGameScene = gameTableScene;
 	}
@@ -93,6 +95,7 @@ public partial class Main : Node2D
 		var workTableScene = _workTableScene.Instantiate<WorkTable>();
 
 		workTableScene.NextSession += () => this.SetGameState(GameState.GameTable);
+		GameStateManager.Instance.FireMusicChangeEvent("Desk");
 
 		this.activeGameScene = workTableScene;
 	}

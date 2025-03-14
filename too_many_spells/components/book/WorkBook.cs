@@ -32,6 +32,8 @@ public partial class WorkBook : Book
 
 			if (!this.DeletePage)
 			{
+				GameStateManager.Instance.FirePlayEffect(SoundEffects.DropPlop);
+
 				if (_currentPage == 0 || _currentPage == _pages.Count)
 				{
 					this._pages.Insert(draggingFromIndex, this.draggingPage);
@@ -77,6 +79,7 @@ public partial class WorkBook : Book
 
 	public void PageDragged()
 	{
+		GameStateManager.Instance.FirePlayEffect(SoundEffects.DragPlop);
 		this._pages.Remove(this.draggingPage!);
 		this.EnsureEvenPages();
 		this.OnAnimationFinished();

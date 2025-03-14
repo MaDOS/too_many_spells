@@ -330,11 +330,11 @@
 		]
 	},
 	{
-		"Name": "Calm the F Down",
-		"Artwork": "res://assets/book/pages/Calm the F Down.png",
+		"Name": "Calm the F down",
+		"Artwork": "res://assets/book/pages/Calm the F down.png",
 		"IsTrash": false,
 		"SpellTags": [
-			"Calm the F Down",
+			"Calm the F down",
 			"social",
 			"psychic",
 			"defense",
@@ -354,22 +354,22 @@
 		]
 	},
 	{
-		"Name": "Comprehend Languages",
-		"Artwork": "res://assets/book/pages/Comprehend Languages.png",
+		"Name": "Comprehend languages",
+		"Artwork": "res://assets/book/pages/Comprehend languages.png",
 		"IsTrash": false,
 		"SpellTags": [
-			"Comprehend Languages",
+			"Comprehend languages",
 			"social",
 			"psychic",
 			"utility"
 		]
 	},
 	{
-		"Name": "Star Gem",
-		"Artwork": "res://assets/book/pages/Star Gem.png",
+		"Name": "Star Gem Power Glow Up",
+		"Artwork": "res://assets/book/pages/Star Gem Power Glow Up.png",
 		"IsTrash": false,
 		"SpellTags": [
-			"Star Gem",
+			"Star Gem Power Glow Up",
 			"social",
 			"defense",
 			"support",
@@ -436,11 +436,11 @@
 		]
 	},
 	{
-		"Name": "Five more Minutes",
-		"Artwork": "res://assets/book/pages/Five more Minutes.png",
+		"Name": "Five more minutes",
+		"Artwork": "res://assets/book/pages/Five more minutes.png",
 		"IsTrash": false,
 		"SpellTags": [
-			"Five more Minutes",
+			"Five more minutes",
 			"social",
 			"survival",
 			"psychic",
@@ -466,34 +466,34 @@
 	},
 	{
 		"Name": "I Like Animals",
-		"Artwork": "res://assets/book/pages/I Like Animals.png",
+		"Artwork": "res://assets/book/pages/Animals _ People.png",
 		"IsTrash": false,
 		"SpellTags": [
 			"I Like Animals"
 		]
 	},
 	{
-		"Name": "Make Water Do Things",
-		"Artwork": "res://assets/book/pages/Make Water Do Things.png",
+		"Name": "Make Water",
+		"Artwork": "res://assets/book/pages/Make Water.png",
 		"IsTrash": false,
 		"SpellTags": [
-			"Make Water Do Things"
+			"Make Water"
 		]
 	},
 	{
-		"Name": "Make Things Do Things",
-		"Artwork": "res://assets/book/pages/Make Things Do Things.png",
+		"Name": "Make things do things",
+		"Artwork": "res://assets/book/pages/Make things do things.png",
 		"IsTrash": false,
 		"SpellTags": [
-			"Make Things Do Things"
+			"Make things do things"
 		]
 	},
 	{
-		"Name": "Mage Hand",
-		"Artwork": "res://assets/book/pages/Mage Hand.png",
+		"Name": "Maes Hand",
+		"Artwork": "res://assets/book/pages/Maes Hand.png",
 		"IsTrash": false,
 		"SpellTags": [
-			"Mage Hand"
+			"Maes Hand"
 		]
 	},
 	{

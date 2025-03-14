@@ -19,6 +19,7 @@ public partial class Recyclebin : Node2D
 
     public void NomNomNm()
     {
+		GameStateManager.Instance.FirePlayEffect(SoundEffects.Trashcan);
         GD.Print("Nom nom nm");
         _trashCanSprite.Play("nomnomnom");
     }

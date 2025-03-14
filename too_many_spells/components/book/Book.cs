@@ -165,25 +165,52 @@ public partial class Book : AnimatedSprite2D
 			page = _pages.Count + 1;
 
 		if (_currentPage == -1 && page == 0)
+		{
 			PlayAnimation("open_to_first");
+			GameStateManager.Instance.FirePlayEffect(SoundEffects.OpenBook);
+		}
 		else if (_currentPage == 0 && page == -1)
+		{
 			PlayAnimation("close_from_first");
+			GameStateManager.Instance.FirePlayEffect(SoundEffects.CloseBook);
+		}
 		else if (_currentPage == 0 && page == 2)
+		{
 			PlayAnimation("next_from_first");
+			GameStateManager.Instance.FirePlayEffect(SoundEffects.Leafing);
+		}
 		else if (_currentPage == 2 && page == 0)
+		{
 			PlayAnimation("previous_to_first");
+			GameStateManager.Instance.FirePlayEffect(SoundEffects.Leafing);
+		}
 		else if (_currentPage == _pages.Count - 2 && page == _pages.Count)
+		{
 			PlayAnimation("next_to_last");
+			GameStateManager.Instance.FirePlayEffect(SoundEffects.Leafing);
+		}
 		else if (_currentPage == _pages.Count && page == _pages.Count + 1)
+		{
 			PlayAnimation("close_from_last");
+			GameStateManager.Instance.FirePlayEffect(SoundEffects.CloseBook);
+		}
 		else if (_currentPage == _pages.Count + 1 && page == _pages.Count)
+		{
 			PlayAnimation("open_to_last");
+			GameStateManager.Instance.FirePlayEffect(SoundEffects.OpenBook);
+		}
 		else
 		{
 			if (_currentPage < page)
+			{
 				PlayAnimation("next_page");
+				GameStateManager.Instance.FirePlayEffect(SoundEffects.Leafing);
+			}
 			else if (_currentPage > page)
+			{
 				PlayAnimation("previous_page");
+				GameStateManager.Instance.FirePlayEffect(SoundEffects.Leafing);
+			}
 		}
 
 		_currentPage = page;
@@ -270,7 +297,7 @@ public partial class Book : AnimatedSprite2D
 
 			Texture = ResourceLoader.Exists(textureFile) ? GD.Load<Texture2D>(textureFile) : null;
 
-			if(!string.IsNullOrEmpty(spellName) && Texture is null)
+			if (!string.IsNullOrEmpty(spellName) && Texture is null)
 			{
 				GD.Print($"[W] Artwork for Spell {spellName} not found!");
 			}
