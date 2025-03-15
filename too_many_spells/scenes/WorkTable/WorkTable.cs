@@ -3,50 +3,50 @@ using System;
 
 public partial class WorkTable : Node2D
 {
-    [Signal]
-    public delegate void NextSessionEventHandler();
+	[Signal]
+	public delegate void NextSessionEventHandler();
 
-    private WorkBook _workBook = null!;
-    private Label _lblSwapsRemaining = null!;
-    private Recyclebin _recyclebin = null!;
+	private WorkBook _workBook = null!;
+	private Label _lblSwapsRemaining = null!;
+	private Recyclebin _recyclebin = null!;
 
-    private int _swapsRemaining = 5;
+	private int _swapsRemaining = 5;
 
-    public override void _Ready()
-    {
-        base._Ready();
+	public override void _Ready()
+	{
+		base._Ready();
 
-        _workBook = GetNode<WorkBook>("Book");
-        _lblSwapsRemaining = GetNode<Label>("SwapsLeftSprite/LblSwapsRemaining");
-        _recyclebin = GetNode<Recyclebin>("Recyclebin");
+		_workBook = GetNode<WorkBook>("Book");
+		_lblSwapsRemaining = GetNode<Label>("SwapsLeftSprite/LblSwapsRemaining");
+		_recyclebin = GetNode<Recyclebin>("Recyclebin");
 
-        _recyclebin.OnRecyclebinEntered += () => _workBook.DeletePage = true;
-        _recyclebin.OnRecyclebinExited += () => _workBook.DeletePage = false;
+		_recyclebin.OnRecyclebinEntered += () => _workBook.DeletePage = true;
+		_recyclebin.OnRecyclebinExited += () => _workBook.DeletePage = false;
 
-        _workBook.PageDeleted += () => _recyclebin.NomNomNm();
+		_workBook.PageDeleted += () => _recyclebin.NomNomNm();
 
-        _workBook.PageSwap += this.OnPageSwap;
-    }
+		_workBook.PageSwap += this.OnPageSwap;
+	}
 
-    private void _on_BtnNextSession_pressed()
-    {
-        EmitSignal(nameof(NextSession));
-    }    
-    
-    private void _on_BtnTablet_pressed()
-    {
-        GameStateManager.Instance.FireBackToMainMenu();
-    }
+	private void _on_BtnNextSession_pressed()
+	{
+		EmitSignal(nameof(NextSession));
+	}    
+	
+	private void _on_BtnTablet_pressed()
+	{
+		GameStateManager.Instance.FireBackToMainMenu();
+	}
 
-    private void OnPageSwap()
-    {
-        this._swapsRemaining--;
+	private void OnPageSwap()
+	{
+		this._swapsRemaining--;
 
-        if(this._swapsRemaining == 0)
-        {
-            this._workBook.DisableSwapping();
-        }
-        
-        _lblSwapsRemaining.Text = $"{_swapsRemaining}";
-    }
+		if(this._swapsRemaining == 0)
+		{
+			this._workBook.DisableSwapping();
+		}
+		
+		_lblSwapsRemaining.Text = $"{_swapsRemaining}";
+	}
 }

@@ -6,6 +6,9 @@ extends Node2D
 @onready var sound_control: Control = $UIMainMenu/SoundControl
 @onready var animation_player: AnimationPlayer = $UIMainMenu/AnimationPlayer
 @onready var panel_2: Panel = $UIMainMenu/AnimationPlayer/Panel2
+@onready var poster: AnimatedSprite2D = $UIMainMenu/Panel/Sprite2D/Poster
+@onready var book: AnimatedSprite2D = $UIMainMenu/Panel/Sprite2D/Book
+@onready var tuer: AnimatedSprite2D = $UIMainMenu/Panel/Sprite2D/Tuer
 
 
 
@@ -70,3 +73,27 @@ func _on_exit_settings_button_pressed() -> void:
 
 func _on_reset_save_button_pressed() -> void:
 	GameStateManager.ResetSave()
+
+
+func _on_credits_mouse_entered() -> void:
+	poster.play("poster_shimmer")
+
+
+func _on_credits_mouse_exited() -> void:
+	poster.play("poster_default")
+
+
+func _on_start_game_button_mouse_entered() -> void:
+	book.play("book_shimmer")
+
+
+func _on_start_game_button_mouse_exited() -> void:
+	book.play("book_default")
+
+
+func _on_exit_button_mouse_entered() -> void:
+	tuer.play("tuer_shimmer")
+
+
+func _on_exit_button_mouse_exited() -> void:
+	tuer.play("tuer_default")

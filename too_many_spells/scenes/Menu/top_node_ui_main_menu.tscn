@@ -1,8 +1,9 @@
-[gd_scene load_steps=40 format=3 uid="uid://disenhn2wv3if"]
+[gd_scene load_steps=53 format=3 uid="uid://disenhn2wv3if"]
 
 [ext_resource type="Script" uid="uid://td4jis23odu" path="res://scenes/Menu/ui_main_menu.gd" id="1_5f0d0"]
 [ext_resource type="FontFile" uid="uid://bfkna668oo3mb" path="res://assets/Fonts/Finnfont-Regular.ttf" id="3_5gksv"]
 [ext_resource type="Texture2D" uid="uid://b7267gxdowjuv" path="res://assets/Menu/Hauptmenue/Book.png" id="3_mj72h"]
+[ext_resource type="Texture2D" uid="uid://cl0rfe1lj5gmu" path="res://assets/Menu/Hauptmenue/PosterShimmer.png" id="4_2efse"]
 [ext_resource type="Texture2D" uid="uid://4w6mgl21xnwl" path="res://assets/Menu/OptionsAnimation/Unbenanntes_Projekt-1.png" id="4_5of4f"]
 [ext_resource type="FontFile" uid="uid://baj3xxd4vtp7g" path="res://assets/Fonts/Believe Heart.otf" id="4_l3ujf"]
 [ext_resource type="Texture2D" uid="uid://cch5py6liqmat" path="res://assets/Menu/Hauptmenue/Poster.png" id="4_mxwpg"]
@@ -12,17 +13,78 @@
 [ext_resource type="Texture2D" uid="uid://bty7u20eqylqd" path="res://assets/Menu/OptionsAnimation/Unbenanntes_Projekt-3.png" id="6_jk1c5"]
 [ext_resource type="PackedScene" uid="uid://dlw4y68fq4syw" path="res://scenes/Audio Manager/audio_manager.tscn" id="6_sgxvc"]
 [ext_resource type="Texture2D" uid="uid://cmkultu2inq76" path="res://assets/Menu/OptionsAnimation/Unbenanntes_Projekt-4.png" id="7_tdqvf"]
+[ext_resource type="Texture2D" uid="uid://cj3eppn88xtk5" path="res://assets/Menu/Hauptmenue/BookShimmer.png" id="8_2efse"]
 [ext_resource type="Texture2D" uid="uid://bfeedl27slbq3" path="res://assets/Menu/OptionsAnimation/Unbenanntes_Projekt-5.png" id="8_hl6yh"]
 [ext_resource type="Texture2D" uid="uid://e6yvy3ul1mqr" path="res://assets/Menu/OptionsAnimation/Unbenanntes_Projekt-6.png" id="9_0gg4p"]
+[ext_resource type="Texture2D" uid="uid://d1lb7nohd66ud" path="res://assets/Menu/Hauptmenue/TuerShimmer.png" id="9_jk1c5"]
 [ext_resource type="Texture2D" uid="uid://btcpkl3uc86cc" path="res://assets/Menu/OptionsAnimation/Unbenanntes_Projekt-7.png" id="10_xr624"]
 [ext_resource type="Texture2D" uid="uid://b26eahbpa6ggj" path="res://assets/Menu/OptionsAnimation/Unbenanntes_Projekt-8.png" id="11_a5pp5"]
 [ext_resource type="Texture2D" uid="uid://bqlegg3wi156u" path="res://assets/Menu/OptionsAnimation/Unbenanntes_Projekt-9.png" id="12_utcp0"]
 [ext_resource type="Texture2D" uid="uid://cu7c52qjie7ot" path="res://assets/Menu/OptionsAnimation/Unbenanntes_Projekt-10.png" id="13_12r7g"]
 [ext_resource type="Texture2D" uid="uid://b3177kfjlvtml" path="res://assets/Menu/OptionsAnimation/Unbenanntes_Projekt-12.png" id="13_n84fj"]
 [ext_resource type="PackedScene" uid="uid://c87875qjekd4g" path="res://components/torchlight/torchlight.tscn" id="17_w16s8"]
+[ext_resource type="Texture2D" uid="uid://sns1n6y13pkl" path="res://assets/Menu/Credits1.png" id="19_s3gmn"]
+[ext_resource type="Texture2D" uid="uid://ckoujpk8horkg" path="res://assets/Menu/Credits2.png" id="20_5of4f"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_s3gmn"]
 load_path = "res://.godot/imported/HauptmenueCleaner.png-77d0f82e00a3453febc50dc9eac1562b.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jk1c5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_mxwpg")
+}],
+"loop": true,
+"name": &"poster_default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_2efse")
+}],
+"loop": true,
+"name": &"poster_shimmer",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tdqvf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_mj72h")
+}],
+"loop": true,
+"name": &"book_default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_2efse")
+}],
+"loop": true,
+"name": &"book_shimmer",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hl6yh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_n84fj")
+}],
+"loop": true,
+"name": &"tuer_default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_jk1c5")
+}],
+"loop": true,
+"name": &"tuer_shimmer",
+"speed": 5.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fm4mm"]
 animations = [{
@@ -92,6 +154,20 @@ animations = [{
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_s3gmn"]
 points = PackedVector2Array(-3.88156, -19.4007, 40.8553, 9.70891, 40.8553, 13.3048, -12.8728, 14.6747, -47.3026, -13.4075, -47.0833, -18.2021)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_2efse"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_s3gmn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_5of4f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_my4uc"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w16s8"]
@@ -99,6 +175,33 @@ points = PackedVector2Array(-3.88156, -19.4007, 40.8553, 9.70891, 40.8553, 13.30
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kmvpm"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mj72h"]
+
+[sub_resource type="Animation" id="Animation_kmvpm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:theme_override_styles/panel:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:theme_override_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_w16s8"]
 resource_name = "fade out"
@@ -126,33 +229,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_kmvpm"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:theme_override_styles/panel:bg_color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Label:theme_override_colors/font_color")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mj72h"]
@@ -203,21 +279,24 @@ position = Vector2(775, 414)
 [node name="lightTorchLeft1" parent="UIMainMenu/Panel/Sprite2D" instance=ExtResource("17_w16s8")]
 position = Vector2(593, 417)
 
-[node name="Poster" type="Sprite2D" parent="UIMainMenu/Panel/Sprite2D"]
-texture = ExtResource("4_mxwpg")
-centered = false
-
-[node name="Tuer" type="Sprite2D" parent="UIMainMenu/Panel/Sprite2D"]
-texture = ExtResource("5_n84fj")
-centered = false
+[node name="Poster" type="AnimatedSprite2D" parent="UIMainMenu/Panel/Sprite2D"]
+position = Vector2(1280, 720)
+sprite_frames = SubResource("SpriteFrames_jk1c5")
+animation = &"poster_default"
 
 [node name="Tisch" type="Sprite2D" parent="UIMainMenu/Panel/Sprite2D"]
 texture = ExtResource("5_mxwpg")
 centered = false
 
-[node name="Book" type="Sprite2D" parent="UIMainMenu/Panel/Sprite2D"]
-texture = ExtResource("3_mj72h")
-centered = false
+[node name="Book" type="AnimatedSprite2D" parent="UIMainMenu/Panel/Sprite2D"]
+position = Vector2(1280, 720)
+sprite_frames = SubResource("SpriteFrames_tdqvf")
+animation = &"book_default"
+
+[node name="Tuer" type="AnimatedSprite2D" parent="UIMainMenu/Panel/Sprite2D"]
+position = Vector2(1280, 720)
+sprite_frames = SubResource("SpriteFrames_hl6yh")
+animation = &"tuer_shimmer"
 
 [node name="TabletAnimation" type="AnimatedSprite2D" parent="UIMainMenu/Panel"]
 z_index = 1
@@ -227,6 +306,7 @@ animation = &"tablet_animated"
 
 [node name="StartGameButton" type="Button" parent="UIMainMenu/Panel"]
 z_index = 1
+layout_mode = 0
 offset_left = 978.0
 offset_top = 382.0
 offset_right = 1592.0
@@ -239,6 +319,7 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_s3gmn")
 
 [node name="ExitButton" type="Button" parent="UIMainMenu/Panel"]
 z_index = 1
+layout_mode = 0
 offset_left = 2011.0
 offset_top = 280.0
 offset_right = 2493.0
@@ -252,6 +333,7 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_4c1jx")
 
 [node name="Credits" type="Button" parent="UIMainMenu/Panel"]
 z_index = 1
+layout_mode = 0
 offset_left = 133.0
 offset_top = 287.0
 offset_right = 495.0
@@ -279,46 +361,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CreditsBackground" type="ColorRect" parent="UIMainMenu/CreditsControl"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
-[node name="Credits" type="RichTextLabel" parent="UIMainMenu/CreditsControl"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_shadow_color = Color(0.332881, 0.332881, 0.332881, 1)
-theme_override_constants/shadow_offset_y = 0
-theme_override_constants/shadow_offset_x = 0
-theme_override_fonts/normal_font = ExtResource("4_l3ujf")
-theme_override_fonts/bold_font = ExtResource("3_5gksv")
-theme_override_font_sizes/normal_font_size = 120
-theme_override_font_sizes/bold_font_size = 120
-bbcode_enabled = true
-text = "[b]Managing/Writing[/b]: Thomas
-[b]Programming[/b]: Amy, Niko
-[b]2D Art[/b]: Finn, Sunna
-[b]Sound[/b]: Mae
-"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="UIMainMenu/CreditsControl"]
+z_index = 1
+position = Vector2(1280, 720)
+sprite_frames = SubResource("SpriteFrames_2efse")
+autoplay = "default"
 
 [node name="ExitCredits" type="Button" parent="UIMainMenu/CreditsControl"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -330.0
-offset_bottom = 241.0
+offset_left = -2524.0
+offset_top = 5.0
+offset_right = -2280.0
+offset_bottom = 191.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("4_l3ujf")
 theme_override_font_sizes/font_size = 120
@@ -379,6 +436,7 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_mj72h")
 
 [node name="AudioSettingsManager" parent="UIMainMenu" instance=ExtResource("6_sgxvc")]
 visible = false
+z_index = 1
 layout_mode = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="UIMainMenu"]
@@ -388,6 +446,7 @@ libraries = {
 }
 
 [node name="Panel2" type="Panel" parent="UIMainMenu/AnimationPlayer"]
+visible = false
 z_index = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -407,8 +466,14 @@ theme_override_font_sizes/font_size = 116
 text = "This game saves automatically...magically!"
 
 [connection signal="animation_finished" from="UIMainMenu/Panel/TabletAnimation" to="." method="_on_tablet_animation_animation_finished"]
+[connection signal="mouse_entered" from="UIMainMenu/Panel/StartGameButton" to="." method="_on_start_game_button_mouse_entered"]
+[connection signal="mouse_exited" from="UIMainMenu/Panel/StartGameButton" to="." method="_on_start_game_button_mouse_exited"]
 [connection signal="pressed" from="UIMainMenu/Panel/StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="mouse_entered" from="UIMainMenu/Panel/ExitButton" to="." method="_on_exit_button_mouse_entered"]
+[connection signal="mouse_exited" from="UIMainMenu/Panel/ExitButton" to="." method="_on_exit_button_mouse_exited"]
 [connection signal="pressed" from="UIMainMenu/Panel/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="mouse_entered" from="UIMainMenu/Panel/Credits" to="." method="_on_credits_mouse_entered"]
+[connection signal="mouse_exited" from="UIMainMenu/Panel/Credits" to="." method="_on_credits_mouse_exited"]
 [connection signal="pressed" from="UIMainMenu/Panel/Credits" to="." method="_on_credits_pressed"]
 [connection signal="mouse_entered" from="UIMainMenu/Panel/Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="UIMainMenu/Panel/Area2D" to="." method="_on_area_2d_mouse_exited"]

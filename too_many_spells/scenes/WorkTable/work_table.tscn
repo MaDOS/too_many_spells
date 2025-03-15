@@ -45,6 +45,7 @@ script = ExtResource("2_vkig8")
 
 [node name="NextSessionButton" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_uus2h")
+animation = &"shimmer_on_hover"
 centered = false
 
 [node name="BtnNextSession" type="Button" parent="NextSessionButton"]
