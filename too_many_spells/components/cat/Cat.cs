@@ -45,8 +45,8 @@ public partial class Cat : Node2D
 
         _isMoving = false;
         _catSprite.Position = new Vector2(2560, 0);
-        //_timer.Start(GD.RandRange(30, 60));
-        _timer.Start(2); //debugging
+        _timer.Start(GD.RandRange(30, 60));
+        //_timer.Start(2); //debugging
     }
 
     public override void _Process(double delta)
