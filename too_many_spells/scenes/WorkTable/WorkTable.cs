@@ -17,7 +17,7 @@ public partial class WorkTable : Node2D
 		base._Ready();
 
 		_workBook = GetNode<WorkBook>("Book");
-		_lblSwapsRemaining = GetNode<Label>("SwapsLeftSprite/LblSwapsRemaining");
+		_lblSwapsRemaining = GetNode<Label>("Swaps/LblSwapsRemaining");
 		_recyclebin = GetNode<Recyclebin>("Recyclebin");
 
 		_recyclebin.OnRecyclebinEntered += () => _workBook.DeletePage = true;
