@@ -4,175 +4,175 @@ using Godot;
 
 public partial class GameTable : Node2D
 {
-    [Signal]
-    public delegate void GoHomeEventHandler();
+	[Signal]
+	public delegate void GoHomeEventHandler();
 
-    enum State
-    {
-        GMPrompt,
-        SpellCast,
-        GMPromptScoring,
-        AddExperience,
-        SessionEnd
-    }
+	enum State
+	{
+		GMPrompt,
+		SpellCast,
+		GMPromptScoring,
+		AddExperience,
+		SessionEnd
+	}
 
-    private State _state = State.GMPrompt;
+	private State _state = State.GMPrompt;
 
-    private Dialogbox _dialogbox = null!;
-    private GameBook _book = null!;
-    private Button _btnGoHome = null!;
-    private Bark _bark = null!;
-    private Cat _cat = null!;
-    private Area2D _bookArea = null!;
+	private Dialogbox _dialogbox = null!;
+	private GameBook _book = null!;
+	private Button _btnGoHome = null!;
+	private Bark _bark = null!;
+	private Cat _cat = null!;
+	private Area2D _bookArea = null!;
 
-    private GameMaster.GameMasterPrompt _gmPrompt = null!;
+	private GameMaster.GameMasterPrompt _gmPrompt = null!;
 
-    private string _lastSpellCast = string.Empty;
-    private int promptsThisSession = Player.Instance.IsInTutorial ? 1 : GD.RandRange(1,2);
+	private string _lastSpellCast = string.Empty;
+	private int promptsThisSession = Player.Instance.IsInTutorial ? 1 : GD.RandRange(1,2);
 
-    public override void _Ready()
-    {
-        _dialogbox = GetNode<Dialogbox>("Dialogbox");
-        _book = GetNode<GameBook>("Book");
-        _btnGoHome = GetNode<Button>("BtnGoHome");
-        _bark = GetNode<Bark>("Bark");
-        _cat = GetNode<Cat>("Cat");
-        _bookArea = GetNode<Area2D>("Book/BookArea");
+	public override void _Ready()
+	{
+		_dialogbox = GetNode<Dialogbox>("Dialogbox");
+		_book = GetNode<GameBook>("Book");
+		_btnGoHome = GetNode<Button>("BtnGoHome");
+		_bark = GetNode<Bark>("Bark");
+		_cat = GetNode<Cat>("Cat");
+		_bookArea = GetNode<Area2D>("Book/BookArea");
 
-        _btnGoHome.Visible = false;
+		_btnGoHome.Visible = false;
 
-        _bookArea.AreaEntered += OnBodyEnteredBookArea;
-        _bookArea.AreaExited += OnBodyExitedBookArea;
+		_bookArea.AreaEntered += OnBodyEnteredBookArea;
+		_bookArea.AreaExited += OnBodyExitedBookArea;
 
-        _dialogbox.TalkingPointsFinished += AddvanceState;
+		_dialogbox.TalkingPointsFinished += AddvanceState;
 
-        _book.SpellCast += Book_SpellCast;
+		_book.SpellCast += Book_SpellCast;
 
-        Player.Instance.LevelUp += OnPlayerLevelUp;
+		Player.Instance.LevelUp += OnPlayerLevelUp;
 
-        this.BeginNewPrompt();
-    }
+		this.BeginNewPrompt();
+	}
 
-    public void OnBodyEnteredBookArea(Area2D area)
-    {
-        _book.SetProcessInput(false);
-    }
+	public void OnBodyEnteredBookArea(Area2D area)
+	{
+		_book.SetProcessInput(false);
+	}
 
-    public void OnBodyExitedBookArea(Area2D area)
-    {
-        _book.SetProcessInput(true);
-    }
+	public void OnBodyExitedBookArea(Area2D area)
+	{
+		_book.SetProcessInput(true);
+	}
 
-    private void BeginNewPrompt()
-    {
-        _state = State.GMPrompt;
+	private void BeginNewPrompt()
+	{
+		_state = State.GMPrompt;
 
-        _gmPrompt = GameMaster.Instance.GetRandomPrompt();
+		_gmPrompt = GameMaster.Instance.GetRandomPrompt();
 
-        DialogBoxTalk(_gmPrompt.PromptTexts, "Game Master");
-    }
+		DialogBoxTalk(_gmPrompt.PromptTexts, "Game Master");
+	}
 
-    private void Book_SpellCast(string spellName)
-    {
-        _bark.Disable();
-        _cat.Disable();
-        this._lastSpellCast = spellName;
-        DialogBoxTalk(new[] { $"You cast {spellName}!" }, "");
-    }
+	private void Book_SpellCast(string spellName)
+	{
+		_bark.Disable();
+		_cat.Disable();
+		this._lastSpellCast = spellName;
+		DialogBoxTalk(new[] { $"You cast {spellName}!" }, "");
+	}
 
-    private void DialogBoxTalk(string[] talkingPoints, string speaker)
-    {
-        _book.SetProcessInput(false);
-        _dialogbox.Talk(talkingPoints, speaker);
-    }
+	private void DialogBoxTalk(string[] talkingPoints, string speaker)
+	{
+		_book.SetProcessInput(false);
+		_dialogbox.Talk(talkingPoints, speaker);
+	}
 
-    private void HandleSpellCast()
-    {
-        Spells.Spell spell = Spells.Instance.GetSpell(_lastSpellCast)!;
+	private void HandleSpellCast()
+	{
+		Spells.Spell spell = Spells.Instance.GetSpell(_lastSpellCast)!;
 
-        //float score = GameMaster.Instance.ScoreSpell(_gmPrompt, spell);
-        string[] answers = GameMaster.Instance.GetAnswer(_gmPrompt, spell);
+		//float score = GameMaster.Instance.ScoreSpell(_gmPrompt, spell);
+		string[] answers = GameMaster.Instance.GetAnswer(_gmPrompt, spell);
 
-        GD.Print($"Answers: {string.Join(", ", answers)}");
+		GD.Print($"Answers: {string.Join(", ", answers)}");
 
-        DialogBoxTalk(answers, "Game Master");
-    }
+		DialogBoxTalk(answers, "Game Master");
+	}
 
-    private void OnPlayerLevelUp(int level)
-    {
-        Player.LevelDefintion levelDefintion = Player.Instance.LevelDefintions.Single(lvlDef => lvlDef.Level == level);
-        List<Spells.Spell> spellsAdded = Spells.Instance.AllSpells
-            .Where(spell => levelDefintion.AddedSpells.Contains(spell.Name))
-            .Where(spell => !spell.IsTrash)
-            .ToList();
+	private void OnPlayerLevelUp(int level)
+	{
+		Player.LevelDefintion levelDefintion = Player.Instance.LevelDefintions.Single(lvlDef => lvlDef.Level == level);
+		List<Spells.Spell> spellsAdded = Spells.Instance.AllSpells
+			.Where(spell => levelDefintion.AddedSpells.Contains(spell.Name))
+			.Where(spell => !spell.IsTrash)
+			.ToList();
 
-        string[] talkingPoints = 
-        {
-            "Congratulations you leveled up!",
-            $"Spell added: {string.Join(" ,", spellsAdded.Select(spell => spell.Name).ToList())}"
-        };
+		string[] talkingPoints = 
+		{
+			"Congratulations you leveled up!",
+			$"Spell added: {string.Join(" ,", spellsAdded.Select(spell => spell.Name).ToList())}"
+		};
 
-        DialogBoxTalk(talkingPoints, "Game Master");
-    }
+		DialogBoxTalk(talkingPoints, "Game Master");
+	}
 
-    private void HandleAddExperience()
-    {
-        var level = Player.Instance.Level;
+	private void HandleAddExperience()
+	{
+		var level = Player.Instance.Level;
 
-        promptsThisSession--;
-        Player.Instance.AddExperience(_gmPrompt.MaxExperience);
+		promptsThisSession--;
+		Player.Instance.AddExperience(_gmPrompt.MaxExperience);
 
-        if(level == Player.Instance.Level) //No level up happened
-        {
-            AddvanceState();
-        }
-    }
+		if(level == Player.Instance.Level) //No level up happened
+		{
+			AddvanceState();
+		}
+	}
 
-    private void HandleSessionContinuation()
-    {
-        GD.Print($"There are {promptsThisSession} prompts in this session left");
+	private void HandleSessionContinuation()
+	{
+		GD.Print($"There are {promptsThisSession} prompts in this session left");
 
-        if(promptsThisSession == 0)
-        {
-            _state = State.SessionEnd;
-            AddvanceState();
-        }
-        else
-        {
-            BeginNewPrompt();
-        }
-    }
+		if(promptsThisSession == 0)
+		{
+			_state = State.SessionEnd;
+			AddvanceState();
+		}
+		else
+		{
+			BeginNewPrompt();
+		}
+	}
 
-    private void AddvanceState()
-    {
-        switch (_state)
-        {
-            case State.GMPrompt:
-                _state = State.SpellCast;
-                _book.SetProcessInput(true);
-                _book.AllowedToCast = true;
-                _bark.Enable();
-                _cat.Reset();
-                break;
-            case State.SpellCast:
-                _state = State.GMPromptScoring;
-                HandleSpellCast();
-                break;
-            case State.GMPromptScoring:
-                _state = State.AddExperience;
-                HandleAddExperience();
-                break;
-            case State.AddExperience:
-                HandleSessionContinuation();
-                break;
-            case State.SessionEnd:
-                _btnGoHome.Visible = true;
-                break;
-        }
-    }
+	private void AddvanceState()
+	{
+		switch (_state)
+		{
+			case State.GMPrompt:
+				_state = State.SpellCast;
+				_book.SetProcessInput(true);
+				_book.AllowedToCast = true;
+				_bark.Enable();
+				_cat.Reset();
+				break;
+			case State.SpellCast:
+				_state = State.GMPromptScoring;
+				HandleSpellCast();
+				break;
+			case State.GMPromptScoring:
+				_state = State.AddExperience;
+				HandleAddExperience();
+				break;
+			case State.AddExperience:
+				HandleSessionContinuation();
+				break;
+			case State.SessionEnd:
+				_btnGoHome.Visible = true;
+				break;
+		}
+	}
 
-    public void _on_BtnGoHome_pressed()
-    {
-        EmitSignal(nameof(GoHome));
-    }
+	public void _on_BtnGoHome_pressed()
+	{
+		EmitSignal(nameof(GoHome));
+	}
 }

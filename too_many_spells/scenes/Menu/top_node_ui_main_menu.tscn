@@ -49,25 +49,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_tdqvf"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_mj72h")
-}],
-"loop": true,
-"name": &"book_default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("8_2efse")
-}],
-"loop": true,
-"name": &"book_shimmer",
-"speed": 5.0
-}]
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_hl6yh"]
 animations = [{
 "frames": [{
@@ -84,6 +65,25 @@ animations = [{
 }],
 "loop": true,
 "name": &"tuer_shimmer",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tdqvf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_mj72h")
+}],
+"loop": true,
+"name": &"book_default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_2efse")
+}],
+"loop": true,
+"name": &"book_shimmer",
 "speed": 5.0
 }]
 
@@ -285,6 +285,11 @@ position = Vector2(1280, 720)
 sprite_frames = SubResource("SpriteFrames_jk1c5")
 animation = &"poster_default"
 
+[node name="Tuer" type="AnimatedSprite2D" parent="UIMainMenu/Panel/Sprite2D"]
+position = Vector2(1280, 720)
+sprite_frames = SubResource("SpriteFrames_hl6yh")
+animation = &"tuer_shimmer"
+
 [node name="Tisch" type="Sprite2D" parent="UIMainMenu/Panel/Sprite2D"]
 texture = ExtResource("5_mxwpg")
 centered = false
@@ -293,11 +298,6 @@ centered = false
 position = Vector2(1280, 720)
 sprite_frames = SubResource("SpriteFrames_tdqvf")
 animation = &"book_default"
-
-[node name="Tuer" type="AnimatedSprite2D" parent="UIMainMenu/Panel/Sprite2D"]
-position = Vector2(1280, 720)
-sprite_frames = SubResource("SpriteFrames_hl6yh")
-animation = &"tuer_shimmer"
 
 [node name="TabletAnimation" type="AnimatedSprite2D" parent="UIMainMenu/Panel"]
 z_index = 1
@@ -468,7 +468,6 @@ libraries = {
 }
 
 [node name="Panel2" type="Panel" parent="UIMainMenu/AnimationPlayer"]
-visible = false
 z_index = 1
 anchors_preset = 15
 anchor_right = 1.0
