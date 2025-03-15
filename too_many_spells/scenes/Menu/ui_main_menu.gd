@@ -9,6 +9,7 @@ extends Node2D
 @onready var poster: AnimatedSprite2D = $UIMainMenu/Panel/Sprite2D/Poster
 @onready var book: AnimatedSprite2D = $UIMainMenu/Panel/Sprite2D/Book
 @onready var tuer: AnimatedSprite2D = $UIMainMenu/Panel/Sprite2D/Tuer
+@onready var controls: Control = $UIMainMenu/Controls
 
 
 
@@ -97,3 +98,11 @@ func _on_exit_button_mouse_entered() -> void:
 
 func _on_exit_button_mouse_exited() -> void:
 	tuer.play("tuer_default")
+
+
+func _on_controls_button_pressed() -> void:
+	controls.show()
+
+
+func _on_exit_controls_pressed() -> void:
+	controls.hide()

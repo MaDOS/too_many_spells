@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://disenhn2wv3if"]
+[gd_scene load_steps=54 format=3 uid="uid://disenhn2wv3if"]
 
 [ext_resource type="Script" uid="uid://td4jis23odu" path="res://scenes/Menu/ui_main_menu.gd" id="1_5f0d0"]
 [ext_resource type="FontFile" uid="uid://bfkna668oo3mb" path="res://assets/Fonts/Finnfont-Regular.ttf" id="3_5gksv"]
@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://c87875qjekd4g" path="res://components/torchlight/torchlight.tscn" id="17_w16s8"]
 [ext_resource type="Texture2D" uid="uid://sns1n6y13pkl" path="res://assets/Menu/Credits1.png" id="19_s3gmn"]
 [ext_resource type="Texture2D" uid="uid://ckoujpk8horkg" path="res://assets/Menu/Credits2.png" id="20_5of4f"]
+[ext_resource type="Texture2D" uid="uid://cw6iu4tw4rv4q" path="res://assets/Menu/FurtherOptions/Controls.png" id="25_tdqvf"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_s3gmn"]
 load_path = "res://.godot/imported/HauptmenueCleaner.png-77d0f82e00a3453febc50dc9eac1562b.ctex"
@@ -434,6 +435,27 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_w16s8")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_kmvpm")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_mj72h")
 
+[node name="Controls" type="Control" parent="UIMainMenu"]
+visible = false
+z_index = 1
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="UIMainMenu/Controls"]
+z_index = 1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("25_tdqvf")
+
+[node name="ExitControls" type="Button" parent="UIMainMenu/Controls"]
+layout_mode = 0
+offset_left = 1046.0
+offset_top = 257.0
+offset_right = 1195.0
+offset_bottom = 379.0
+
 [node name="AudioSettingsManager" parent="UIMainMenu" instance=ExtResource("6_sgxvc")]
 visible = false
 z_index = 1
@@ -479,5 +501,7 @@ text = "This game saves automatically...magically!"
 [connection signal="mouse_exited" from="UIMainMenu/Panel/Area2D" to="." method="_on_area_2d_mouse_exited"]
 [connection signal="pressed" from="UIMainMenu/CreditsControl/ExitCredits" to="." method="_on_exit_credits_pressed"]
 [connection signal="pressed" from="UIMainMenu/SoundControl/SoundButton" to="." method="_on_sound_button_pressed"]
+[connection signal="pressed" from="UIMainMenu/SoundControl/ControlsButton" to="." method="_on_controls_button_pressed"]
 [connection signal="pressed" from="UIMainMenu/SoundControl/ExitSettingsButton" to="." method="_on_exit_settings_button_pressed"]
 [connection signal="pressed" from="UIMainMenu/SoundControl/ResetSaveButton" to="." method="_on_reset_save_button_pressed"]
+[connection signal="pressed" from="UIMainMenu/Controls/ExitControls" to="." method="_on_exit_controls_pressed"]
