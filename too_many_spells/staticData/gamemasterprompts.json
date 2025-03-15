@@ -809,6 +809,7 @@
 			},
 			{
 				"AnswerTexts": [
+					"After a moment of thought you remember your school days and learning about the mating habits of the common dungeon slime and that there aren't any."
 				],
 				"FilterForIncludedSpellTags": [
 					"Testicular Torsion"
@@ -816,10 +817,11 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellPerfect"
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
+					"There's no shoes in this 1on1 but your own."
 				],
 				"FilterForIncludedSpellTags": [
 					"Gravel"
@@ -831,6 +833,7 @@
 			},
 			{
 				"AnswerTexts": [
+					"It's already sucking you in but not in the way you would have liked to."
 				],
 				"FilterForIncludedSpellTags": [
 					"Magic Rizz"
@@ -838,10 +841,11 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellGood"
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
+					"Either the slime is alreay totally zen-d out or really not listening to you one bit."
 				],
 				"FilterForIncludedSpellTags": [
 					"Calm the F down"
@@ -853,6 +857,7 @@
 			},
 			{
 				"AnswerTexts": [
+					"You don't speak Slime."
 				],
 				"FilterForIncludedSpellTags": [
 					"Command"
@@ -860,10 +865,11 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellGood"
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
+					"The slime doesn't speak or is too shy to engage in conversation with a stranger that has his arm inside it."
 				],
 				"FilterForIncludedSpellTags": [
 					"Comprehend languages"
@@ -871,10 +877,13 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellPerfect"
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
+					"It's terribly difficult to dance with one hand stuck in a wall, let alone elaborately enough to pull off a Magical Girl Transformation but the powers above and beyond are gracious and you pull it off.",
+					"To add to your surprise it seems that the slime monster is allergic to Magical Girl Energy and releases you at once, leaving you to answer your group's questions about who you are."
+
 				],
 				"FilterForIncludedSpellTags": [
 					"Star Gem Power Glow Up"
@@ -886,20 +895,11 @@
 			},
 			{
 				"AnswerTexts": [
+					"Using this spell is as good an idea as touching weird green goo coming out of a wall in a dungeon.",
+					"How you made it to a high level as a wizard looks rather lucky right now."
 				],
 				"FilterForIncludedSpellTags": [
 					"Modify Mind"
-				],
-				"FilterForExcludedSpellTags": [],
-				"MinScore": 0.0,
-				"MaxScore": 0.0,
-				"AnswerSound": "SpellPerfect"
-			},
-			{
-				"AnswerTexts": [
-				],
-				"FilterForIncludedSpellTags": [
-					"Healing"
 				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
@@ -908,6 +908,20 @@
 			},
 			{
 				"AnswerTexts": [
+					"The magic flows through your hand and arm, healing the acid burns and soothing the open skin engulfed with goo, but only for a moment."
+				],
+				"FilterForIncludedSpellTags": [
+					"Healing"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellNeutral"
+			},
+			{
+				"AnswerTexts": [
+					"The burning subsides only slowly but the difference is palpable. There is now a glowing layer between your arm and the goo.",
+					"It looks like it can't suck you in deeper like before but it is still difficult for you to get your arm out. At least it can't continue to burn you with it's acid."
 				],
 				"FilterForIncludedSpellTags": [
 					"Barrier"
@@ -919,6 +933,9 @@
 			},
 			{
 				"AnswerTexts": [
+					"You start to hear thin voices but they are so low that you can barely understand what you're saying, so you lean in closer.",
+					"With your head almost against the wall you can hear a couple of moss lice complaining about their living room being demolished.",
+					"Fun stuff but not really helping with the goo situation."
 				],
 				"FilterForIncludedSpellTags": [
 					"I Like Animals"
@@ -930,6 +947,8 @@
 			},
 			{
 				"AnswerTexts": [
+					"There has to be some water in a goo creature of that size, you think, and it quickly looks like it is indeed working but as fast as you would like.",
+					"The tug of war changes in your favour but the acid still burns you until you are free."
 				],
 				"FilterForIncludedSpellTags": [
 					"Make Water"
@@ -937,10 +956,11 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellBad"
+				"AnswerSound": "SpellGood"
 			},
 			{
 				"AnswerTexts": [
+					"This is indeed a slime creature and you really shouldn't have touched it. Facts."
 				],
 				"FilterForIncludedSpellTags": [
 					"Fact Check"
@@ -948,10 +968,12 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellBad"
+				"AnswerSound": "SpellPerfect"
 			},
 			{
 				"AnswerTexts": [
+					"You decided on the spell before thinking much about what to do with it but then, seeing as the slime creature had camouflaged as a big part of the wall, there is still a lot of dirt and stone around it.",
+					"Animating the soil you slowly move it into the wrapping goo, covering you with it and leaving dirt and rock as a substitute for your arm."
 				],
 				"FilterForIncludedSpellTags": [
 					"Make things do things"
@@ -959,10 +981,11 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellNeutral"
+				"AnswerSound": "SpellPerfect"
 			},
 			{
 				"AnswerTexts": [
+					"You know you don't think well on an empty stomach but it really is weird watching someone eat a grilled cheese sandwich while his arm is getting sucked into acid slime."
 				],
 				"FilterForIncludedSpellTags": [
 					"Summon Grilled Cheese"
@@ -970,7 +993,8 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellBad"
+				"AnswerSound": "SpellNeutral"
+
 			}
 		]
 	},
@@ -979,11 +1003,16 @@
 		"MaxExperience": 100,
 		"TrashAnswer": "Go drunk you are home",
 		"PromptTexts": [
+			"The last piece of cake at the village feast and it has your name on it! Or had. You looked away for just a moment marveling at Fred the Fighter's dance skills and in the blink of an eye the elderly woman had cut in line and the piece of cake was on her plate.",
+			"She thanks you profoundly for saving their village, her family and her cat but to questions about that last piece of cake she suddenly remembers her old age and can't hear you.",
+			"No amount of sweet-talk, no persuasion or amount of charisma seems able to turn her and she's about to leave. Do you want to do something or let the piece of cake go?"
 		],
 		"PromptTags": [],
 		"Answers": [
 			{
 				"AnswerTexts": [
+					"The DM looks at you. Betty, Fred and Robin look at you. If the eldery woman was real she would look at you. Judgiiiiing.",
+					"Awkward situation and instead of casting a huge ball of fire at a village feast your turn is skipped. Shame on you!"
 				],
 				"FilterForIncludedSpellTags": [
 					"Just Fireball"
@@ -995,6 +1024,7 @@
 			},
 			{
 				"AnswerTexts": [
+					"It is a hot day, not gonna lie, but creating a huge wave that would blast away not just the majority of the people but the cake as well is maybe not the best idea."
 				],
 				"FilterForIncludedSpellTags": [
 					"Surf"
@@ -1006,6 +1036,7 @@
 			},
 			{
 				"AnswerTexts": [
+					"There's definitely some tension between you and the old woman but she probably wouldn't know what a T-pose is and shocking people might change their opinion about your group of heroes."
 				],
 				"FilterForIncludedSpellTags": [
 					"Generate Lightning"
@@ -1013,10 +1044,12 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellNeutral"
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
+					"There's plenty frosting on the cake and while the woman is quite old, she's definitely not cold yet.",
+					"Maybe we should keep it that way and just admit defeat, yes?"
 				],
 				"FilterForIncludedSpellTags": [
 					"Biting Frost"
@@ -1024,35 +1057,15 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellPerfect"
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
+					"You think about it for a second longer than mentally healthy but decide for the theatrical version at last.",
+					"The old lady chuckles and shoots back, luckily the theatrical version as well, and leaves with the piece of cake."
 				],
 				"FilterForIncludedSpellTags": [
 					"Finger Gun"
-				],
-				"FilterForExcludedSpellTags": [],
-				"MinScore": 0.0,
-				"MaxScore": 0.0,
-				"AnswerSound": "SpellPerfect"
-			},
-			{
-				"AnswerTexts": [
-				],
-				"FilterForIncludedSpellTags": [
-					"Mindfrick"
-				],
-				"FilterForExcludedSpellTags": [],
-				"MinScore": 0.0,
-				"MaxScore": 0.0,
-				"AnswerSound": "SpellGood"
-			},
-			{
-				"AnswerTexts": [
-				],
-				"FilterForIncludedSpellTags": [
-					"Acid Splash"
 				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
@@ -1061,6 +1074,32 @@
 			},
 			{
 				"AnswerTexts": [
+					"I forgot to write a response for this one. Sorry."
+				],
+				"FilterForIncludedSpellTags": [
+					"Mindfrick"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+					"It's a ghastly thing getting inbetween a man and his cake but burning an old lady with acid might be worse and, honestly, she doesn't look fit enough for a good trip either."
+				],
+				"FilterForIncludedSpellTags": [
+					"Acid Splash"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"You actually quite like this village, they've treated you and your friends well. Even before throwing you a feast.",
+					"Erasing it from the hillside would mean no more feasts."
 				],
 				"FilterForIncludedSpellTags": [
 					"Rock-a-lanche"
@@ -1072,6 +1111,7 @@
 			},
 			{
 				"AnswerTexts": [
+					"The old lady doesn't back down and as you suit up to throw down she just compliments your fancy cloak and gives you a 'That's nice, honey!' as she leaves."
 				],
 				"FilterForIncludedSpellTags": [
 					"Cloak of Fire"
@@ -1079,10 +1119,13 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellGood"
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
+					"You realise this old woman is an opponent you won't best on your own and summon the hulking water giant.",
+					"You missed the spot by an inch and the Golem knocks over the table laden with food.",
+					"The battle for the cake ends before it really began and with a severe scolding by the old lady."
 				],
 				"FilterForIncludedSpellTags": [
 					"Summon Water Golem"
@@ -1090,10 +1133,13 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellGood"
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
+					"You actually manage to wear her down or generate enough pity that the old woman agrees to go halfsies.",
+					"There's no cutlery and your first instinct is 'I have a Lightning 'blade'!",
+					"Now there's no cake anymore but for some frosting that exploded into your faces."
 				],
 				"FilterForIncludedSpellTags": [
 					"Lightning Blade"
@@ -1101,10 +1147,12 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellGood"
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
+					"You shoot several crystals of ice into the ground and offer the old woman shaved ice in trade for the piece of cake.",
+					"The old lady is impressed with your magical prowess but has no idea what you're talking about and leaves patting your arm and saying something about 'young people these days'."
 				],
 				"FilterForIncludedSpellTags": [
 					"Ice Crystal Missle"
@@ -1112,10 +1160,12 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellGood"
+				"AnswerSound": "SpellNeutral"
 			},
 			{
 				"AnswerTexts": [
+					"She looks like she's been around for a thousand years and you remember that she's on Betty's 'NPCs to adopt' list and you really don't want to get on Betty's bad side.",
+					"Guess that cake goes to the old lady..."
 				],
 				"FilterForIncludedSpellTags": [
 					"1000 Years of Pain"
@@ -1127,6 +1177,8 @@
 			},
 			{
 				"AnswerTexts": [
+					"You tone down the power and the smell, at least a little bit, and the old lady very quickly and very suddenly has no more appetite for cake.",
+					"You're very proud of yourself but next to you two children passed out."
 				],
 				"FilterForIncludedSpellTags": [
 					"Poison Breath"
@@ -1134,10 +1186,13 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellNeutral"
+				"AnswerSound": "SpellGood"
 			},
 			{
 				"AnswerTexts": [
+					"It's your favourite cake and you get the feeling the lady understands the situation very much.",
+					"Killing an old lady is out of the question... but if you made the meteor very small... and just hit the cake?",
+					"If you can't have it, neither can she!"
 				],
 				"FilterForIncludedSpellTags": [
 					"Meteor"
@@ -1145,10 +1200,13 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellNeutral"
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
+					"You realize there is no reasoning with her, no persuading. You're not going to bribe someone for a pice of cake that was made to your honour but if you can't have that cake...",
+					"You manage the sneak role and place a little piece of the blob under the plate and before the old lady arrives at her table, the cake has melted.",
+					"It's a cheap win but victory is victory."
 				],
 				"FilterForIncludedSpellTags": [
 					"Fireblob"
@@ -1160,86 +1218,11 @@
 			},
 			{
 				"AnswerTexts": [
+					"When you conjure the whip, not really sure yet what to do with it, the old lady suddenly looks very interested.",
+					"Suddenly you don't want cake anymore and quickly leave to rejoin the party and start trying to forget what you just witnessed."
 				],
 				"FilterForIncludedSpellTags": [
 					"What Whip"
-				],
-				"FilterForExcludedSpellTags": [],
-				"MinScore": 0.0,
-				"MaxScore": 0.0,
-				"AnswerSound": "SpellPerfect"
-			},
-			{
-				"AnswerTexts": [
-				],
-				"FilterForIncludedSpellTags": [
-					"Thunderstruck"
-				],
-				"FilterForExcludedSpellTags": [],
-				"MinScore": 0.0,
-				"MaxScore": 0.0,
-				"AnswerSound": "SpellPerfect"
-			},
-			{
-				"AnswerTexts": [
-				],
-				"FilterForIncludedSpellTags": [
-					"Frost Nova"
-				],
-				"FilterForExcludedSpellTags": [],
-				"MinScore": 0.0,
-				"MaxScore": 0.0,
-				"AnswerSound": "SpellGood"
-			},
-			{
-				"AnswerTexts": [
-				],
-				"FilterForIncludedSpellTags": [
-					"Summon Apple"
-				],
-				"FilterForExcludedSpellTags": [],
-				"MinScore": 0.0,
-				"MaxScore": 0.0,
-				"AnswerSound": "SpellGood"
-			},
-			{
-				"AnswerTexts": [
-				],
-				"FilterForIncludedSpellTags": [
-					"Walls of Fire"
-				],
-				"FilterForExcludedSpellTags": [],
-				"MinScore": 0.0,
-				"MaxScore": 0.0,
-				"AnswerSound": "SpellNeutral"
-			},
-			{
-				"AnswerTexts": [
-				],
-				"FilterForIncludedSpellTags": [
-					"Freezer Burn"
-				],
-				"FilterForExcludedSpellTags": [],
-				"MinScore": 0.0,
-				"MaxScore": 0.0,
-				"AnswerSound": "SpellGood"
-			},
-			{
-				"AnswerTexts": [
-				],
-				"FilterForIncludedSpellTags": [
-					"Testicular Torsion"
-				],
-				"FilterForExcludedSpellTags": [],
-				"MinScore": 0.0,
-				"MaxScore": 0.0,
-				"AnswerSound": "SpellPerfect"
-			},
-			{
-				"AnswerTexts": [
-				],
-				"FilterForIncludedSpellTags": [
-					"Gravel"
 				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
@@ -1248,9 +1231,12 @@
 			},
 			{
 				"AnswerTexts": [
+					"You try to show her some really impressive moves, something that just HAS to convince her to give you that cake and it does work.",
+					"In no time you have a small crowd around you and get excited yourself as you never had so many people chant and boost your spell.",
+					"While you concentrate the thunder and lightning to the sky and deliver a sick light show on top, all things cake have been forgotten."
 				],
 				"FilterForIncludedSpellTags": [
-					"Magic Rizz"
+					"Thunderstruck"
 				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
@@ -1259,6 +1245,96 @@
 			},
 			{
 				"AnswerTexts": [
+					"The old lady turns around to leave, taking the cake with her and in a really dark moment and lots of bad karma you spin once and quickly, watching the old lady go down and drop the cake.",
+					"You're not proud of yourself but that was your cake."
+				],
+				"FilterForIncludedSpellTags": [
+					"Frost Nova"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"You wind up to throw hoping that she worked as a nurse or wise-woman back in her days and suddenly get interrupted by her praise that you'd choose healthy fruit over bad cake.",
+					"Outplayed yourself."
+				],
+				"FilterForIncludedSpellTags": [
+					"Summon Apple"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellNeutral"
+			},
+			{
+				"AnswerTexts": [
+					"How about no?"
+				],
+				"FilterForIncludedSpellTags": [
+					"Walls of Fire"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"You're a wizard and powerful but the old lady's hand is colder still. Outskilled or something."
+				],
+				"FilterForIncludedSpellTags": [
+					"Freezer Burn"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"The lack of reaction seems to indicate a severe lack of testicles. Mana wasted."
+				],
+				"FilterForIncludedSpellTags": [
+					"Testicular Torsion"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"It doesn't get you the cake but it gets you some revenge.",
+					"Watching her go you can see her start limping slightly only a couple of steps away."
+				],
+				"FilterForIncludedSpellTags": [
+					"Gravel"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+					"Piece. Of. Cake. Haha, I'm so funny. Someone hire me, please.",
+					"You don't tell her anything new but suddenly it just hits the right spots. Suddenly the cake is back in your hand and cookies appear from nowhere.",
+					"She complains that you're not eating enough and asks about your life situation, letting you know that she has a couple of granddaughters of age or a grandson or two. She knows about the rainbow, no biggie."
+				],
+				"FilterForIncludedSpellTags": [
+					"Magic Rizz"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+					"The lady is way more chill than you. She has the cake after all. Maybe you need to calm down?"
 				],
 				"FilterForIncludedSpellTags": [
 					"Calm the F down"
@@ -1270,6 +1346,8 @@
 			},
 			{
 				"AnswerTexts": [
+					"Easy fix. You wait until noone is in earshot and utter the command.",
+					"The cake is yours and so is the day!"
 				],
 				"FilterForIncludedSpellTags": [
 					"Command"
@@ -1277,10 +1355,12 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellGood"
+				"AnswerSound": "SpellPerfect"
 			},
 			{
 				"AnswerTexts": [
+					"Her English is actually way better than yours and has a lot less spelling mistakes, too.",
+					"You should feel bad. Especially as a writer. Game Jams being tough is only half an excuse, really."
 				],
 				"FilterForIncludedSpellTags": [
 					"Comprehend languages"
@@ -1288,10 +1368,14 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellPerfect"
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
+					"At first the old lady is very impressed! Impressed by your outfit, impressed by your dance number, the music and the strawberry power glow up glitter.",
+					"When you try to go for the cake the old lady looks surprised and points out that you already got enough of that before she leaves with a cackle.",
+					"You need a moment before you understand how nicely your Magical Girl outfit shows off your behind.",
+					"Juicyyyyyy!"
 				],
 				"FilterForIncludedSpellTags": [
 					"Star Gem Power Glow Up"
@@ -1299,10 +1383,12 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellPerfect"
+				"AnswerSound": "SpellNeutral"
 			},
 			{
 				"AnswerTexts": [
+					"Not only do you make her give her the cake, you make her promise you to bake you and your friends cakes for as long as you stay in the village.",
+					"If there's a list of bad people somwhere, you're on it. The old lady's mind bends easily to your will."
 				],
 				"FilterForIncludedSpellTags": [
 					"Modify Mind"
@@ -1314,9 +1400,25 @@
 			},
 			{
 				"AnswerTexts": [
+					"You could sell ice to a penguin, make a priest apologize or a politician regret but this old lady did not budge until you healed her acking back.",
+					"The cake is yours and the promise of as many cakes as  you want.",
+					"Is this what being a hero is like?"
 				],
 				"FilterForIncludedSpellTags": [
 					"Healing"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+					"You're at your wits end and the best idea that you can come up with is throwing up a magical barrier between you and the old lady.",
+					"She's a bit surprised for a moment before she shrugs and tells you 'I don't fight little bitc-....'"
+				],
+				"FilterForIncludedSpellTags": [
+					"Barrier"
 				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
@@ -1325,9 +1427,11 @@
 			},
 			{
 				"AnswerTexts": [
+					"At first it doesn't help. Once the old lady understands what you just tried to do she's offended for a moment before her eyes start glowing.",
+					"You agree to help house-train her new dog and the cake is yours."
 				],
 				"FilterForIncludedSpellTags": [
-					"Barrier"
+					"I Like Animals"
 				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
@@ -1336,17 +1440,8 @@
 			},
 			{
 				"AnswerTexts": [
-				],
-				"FilterForIncludedSpellTags": [
-					"I Like Animals"
-				],
-				"FilterForExcludedSpellTags": [],
-				"MinScore": 0.0,
-				"MaxScore": 0.0,
-				"AnswerSound": "SpellBad"
-			},
-			{
-				"AnswerTexts": [
+					"There's not much water to do something with and you once learned that people don't take kindly to you controling their booze.",
+					"The old lady leaves and you suddenly feel the need for a bathroom."
 				],
 				"FilterForIncludedSpellTags": [
 					"Make Water"
@@ -1358,6 +1453,9 @@
 			},
 			{
 				"AnswerTexts": [
+					"The old lady outmaneuvered you at every turn, quite embarassing for you actualy but with the knowledge flooding into your brain you slowly turn the tide.",
+					"The cake is yours after explaining to her how a diet high in sugar is bad for seniors and how fast blood pressure and heart disease can hit her at her age.",
+					"It doesn't stop there, though, and she keeps asking questions about all her little woes and pains as you slowly realise that this isn't worth a piece of cake."
 				],
 				"FilterForIncludedSpellTags": [
 					"Fact Check"
@@ -1365,10 +1463,12 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellBad"
+				"AnswerSound": "SpellPerfect"
 			},
 			{
 				"AnswerTexts": [
+					"Your arguments don't sway her and even when you're out of them and start repeating yourself the old lady is too nice to stop you.",
+					"Her loss, really, because the piece of cake just sprouted legs and started running towards your seat. Suckerrrrr!"
 				],
 				"FilterForIncludedSpellTags": [
 					"Make things do things"
@@ -1376,10 +1476,11 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellNeutral"
+				"AnswerSound": "SpellPerfect"
 			},
 			{
 				"AnswerTexts": [
+					"You don't get the cake but now you have a grilled cheese sandwich and a tedious, failing persuasion turns into a nice discussion about sweet vs. savory."
 				],
 				"FilterForIncludedSpellTags": [
 					"Summon Grilled Cheese"
@@ -1387,7 +1488,7 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellBad"
+				"AnswerSound": "SpellGood"
 			}
 		]
 	},
@@ -1396,11 +1497,18 @@
 		"MaxExperience": 100,
 		"TrashAnswer": "Go drunk you are home",
 		"PromptTexts": [
+			"Someone cast an idiotically large wave against a laughable little bandit which got a lot of your equipment damaged, destroyed or lost. We're not saying names but Betty, Fred and Robin are still made at you.",
+			"In an attempt to smooth things over you offer to go look for some food because wet bread is just not a thing to do.",
+			"While the others try to salvage some of your gear, repair what they found or just get dry you start walking.",
+			"A couple of shitty Nature rolls later you actually stumble across a wild boar. The boar spots you as well, a quick decision is required!"
 		],
 		"PromptTags": [],
 		"Answers": [
 			{
 				"AnswerTexts": [
+					"Finally! A situation where you can go all out and don't have to talk about warcrimes, collateral damage or any such nonsense!",
+					"It takes only a moment, the boar just turned around to bolt but it can't outrun your fire magic!",
+					"Result: roasted boar. Late realisation: Your Strength is too bad to carry your dinner back to camp. Fk."
 				],
 				"FilterForIncludedSpellTags": [
 					"Just Fireball"
@@ -1408,10 +1516,13 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellBad"
+				"AnswerSound": "SpellPerfect"
 			},
 			{
 				"AnswerTexts": [
+					"A giant wave of water would certainly do enough damage to finish the beast, definitely too quick to escape, too, and nobody is there to see that there is no learning curve with you.",
+					"You blink and watch the boar disappear in a whirl of water, branches and dirt.",
+					"You roll for Nature again and start walking."
 				],
 				"FilterForIncludedSpellTags": [
 					"Surf"
@@ -1423,6 +1534,8 @@
 			},
 			{
 				"AnswerTexts": [
+					"You're way too slow to get in range before the boar dashes away.",
+					"You stand in the woods, probably the saddest T-pose ever to be posed."
 				],
 				"FilterForIncludedSpellTags": [
 					"Generate Lightning"
@@ -1430,35 +1543,15 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellNeutral"
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
+					"You raise your hand, the boar bolts but you swing around and catch it as it tries to change course freezing it against a tree.",
+					"You chuckle and start thinking about turning your infinite pouch into a freezer."
 				],
 				"FilterForIncludedSpellTags": [
 					"Biting Frost"
-				],
-				"FilterForExcludedSpellTags": [],
-				"MinScore": 0.0,
-				"MaxScore": 0.0,
-				"AnswerSound": "SpellPerfect"
-			},
-			{
-				"AnswerTexts": [
-				],
-				"FilterForIncludedSpellTags": [
-					"Finger Gun"
-				],
-				"FilterForExcludedSpellTags": [],
-				"MinScore": 0.0,
-				"MaxScore": 0.0,
-				"AnswerSound": "SpellPerfect"
-			},
-			{
-				"AnswerTexts": [
-				],
-				"FilterForIncludedSpellTags": [
-					"Mindfrick"
 				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
@@ -1467,6 +1560,35 @@
 			},
 			{
 				"AnswerTexts": [
+					"You're the quickest shot in all the lands - insert immature chuckles by Fred and Robin.",
+					"You're quick but you definitely need to hit the range more often because you're almost out of shots before you land a good hit on the boar.",
+					"Stalking over you check your bag of fingers, noticing that you're almost out."
+				],
+				"FilterForIncludedSpellTags": [
+					"Finger Gun"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+					"The boar is already in full panic, sometimes the best defense against psychic magic.",
+					"Feeling that fear stuns you more and you can barely see how the boar disappears in the underbrush."
+				],
+				"FilterForIncludedSpellTags": [
+					"Mindfrick"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"The animal dies almost instantly from the pain and the shock but the satisfaction is quickly gone.",
+					"You're not really sure if you can still eat that and you're quite sure that you don't want to."
 				],
 				"FilterForIncludedSpellTags": [
 					"Acid Splash"
@@ -1478,6 +1600,8 @@
 			},
 			{
 				"AnswerTexts": [
+					"Pretty much just as bad as the thing with the giant wave.",
+					"The DM looks at you, your teammates look at you, the dead boar looks at you."
 				],
 				"FilterForIncludedSpellTags": [
 					"Rock-a-lanche"
@@ -1489,6 +1613,8 @@
 			},
 			{
 				"AnswerTexts": [
+					"What a bad idea to go hunting as a wizard. The boar dashes away scared and you, not used to being the front line, are just as scared and throw up a defensive spell out of habit.",
+					"You look very stunning and the flames keep you warm as you watch your dinner hightail it."
 				],
 				"FilterForIncludedSpellTags": [
 					"Cloak of Fire"
@@ -1496,10 +1622,12 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellGood"
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
+					"Water Magic is usually quite fast but a hulking mass of whirling waters turned into the rough shape of a man might only be fast in a somewhat static fight. Especially bad opposite someone who doesn't want to fight.",
+					"You're lucky that you're out on your own so Betty, Fred and Robin can only laugh at you OT while your Golem chases the boar as you chase your golem so it doesn't get out of control reach."
 				],
 				"FilterForIncludedSpellTags": [
 					"Summon Water Golem"
@@ -1507,10 +1635,11 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellGood"
+				"AnswerSound": "SpellNeutral"
 			},
 			{
 				"AnswerTexts": [
+					"This spell would have been great if you could outrun a boar."
 				],
 				"FilterForIncludedSpellTags": [
 					"Lightning Blade"
@@ -1518,10 +1647,11 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellGood"
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
+					"The animal barely twitches before you shoot it full of razor-sharp crystals. What an impressive beast though taking the beating and only keeling over after it pretty much looked like a hedgehog."
 				],
 				"FilterForIncludedSpellTags": [
 					"Ice Crystal Missle"
@@ -1533,6 +1663,8 @@
 			},
 			{
 				"AnswerTexts": [
+					"Great idea, if you were going to create a memorable meme for your group.",
+					"Sadly, or luckily, you're not quick enough to catch up to the boar once it turned on you and dashed away."
 				],
 				"FilterForIncludedSpellTags": [
 					"1000 Years of Pain"
@@ -1544,6 +1676,7 @@
 			},
 			{
 				"AnswerTexts": [
+					"You're quick but gas is not and while you watch the animal disappear in the underbrush you start thinking that literally poisoning your dinner might not have been the best idea to begin with."
 				],
 				"FilterForIncludedSpellTags": [
 					"Poison Breath"
@@ -1551,10 +1684,13 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellNeutral"
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
+					"The spell is quickly cast but the meteor still takes some time to appear and travel, always making it tough to hit.",
+					"It takes you several tries, and several hits, too, before the boar finally goes down, smashed to a pulp.",
+					"Walking up to your job 'well' done you start wondering if that tenderized the meat or just beat it up."
 				],
 				"FilterForIncludedSpellTags": [
 					"Meteor"
@@ -1566,6 +1702,8 @@
 			},
 			{
 				"AnswerTexts": [
+					"The idea is good, your aim as well but the spell just doesn't have enough oomph to take out a hundred kilos of boar in one shot.",
+					"The boar's hide is severely burned, the enemy hurt but gone as well before you can cast again."
 				],
 				"FilterForIncludedSpellTags": [
 					"Fireblob"
@@ -1573,10 +1711,12 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellGood"
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
+					"Whater Whip is one of your fastest spells and one of your favourites. That's how well you wield it, too, but grabbing onto a charging boar is only a good idea if you can't actually overpower the beast.",
+					"You're dragged through the underbrush for a good bit before you finally let go of the spell. Ouchy."
 				],
 				"FilterForIncludedSpellTags": [
 					"What Whip"
@@ -1584,10 +1724,11 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellPerfect"
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
+					"The boar only listens to smooth jazz and is no fan of rock music. Also, this takes way too long against a target who doesn't feel like staying close to you."
 				],
 				"FilterForIncludedSpellTags": [
 					"Thunderstruck"
@@ -1595,10 +1736,11 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellPerfect"
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
+					"You can spin fast enough to enhance range and power of the spell and as the boar charges into the underbrush you lose balance and slip on your own ice."
 				],
 				"FilterForIncludedSpellTags": [
 					"Frost Nova"
@@ -1606,10 +1748,11 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellGood"
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
+					"You should have caught the boar before you summon an apple. Rookie mistake."
 				],
 				"FilterForIncludedSpellTags": [
 					"Summon Apple"
@@ -1617,35 +1760,15 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellGood"
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
+					"You're really disappointed that nobody saw you as you cast the walls behind the boar first, walling off it's route of escape, before you close the square hearing one last squeal.",
+					"When you extinguish the fires you find your dinner with all those pesky bristles burned cleanly away."
 				],
 				"FilterForIncludedSpellTags": [
 					"Walls of Fire"
-				],
-				"FilterForExcludedSpellTags": [],
-				"MinScore": 0.0,
-				"MaxScore": 0.0,
-				"AnswerSound": "SpellNeutral"
-			},
-			{
-				"AnswerTexts": [
-				],
-				"FilterForIncludedSpellTags": [
-					"Freezer Burn"
-				],
-				"FilterForExcludedSpellTags": [],
-				"MinScore": 0.0,
-				"MaxScore": 0.0,
-				"AnswerSound": "SpellGood"
-			},
-			{
-				"AnswerTexts": [
-				],
-				"FilterForIncludedSpellTags": [
-					"Testicular Torsion"
 				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
@@ -1654,6 +1777,32 @@
 			},
 			{
 				"AnswerTexts": [
+					"You stand there with a very cold hand and watch the boar hightail it into the forrest.",
+					"Come to think of it, even if you had been able to catch up this probably wouldn't have done much besides get you in range of some nasty tusks."
+				],
+				"FilterForIncludedSpellTags": [
+					"Freezer Burn"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"PETA will be so mad. You better lawyer up, son."
+				],
+				"FilterForIncludedSpellTags": [
+					"Testicular Torsion"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+					"What did you think a handful of pebbles would do against a hundred kilo animal?"
 				],
 				"FilterForIncludedSpellTags": [
 					"Gravel"
@@ -1665,6 +1814,7 @@
 			},
 			{
 				"AnswerTexts": [
+					"The boar hesitates for a second but eventually decides that you're not his type."
 				],
 				"FilterForIncludedSpellTags": [
 					"Magic Rizz"
@@ -1672,10 +1822,12 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellGood"
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
+					"Your spell manages to calm the animal but that only gives it time to think that it might actually be able to take you out instead. A staring duel begins.",
+					"The boar twitches and you almost jump out of your skin but instead of charing you it turns around and leaves."
 				],
 				"FilterForIncludedSpellTags": [
 					"Calm the F down"
@@ -1687,6 +1839,8 @@
 			},
 			{
 				"AnswerTexts": [
+					"You speak the word with emphasis and a sick basso profundo but have to watch the boar turn around and bolt.",
+					"Suddenly you're reminded that you don't speak boar and the boar probably doesn't speak english."
 				],
 				"FilterForIncludedSpellTags": [
 					"Command"
@@ -1694,10 +1848,11 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellGood"
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
+					"You knew this wouldn't work out for dinner but curiosity got the best of you and in anticipation about what kind of conversation you could have with a boar you're reminded that animals don't actually speak a 'language'."
 				],
 				"FilterForIncludedSpellTags": [
 					"Comprehend languages"
@@ -1705,10 +1860,11 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellPerfect"
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
+					"This probably was the best incantation dance you've ever done and noone was there to see it. Not even the boar. Surprisingly, it didn't stay and watch."
 				],
 				"FilterForIncludedSpellTags": [
 					"Star Gem Power Glow Up"
@@ -1716,10 +1872,11 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellPerfect"
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
+					"You thought you could just insert yourself as a friend into the animal's memory but besides that being rather sick and twisted it also doesn't work on animals."
 				],
 				"FilterForIncludedSpellTags": [
 					"Modify Mind"
@@ -1727,10 +1884,12 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellPerfect"
+				"AnswerSound": "SpellBad"
 			},
 			{
 				"AnswerTexts": [
+					"Your brain glitches and you heal the boar. PETA would be proud.",
+					"It doesn't stop to thank you though and runs off. What a pig."
 				],
 				"FilterForIncludedSpellTags": [
 					"Healing"
@@ -1742,20 +1901,11 @@
 			},
 			{
 				"AnswerTexts": [
+					"You panic and instead of remembering you're the hunter you think like a wizard in melee and throw up a defensive spell.",
+					"You watch your dinner run off in the safety of your magical barrier."
 				],
 				"FilterForIncludedSpellTags": [
 					"Barrier"
-				],
-				"FilterForExcludedSpellTags": [],
-				"MinScore": 0.0,
-				"MaxScore": 0.0,
-				"AnswerSound": "SpellGood"
-			},
-			{
-				"AnswerTexts": [
-				],
-				"FilterForIncludedSpellTags": [
-					"I Like Animals"
 				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
@@ -1764,6 +1914,23 @@
 			},
 			{
 				"AnswerTexts": [
+					"You set out to find dinner but you found a friend instead.",
+					"You share stories back and forth of growing up in a place that didn't accept your wants and needs, family expectations and how rough it is to date.",
+					"You sit in silence then for a while but it's not awkward, you both feel comfortable in each others company and later part in peace.",
+					"It's late at night when you return to camp and when your team berates you on the lack of food you fail to tell them that you found something more important than dinner."
+				],
+				"FilterForIncludedSpellTags": [
+					"I Like Animals"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+					"There's not enough water to do much more than make a few drops dance in the air.",
+					"The boar is not impressed and leaves."
 				],
 				"FilterForIncludedSpellTags": [
 					"Make Water"
@@ -1775,6 +1942,7 @@
 			},
 			{
 				"AnswerTexts": [
+					"The boar is not impressed by your knowledge and prefers to do his own research."
 				],
 				"FilterForIncludedSpellTags": [
 					"Fact Check"
@@ -1786,6 +1954,7 @@
 			},
 			{
 				"AnswerTexts": [
+					"It takes you a moment and the boar almost gets away but you manage to animate enough branches and brambles to catch it and put it down. Use nature to fight nature."
 				],
 				"FilterForIncludedSpellTags": [
 					"Make things do things"
@@ -1793,10 +1962,13 @@
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
-				"AnswerSound": "SpellNeutral"
+				"AnswerSound": "SpellGood"
 			},
 			{
 				"AnswerTexts": [
+					"The boar runs away as you stare after it with a grilled cheese sandwich in hand.",
+					"You could have just stayed in camp and recast the spell until everyone was happy and full.",
+					"So much for INT being your main stat."
 				],
 				"FilterForIncludedSpellTags": [
 					"Summon Grilled Cheese"
