@@ -77,3 +77,8 @@ script = ExtResource("5_tbgi4")
 event_name = "event:/Core/Trashcan"
 event_guid = "{ee1841b0-3583-4435-8a46-05c78e73a98a}"
 script = ExtResource("5_tbgi4")
+
+[node name="CatEmitter" type="FmodEventEmitter2D" parent="Sound/Effects"]
+event_name = "event:/Core/Meow"
+event_guid = "{4fcc4c46-907d-448a-8b3d-5b5da68418cd}"
+script = ExtResource("5_tbgi4")

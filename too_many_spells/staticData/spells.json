@@ -514,7 +514,7 @@
 	},
 	{
 		"Name": "Remove Static from Clothing",
-		"Artwork": "res://assets/book/pages/Remove Static from Clothing.png",
+		"Artwork": "res://assets/book/pages/Remove Static.png",
 		"IsTrash": false,
 		"SpellTags": [
 			"Remove Static from Clothing"
@@ -566,14 +566,6 @@
 		"IsTrash": true,
 		"SpellTags": [
 			"Rundfunk"
-		]
-	},
-	{
-		"Name": "Procoontra",
-		"Artwork": "res://assets/book/pages/Procoontra.png",
-		"IsTrash": true,
-		"SpellTags": [
-			"Procoontra"
 		]
 	},
 	{

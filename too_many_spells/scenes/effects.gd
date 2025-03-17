@@ -10,6 +10,7 @@ extends Node2D
 @onready var _dragPlopEmitter: FmodEventEmitter2D = $DragPlopEmitter
 @onready var _dropPlopEmitter: FmodEventEmitter2D = $DropPlopEmitter
 @onready var _trashcanEmitter: FmodEventEmitter2D = $TrashcanEmitter
+@onready var _catEmitter: FmodEventEmitter2D = $CatEmitter
 
 func _ready() -> void:
 	print("effect script init")	
@@ -38,5 +39,7 @@ func play_effect(parameter: String) -> void:
 		_dropPlopEmitter.play_one_shot()
 	elif parameter == "Trashcan":
 		_trashcanEmitter.play_one_shot()
+	elif parameter == "Cat":
+		_catEmitter.play_one_shot()
 	else:
 		print("No effect found for " + parameter)

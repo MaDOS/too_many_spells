@@ -25,7 +25,5 @@ public partial class Torchlight : Node2D
 	private void OnTimerTimeout()
 	{
 		_randomLightEnergy = (float)GD.Randfn(0.7, 0.4);
-
-		GD.Print($"Random light energy: {_randomLightEnergy}");
 	}
 }

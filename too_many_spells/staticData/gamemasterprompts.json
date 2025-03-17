@@ -27,6 +27,32 @@
 			},
 			{
 				"AnswerTexts": [
+					"Who doesn't love toilet humour? Doesn't matter that you're all on the way to 30 or there already, a thunderous fart deserves thunderous applaus!",
+					"The earth shakes and so do the bandit's knees! Thoroughly disheartened, and a little disgusted, they are easy work to finish off."
+				],
+				"FilterForIncludedSpellTags": [
+					"Combat Fart"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+					"It's hardcore and very edgy and you ponder the meaning of life and love as the sand closes around the poor bandit, the panic making their eyes pop.",
+					"Your voice is lower than usual as you try to quote japanese words of great importance but can't quite remember what you didn't practice enough on Duolingo. Spells works nonetheless."
+				],
+				"FilterForIncludedSpellTags": [
+					"Sand Prison"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "Spell"
+			},
+			{
+				"AnswerTexts": [
 					"What an incredible demonstration of your water bending skills. You're a true master!",
 					"The bandits are gone but so is your team, and all trees not strong enough to withstand the tsunami you created.",
 					"Betty, Fred and Robin are not amused. The DM sighs."
@@ -512,6 +538,94 @@
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
 				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"The only thing keeping this from a bad choice is the size of the tent appearing in the air above you and the bandit.",
+					"The tarp is big and heavy enough to stop the bandit's charge short but knocks both of you to the ground."
+				],
+				"FilterForIncludedSpellTags": [
+					"Summon Tent"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellNeutral"
+			},
+			{
+				"AnswerTexts": [
+					"You get stabbed. But when Betty gives you a healing touch she doesn't get zapped.",
+					"Yay."
+				],
+				"FilterForIncludedSpellTags": [
+					"Remove Static from Clothing"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"You get stabbed and are going to have to recast this again once the bleeding stops."
+				],
+				"FilterForIncludedSpellTags": [
+					"Clean Laundry"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"It is said that the eyes are the windows to the soul but they don't open for this spell.",
+					"Someone's getting stabbed real good."
+				],
+				"FilterForIncludedSpellTags": [
+					"Sesame"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"The bandit doesn't have internet and so doesn't get the reference.",
+					"You get stabbed though."
+				],
+				"FilterForIncludedSpellTags": [
+					"Alarm"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"Lucky for you the power gap between you and the bandit is so large that your mage hand is enough to keep the enemy in check until your teammates can get you out of the stalemate."
+				],
+				"FilterForIncludedSpellTags": [
+					"Maes Hand"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellNeutral"
+			},
+			{
+				"AnswerTexts": [
+					"The bandit stops, dumbstruck as you suddenly turn around and long enough that Fred can take them down in passing. Lucky you."
+				],
+				"FilterForIncludedSpellTags": [
+					"Five more minutes"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
 			}
 		]
 	},
@@ -541,6 +655,30 @@
 			},
 			{
 				"AnswerTexts": [
+					"The reverberating echo deafens everybody as does your head from the wall after Fred punches you."
+				],
+				"FilterForIncludedSpellTags": [
+					"Combat Fart"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"Surprising everyone in your team this actually works! It takes using the spell multiple times and being quick about it, too, but you manage to carve away enough slime that way and free your hand at last."
+				],
+				"FilterForIncludedSpellTags": [
+					"Sand Prison"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
 					"The pressure of the water slowly but surely frees your arm from the gloopy entrapment, clearing away the wall more and more, too, which shows you the oozing mass behind.",
 					"Only then do you remember, aka the DM reminds you, that you are in an enclosed room deep underground and how long you'll probably be able to hold your breath and maybe cast something to breath under water..."
 				],
@@ -554,8 +692,8 @@
 			},
 			{
 				"AnswerTexts": [
-				"It takes you a moment to assume T-Pose but leaning into the gelatinous grapple you pull it off at an angle!",
-				"The very moment the first zap hits the ooze you can feel the grip loosening and concentrating on more zaps you fall free in a blink!"
+					"It takes you a moment to assume T-Pose but leaning into the gelatinous grapple you pull it off at an angle!",
+					"The very moment the first zap hits the ooze you can feel the grip loosening and concentrating on more zaps you fall free in a blink!"
 				],
 				"FilterForIncludedSpellTags": [
 					"Generate Lightning"
@@ -797,7 +935,6 @@
 				"AnswerTexts": [
 					"For the longest time nothing happens until you feel your own hand growing increasingly cold.",
 					"Fred and Robin both slap their forehead at exactly the same time."
-
 				],
 				"FilterForIncludedSpellTags": [
 					"Freezer Burn"
@@ -883,7 +1020,6 @@
 				"AnswerTexts": [
 					"It's terribly difficult to dance with one hand stuck in a wall, let alone elaborately enough to pull off a Magical Girl Transformation but the powers above and beyond are gracious and you pull it off.",
 					"To add to your surprise it seems that the slime monster is allergic to Magical Girl Energy and releases you at once, leaving you to answer your group's questions about who you are."
-
 				],
 				"FilterForIncludedSpellTags": [
 					"Star Gem Power Glow Up"
@@ -994,7 +1130,92 @@
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
 				"AnswerSound": "SpellNeutral"
-
+			},
+			{
+				"AnswerTexts": [
+					"The tent is big enough to span the entire width of the hallway, separating you from your teammates but not from the slime."
+				],
+				"FilterForIncludedSpellTags": [
+					"Summon Tent"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"Smart."
+				],
+				"FilterForIncludedSpellTags": [
+					"Remove Static from Clothing"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"You're clean for a moment or two but when the goo drags you in deeper you're body gets pressed against the slimy, dirty wall and the spell was pretty much in vain."
+				],
+				"FilterForIncludedSpellTags": [
+					"Clean Laundry"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"Not a bad idea but while your arm is locked in a grip like a vice, it's not really a 'lock'."
+				],
+				"FilterForIncludedSpellTags": [
+					"Sesame"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"The alarm clamors up and down the hallway, the echo deafeningly loud.",
+					"Your friends cup their ears and their glare tells you just how great an idea that was.",
+					"If there's anything else in here with ears they'll know that you are and where."
+				],
+				"FilterForIncludedSpellTags": [
+					"Alarm"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+					"A bit of a hail mary but it works. The hand made of mana is unable to shoot forth from yours but as it comes into existence over your hand it takes it's place and you are suddenly free!"
+				],
+				"FilterForIncludedSpellTags": [
+					"Maes Hand"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+					"There's no rush. You can stay locked in here as long as you want or the slime needs to engulf and decompose you."
+				],
+				"FilterForIncludedSpellTags": [
+					"Five more minutes"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
 			}
 		]
 	},
@@ -1021,6 +1242,33 @@
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
 				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"Losing cake is some damn shame and you decide to ruin that old lady's day in return.",
+					"Following her to her seat you listen to all the stories about her grandchildren and her youth.",
+					"Once sat down though you let rip a number of deadly silent ones before you got up and left her to her own demise."
+				],
+				"FilterForIncludedSpellTags": [
+					"Combat Fart"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"You're done. You tried being nice and that got you only so far. You and your friends saved this village and that didn't get you the last slice of cake?!",
+					"You close your hand into a fist and the sand engulfs the slice of cake leaving the old lady speechless."
+				],
+				"FilterForIncludedSpellTags": [
+					"Sand Prison"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
 			},
 			{
 				"AnswerTexts": [
@@ -1489,6 +1737,84 @@
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
 				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+					"You're really not ready to admit defeat to an old lady but there's nothing more you can say or do. The humiliation!",
+					"You're a powerful mage, you have seen and done things, you're an adult...",
+					"... and now you're sitting in a tent next to the food tables, pouting."
+				],
+				"FilterForIncludedSpellTags": [
+					"Summon Tent"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"You think an old lady from some backwater village is easy enough to impress with some minor magic. Turns out you're wrong.",
+					"She tries not to but a little laugh escapes her for which she quickly apologises and begins to tell you a story about how she once dated a guy named Elminster."
+				],
+				"FilterForIncludedSpellTags": [
+					"Remove Static from Clothing"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"The old lady's eyes basically pop out of her head. The cake is yours and any promise you wish for if only you teach her this spell!"
+				],
+				"FilterForIncludedSpellTags": [
+					"Clean Laundry"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+					"There's nothing to unlock and she doesn't like sesame in her bread but she opens her arms to give you a hug and a little pat on the back before she leaves."
+				],
+				"FilterForIncludedSpellTags": [
+					"Sesame"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"She gives a hearty laugh, saying she remembers a movie that went somewhat like this.",
+					"Reminiscing about the internet and the early 2000's she gives you the cake, thanking you for the trip down memory lane."
+				],
+				"FilterForIncludedSpellTags": [
+					"Alarm"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
+			},
+			{
+				"AnswerTexts": [
+					"You were just about to do the old 'tipping someone on the shoulder' trick but end up the one surprised as her own hand of magic slaps yours away.",
+					"An epic hand to hand combat beings drawing a crowd and ending in a thumb wrestling match, which you lose.",
+					"You're sad about the cake but only a little. This was fun and the old lady earned it!"
+				],
+				"FilterForIncludedSpellTags": [
+					"Maes Hand"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
 			}
 		]
 	},
@@ -1517,6 +1843,32 @@
 				"MinScore": 0.0,
 				"MaxScore": 0.0,
 				"AnswerSound": "SpellPerfect"
+			},
+			{
+				"AnswerTexts": [
+					"You react quickly enough but are turned in the wrong direction. The thunderous fart startles even yourself and causes the boar to run away even faster.",
+					"What your teammates will think when they hear the noise..."
+				],
+				"FilterForIncludedSpellTags": [
+					"Combat Fart"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"Quick, easy, dead. You caught the boar in a blink and the rest was done in the blink of an eye. Problem is: the spell is rather hard to controll.",
+					"You wonder what the carcass will look like. What you don't have to wonder about is what a nuisance it'll be cleaning all that sand off the meat."
+				],
+				"FilterForIncludedSpellTags": [
+					"Sand Prison"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellGood"
 			},
 			{
 				"AnswerTexts": [
@@ -1972,6 +2324,79 @@
 				],
 				"FilterForIncludedSpellTags": [
 					"Summon Grilled Cheese"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"It's free real estate but the boar is looking for something with two bathrooms and leaves without saying goodbye."
+				],
+				"FilterForIncludedSpellTags": [
+					"Summon Tent"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"Are you even trying to get dinner?"
+				],
+				"FilterForIncludedSpellTags": [
+					"Remove Static from Clothing"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"You do use 'Fresh Meadow' detergent but the boar doesn't care for artifical odorants and leaves."
+				],
+				"FilterForIncludedSpellTags": [
+					"Clean Laundry"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"The only thing the spell opens up is the debate about if you should be let out of the house on your own."
+				],
+				"FilterForIncludedSpellTags": [
+					"Sesame"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"The boar is already running, no sense in making such noise on top of it."
+				],
+				"FilterForIncludedSpellTags": [
+					"Alarm"
+				],
+				"FilterForExcludedSpellTags": [],
+				"MinScore": 0.0,
+				"MaxScore": 0.0,
+				"AnswerSound": "SpellBad"
+			},
+			{
+				"AnswerTexts": [
+					"It's a spell of pure utility but neither a fast one, nor a strong one.",
+					"You stand there with three empty hands. Well played."
+				],
+				"FilterForIncludedSpellTags": [
+					"Maes Hand"
 				],
 				"FilterForExcludedSpellTags": [],
 				"MinScore": 0.0,

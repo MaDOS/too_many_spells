@@ -26,4 +26,5 @@ public static class SoundEffects
     public static string DragPlop = "DragPlop";
     public static string DropPlop = "DropPlop";
     public static string Trashcan = "Trashcan";
+    public static string Cat = "Cat";
 }

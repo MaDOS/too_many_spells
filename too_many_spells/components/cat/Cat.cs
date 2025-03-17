@@ -14,6 +14,8 @@ public partial class Cat : Node2D
         _catSprite = GetNode<AnimatedSprite2D>("CatSprite");
         _timer = GetNode<Timer>("Timer");
 
+        //_timer.Start(2); //debugging
+
         _catSprite.Play("default");
 
         _timer.Timeout += OnTimerTimeout;
@@ -22,6 +24,8 @@ public partial class Cat : Node2D
     private void OnTimerTimeout()
     {
         GD.Print("Cat starts moving");
+
+        GameStateManager.Instance.FirePlayEffect(SoundEffects.Cat);
 
         _isMoving = true;
     }
