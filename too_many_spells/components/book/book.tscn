@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://kf64j7pluy7o"]
+[gd_scene load_steps=48 format=3 uid="uid://kf64j7pluy7o"]
 
 [ext_resource type="Texture2D" uid="uid://bdvs7k2sdrdsw" path="res://assets/book/book_animations/Book_Front_Open_7.png" id="1_uebh5"]
 [ext_resource type="Script" uid="uid://ck4q70ndjf6a3" path="res://components/book/Book.cs" id="2_s0rqt"]
@@ -44,6 +44,8 @@
 [ext_resource type="Texture2D" uid="uid://cq2f0dduyk4sc" path="res://assets/book/book_animations/Book_Back_PageTurn_8.png" id="42_wekmx"]
 [ext_resource type="Texture2D" uid="uid://cnvtxccg88ceb" path="res://assets/book/book_animations/Book_Back_PageTurn_9_Complete.png" id="43_cjo1n"]
 [ext_resource type="Texture2D" uid="uid://jxek4rkoc47h" path="res://assets/book/book_animations/Book_Front_Open_8_Complete.png" id="44_xqu5u"]
+[ext_resource type="Texture2D" uid="uid://bn7wbf4ac2lf5" path="res://assets/Menu/FurtherOptions/TasteD_.png" id="45_tvs66"]
+[ext_resource type="Texture2D" uid="uid://l1s3ldvgdh50" path="res://assets/Menu/FurtherOptions/Tasten.png" id="46_6tg0m"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vxube"]
 animations = [{
@@ -385,7 +387,7 @@ animations = [{
 [node name="Book" type="AnimatedSprite2D"]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_vxube")
-animation = &"open_first"
+animation = &"closed_front"
 autoplay = "closed_front"
 centered = false
 script = ExtResource("2_s0rqt")
@@ -415,6 +417,16 @@ offset_right = 624.0
 offset_bottom = 912.6
 rotation = 0.00133836
 expand_mode = 4
+
+[node name="TasteD" type="Sprite2D" parent="."]
+position = Vector2(1731, 375)
+scale = Vector2(0.487089, 0.487089)
+texture = ExtResource("45_tvs66")
+
+[node name="Tasten" type="Sprite2D" parent="."]
+position = Vector2(287, 362)
+scale = Vector2(0.481612, 0.481612)
+texture = ExtResource("46_6tg0m")
 
 [connection signal="animation_finished" from="." to="." method="OnAnimationFinished"]
 [connection signal="gui_input" from="PageRight" to="." method="_on_gui_input_rightPage"]

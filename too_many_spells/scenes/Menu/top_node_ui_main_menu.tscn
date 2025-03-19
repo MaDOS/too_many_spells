@@ -187,7 +187,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(29.857),
 "update": 0,
 "values": [Color(0, 0, 0, 1)]
 }
@@ -466,6 +466,7 @@ root_node = NodePath("Panel2")
 libraries = {
 &"": SubResource("AnimationLibrary_mj72h")
 }
+speed_scale = 0.708
 
 [node name="Panel2" type="Panel" parent="UIMainMenu/AnimationPlayer"]
 z_index = 1

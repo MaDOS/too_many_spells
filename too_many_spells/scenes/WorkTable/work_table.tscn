@@ -40,7 +40,7 @@ texture = ExtResource("2_d55wh")
 centered = false
 
 [node name="Book" parent="." instance=ExtResource("1_7idc7")]
-animation = &"closed_front"
+animation = &"next_from_first"
 script = ExtResource("2_vkig8")
 
 [node name="NextSessionButton" type="AnimatedSprite2D" parent="."]
